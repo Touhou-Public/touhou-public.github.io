@@ -1,0 +1,157 @@
+# 主题文档：https://xaoxuu.com/wiki/stellar
+
+open_graph:
+  enable: true
+  twitter_id: # for open_graph meta
+
+article:
+  auto_cover: false # 自动配图
+  auto_excerpt: 200 # 内容摘要
+  license: '本文采用 [GLWT（Good Luck With That，祝你好运）公共许可证](https://github.com/me-shaon/GLWTPL/blob/master/translations/LICENSE_zh-CN) 许可协议，转载请注明出处。'
+  # 分享
+  share:  [wechat, weibo, email, link]
+  # npm i hexo-related-popular-posts
+  related_posts:
+    enable: true
+    title: 您可能感兴趣的文章
+
+sidebar:
+  # logo:
+    # title: '[<img no-lazy height="32px" src="https://q1.qlogo.cn/g?b=qq&nk=2128336160&s=640"/>](/)'
+  logo:
+    avatar: '[config.avatar](/rss)' # you can set avatar link in _config.yml or '[https://xxx.png](/about/)'
+    title: '[config.title](/)' # you can set html tag like: '[<img no-lazy height="32px" src="xxx"/>](/)'
+  menu:
+    home: '[btn.home](/)'
+    wiki: '[项目](/wiki)'
+    post: '[RSS](/rss)'
+    blog: '[博客](https://blog.imc.re/)'
+  widgets:
+    #### 自动生成的页面 ####
+    # 主页
+    home: search, welcome, recent, tagcloud, timeline # for home
+    # 博客索引页
+    blog_index: search_blog, recent, tagcloud, timeline # for categories/tags/archives
+    # 文档索引页
+    wiki_index: search_docs, recent, timeline # for wiki
+    # 其它（404）
+    others: search, welcome, recent, tagcloud, timeline # for 404 and ...
+    #### 手动创建的页面 ####
+    # 文章内页
+    post: toc, ghrepo, search_blog, ghissues, recent # for pages using 'layout:post'
+    # 文档内页
+    wiki: search_docs, ghrepo, toc, ghissues, related # for pages using 'layout:wiki'
+    # 其它 layout:page 的页面
+    page: welcome, toc, search # for custom pages using 'layout:page'
+
+search:
+  service: local_search # local_search, todo...
+  local_search: # 在 front-matter 中设置 indexing:false 来避免被搜索索引
+    field: all # post, page, all
+    path: /search.json # 搜索文件存放位置
+    content: true # 是否搜索内容
+    codeblock: true # 是否搜索代码块（需要content: true)
+
+comments:
+  service: giscus
+  # giscus
+  # https://giscus.app/zh-CN
+  giscus:
+    data-repo: SMGoro/contact-data # [在此输入仓库]
+    data-repo-id: R_kgDOJchtuA # [在此输入仓库 ID]
+    data-category: General # [在此输入分类名]
+    data-category-id: DIC_kwDOJchtuM4CWIK_
+    data-mapping: pathname
+    data-strict: 0
+    data-reactions-enabled: 1
+    data-emit-metadata: 0
+    data-input-position: top # top, bottom
+    data-theme: preferred_color_scheme
+    data-lang: zh-CN
+    data-loading: lazy
+    crossorigin: anonymous
+
+footer:
+  social:
+     github:
+       icon: '<img src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/social-github.svg"/>'
+       url: 'https://github.com/SMGoro'
+     bilibili:
+       icon: '<img src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/bilibili.svg"/>'
+       url: 'https://space.bilibili.com/359079394'
+     zhihu:
+       icon: '<img src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/zhihu.svg"/>'
+       url: 'https://l.imc.re/zhihu'
+     discord:
+       icon: '<img src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/discord.svg"/>'
+       url: 'https://l.imc.re/discord'
+     comments:
+       icon: '<img src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/comments.svg"/>'
+       url: 'https://blog.imc.re/contact'
+  sitemap:
+     '文章':
+       - '[分类](/categories)'
+       - '[标签](/tags)'
+       - '[归档](/archives)'
+     '更多':
+       - '[博客](https://blog.imc.re/)'
+       - '[IMC.RE](https://imc.re/)'
+  content: | # 支持 Markdown 格式
+    [@RSSBOX](/) 2023 author by [MHuiG](https://github.com/MHG-LAB/RSSBOX) powered by SummerGoro。<br>
+    本博客所有文章除特别声明外，均采用 [GLWT（Good Luck With That，祝你好运）公共许可证](https://github.com/me-shaon/GLWTPL/blob/master/translations/LICENSE_zh-CN) 许可协议，转载请注明出处。
+
+lazyload:
+  enable: true # [hexo clean && hexo s] is required after changing this value.
+  js: https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js
+  transition: blur # blur, fade
+
+tag_plugins:
+  # {% image %}
+  image:
+    fancybox: true
+
+plugins:
+  # jquery
+  jquery: https://gcore.jsdelivr.net/npm/jquery@3.6.2/dist/jquery.min.js
+
+  # Katex - The fastest math typesetting library for the web
+  # https://katex.org/docs/autorender.html
+  # https://github.com/KaTeX/KaTeX
+  # 使用 hexo-renderer-markdown-it-plus 作为公式渲染器：npm uninstall hexo-renderer-marked --save npm install hexo-renderer-markdown-it-plus --save
+  katex:
+    enable: true
+    min_css: <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+    min_js: <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+    auto_render_min_js: <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"onload="renderMathInElement(document.body);"></script>
+  
+  # Mermaid - markdwon to flow chart, seq chart, class chart ...
+  # 需要安装 npm install --save hexo-filter-mermaid-diagrams
+  # 使用时 需要在Markdown文件开头加入 mermaid: true
+  # 使用示例：
+  # ```mermaid
+  # graph LR
+  #   A(Section A) -->|option 1| B(Section A)
+  #   B -->|option 2| C(Section C)
+  # ```
+  mermaid:
+    enable: true
+    # js: https://unpkg.com/mermaid@9.0.0/dist/mermaid.min.js
+    js: https://cdn.jsdelivr.net/npm/mermaid@v9/dist/mermaid.min.js
+    # Available themes: default | dark | forest | neutral
+    # 推荐使用 dark 主题 在夜间模式下显示效果更好
+    theme: dark
+
+style:
+  darkmode: auto # auto / always / false
+  color:
+    # 动态颜色（会根据明暗主题重设明度值，只用关心色相和饱和度即可）
+    background: 'hsl(212 16% 98%)' # 浅色背景颜色
+    block: 'hsl(212 8% 95%)' # 块背景颜色
+    code: 'hsl(14 100% 48%)' # 行内代码颜色
+    text: 'hsl(0 0% 20%)' # 文本颜色
+    # 主题色配置（不会根据明暗动态调整，请设置为通用的颜色）
+    theme: 'hsl(192 98% 55%)' # 主题色
+    accent: 'hsl(14 100% 57%)' # 强调色
+    link: 'hsl(207 90% 54%)' # 超链接颜色
+    button: 'hsl(192 98% 55%)' # 按钮颜色
+    hover: 'hsl(14 100% 57%)' # 按钮高亮颜色

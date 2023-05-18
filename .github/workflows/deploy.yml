@@ -1,0 +1,67 @@
+name: Deploy To Github Pages
+
+on:
+  watch:
+    types: [started]
+  push:
+    branches:
+    - main
+  schedule:
+    - cron: "0 */1 * * *"
+  workflow_dispatch:
+jobs:
+  deploy:
+    if: github.repository == 'SMGoro/RSSBOX'
+    name: Deploy Hexo Public To Pages
+    runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Shanghai
+    steps:
+    - name: Checkout Repository main branch
+      uses: actions/checkout@main
+      with:
+        submodules: "true"
+    - name: Setup Node.js 14.x
+      uses: actions/setup-node@master
+      with:
+        node-version: "14.x"
+    - name: Setup Python 3.7
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.7'
+        architecture: 'x64'
+
+    - name: Install Globel Dependencies
+      run: |
+        npm install hexo-cli@4 -g
+        pip install -r requirements.txt
+    - name: Cache node modules
+      uses: actions/cache@v1
+      id: cache
+      with:
+        path: node_modules
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+    - name: Install Dependencies
+      if: steps.cache.outputs.cache-hit != 'true'
+      run: |
+        npm install
+    - name: Crawl
+      run: |
+        rm -rf source/_posts
+        python main.py  ${{ secrets.CORS_API }}  ${{ secrets.RSSHUB_API }}
+    - name: Generate Public Files
+      run: |
+        # Restore last modified time
+        git ls-files -z | while read -d '' path; do touch -d "$(git log -1 --format="@%ct" "$path")" "$path"; done
+        npm run start
+
+    - name: Deploy Github
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
+        force_orphan: true

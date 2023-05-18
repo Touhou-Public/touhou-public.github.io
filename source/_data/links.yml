@@ -1,0 +1,131 @@
+'touhou':
+# wiki
+    - title: THBwiki
+      url: https://thwiki.cc/
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305171635549.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305171653854.png
+      description: 国内优秀的中文东方wiki
+
+    - title: Touhou Wiki
+      url: https://en.touhouwiki.net/wiki/Touhou_Wiki
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305171634490.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305171653066.png
+      description: 国外英文的东方wiki
+
+    - title: Wikipedia Touhou
+      url: https://en.wikipedia.org/wiki/Touhou_Project
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305171635224.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305171652003.png
+      description: Wikipedia上的东方记载
+
+    - title: Fandom TouhouWiki
+      url: https://touhou.fandom.com/wiki/Touhou_Wiki
+      screenshot:  https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305171636975.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305171653198.png
+      description: fandom上的Touhou英文wiki
+
+# bbs
+    - title: Touhou.CC
+      url: https://touhou.cc/
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305171638524.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305171654218.png
+      description: 相当老牌的国内东方论坛网站
+
+    - title: 喵玉殿
+      url: https://bbs.nyasama.com/
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305171640113.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305171654213.png
+      description: 官作集结国内东方论坛网站
+      
+# social media
+    - title: Bilibili-东方频道
+      url: https://www.bilibili.com/v/channel/166
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305171641399.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/bilibili.svg
+      description: B站东方频道分区
+      
+    - title: 微博-东方话题
+      url: https://s.weibo.com/weibo?q=%23%E4%B8%9C%E6%96%B9project%23
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305171648540.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/weibo.svg
+      description: 微博东方话题分区
+      
+    - title: 知乎-东方话题
+      url: https://www.zhihu.com/topic/19701004/top-answers
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305171644611.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/zhihu.svg
+      description: 知乎东方话题分区
+      
+    - title: Youtube-touhou
+      url: https://www.youtube.com/hashtag/touhou
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305171641184.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/youtube.svg
+      description: Youtube Touhou tag videos
+      
+    - title: niconico-東方
+      url: https://www.nicovideo.jp/tag/%E6%9D%B1%E6%96%B9
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305171641682.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305171610629.png
+      description: niconico touhou tag videos
+      
+    - title: Twitter-touhou
+      url: https://twitter.com/hashtag/touhou
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305171644443.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/twitter.svg
+      description: 知乎东方话题分区
+      
+    - title: Pixiv-touhou
+      url: https://www.pixiv.net/tags/touhou
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305171646259.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305171650678.png
+      description: Pixiv东方标签绘图
+
+'contact':
+    - title: Dodo
+      url: https://l.imc.re/dodo
+      screenshot:
+      avatar: 'https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/dodo.ico'
+      description:
+    - title: QQ群
+      url: https://l.imc.re/qqgroup
+      screenshot:
+      avatar: 'https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/social-qq.svg'
+      description:
+    - title: Discord
+      url: https://l.imc.re/discord
+      screenshot:
+      avatar: 'https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/discord.svg'
+      description:
+    - title: Bilibili
+      url: https://l.imc.re/bilibili
+      screenshot:
+      avatar: 'https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/bilibili.svg'
+      description:
+    - title: Zhihu
+      url: https://l.imc.re/zhihu
+      screenshot:
+      avatar: 'https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/zhihu.svg'
+      description:
+    - title: Github
+      url: https://l.imc.re/github
+      screenshot:
+      avatar: 'https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/social-github.svg'
+      description:
+
+'IMC':
+  - title: IMC.RE
+    url: https://imc.re
+    screenshot:
+    avatar:
+    description: 'IMC.RE 主页'
+  - title: IMC Store
+    url: https://store.imc.re
+    screenshot:
+    avatar:
+    description: 'IMC Store商店，售卖高频高性价比游戏服务器。'
+  - title: IMC WebMC
+    url: https://ws.imc.re
+    screenshot:
+    avatar:
+    description: 'IMC 网页版MC主站点。'
+

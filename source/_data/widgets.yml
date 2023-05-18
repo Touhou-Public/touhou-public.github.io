@@ -1,0 +1,64 @@
+toc:
+  layout: toc
+  list_number: false # 是否显示序号
+  min_depth: 1 # 建议不要低于 2 即从 H2 标签开始解析（H1标签用于文章大标题）
+  max_depth: 5 # 5 代表最多解析到 H5 标签
+  fallback: recent # Use a backup widget when toc does not exist.
+
+recent:
+  layout: recent
+  rss: /atom.xml # npm i hexo-generator-feed
+  limit: 5 # Count of posts
+
+search:
+  layout: search
+  filter: auto # auto or '/path'
+  placeholder: 搜索 # 搜索框处显示的文字
+
+search_blog:
+  layout: search
+  filter: /rss/ # or /posts/ ...
+  placeholder: 文章搜索
+
+search_docs:
+  layout: search
+  filter: /wiki/
+  placeholder: 文档搜索
+
+related:
+  layout: related
+
+welcome:
+  layout: markdown
+  title: 化繁为简
+  content: |
+    纯静态托管RSS订阅查看网站，好耶！
+    <br>
+    ~~折腾了那么久，可算弄好了~~
+    
+tagcloud:
+  layout: tagcloud
+  title: 标签云
+  # 标签云配置
+  min_font: 12
+  max_font: 24
+  amount: 100
+  orderby: name
+  order: 1 # 1, sac 升序；-1, desc 降序
+  color: false # 使用颜色
+  start_color:  # 开始的颜色。您可使用十六进位值（'#b700ff'），rgba（rgba(183, 0, 255, 1)），hsla（hsla(283, 100%, 50%, 1)）或 颜色关键字。此变量仅在 color 参数开启时才有用。
+  end_color:  # 结束的颜色。您可使用十六进位值（'#b700ff'），rgba（rgba(183, 0, 255, 1)），hsla（hsla(283, 100%, 50%, 1)）或 颜色关键字。此变量仅在 color 参数开启时才有用。
+  show_count: false # 显示每个标签的文章总数
+
+ghuser:
+  layout: ghuser
+  username: SMGoro # your github login username
+  avatar: true # show avatar or not
+  menu: true # show menu or not
+
+timeline:
+  layout: timeline
+  title: 近期动态
+  api: https://api.github.com/repos/SMGoro/contact-data/issues?per_page=3&labels=timeline # 若你想限制数量，在api链接后面加上?per_page=1指限制为1条
+  user: # 是否过滤只显示某个人发布的内容，如果要筛选多人，用英文逗号隔开
+  hide: # title,footer # 隐藏标题或底部 # 此功能需要 Stellar v1.13.0
