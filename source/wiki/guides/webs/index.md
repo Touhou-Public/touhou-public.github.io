@@ -7,4 +7,7 @@ order: 600
 
 # 东方网站指南
 
+
+## 东方网站
+
 {% sites touhou %}

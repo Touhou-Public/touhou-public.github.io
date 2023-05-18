@@ -20,6 +20,8 @@ sidebar: [search, welcome, recent, tagcloud, timeline]
 
 五郎订阅的各种奇奇怪怪的信息流，目前正在收集东方相关信息中。。
 
+{% link https://touhou.pub/wiki/guides/index.html desc:true %}
+
 ## Todo
 
 - 收集东方相关信息流订阅源（长期任务）
@@ -31,13 +33,13 @@ sidebar: [search, welcome, recent, tagcloud, timeline]
 
 ## Logs
 
+> 有的时候懒得手写了，可以看 [Github Commits](https://github.com/Touhou-Public/touhou-public.github.io/commits/main) 记录x
+
+- 2023.5.19 完善[入坑指南项目](/wiki/guides/)，增加github项目合集，Awasome-Touhou等页面
+- 2023.5.18 完善[入坑指南项目](/wiki/guides/)，增加新订阅源。
+- 2023.5.17 创建[项目列表](/wiki)，新建[入坑指南项目](/wiki/guides/)
 - 2023.5.16 丰富订阅源，增设自建RSSHub，实现网易云音乐在线播放，修改b站播放器适配问题
 - 2023.5.15 更换RSSBOX订阅源为东方相关订阅源
-
-## 东方网站
-
-{% sites touhou %}
-
 
 {% ablock color:info %}
 
