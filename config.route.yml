@@ -1,14 +1,15 @@
 # touhou rss collection 
 
-文字:
+Articles:
   知乎话题-东方Project: https://rsshub.5l.re/zhihu/topic/19701004
   # 文文最速新闻: https://www.touhou.cc/bbs/forum.php?mod=forumdisplay&fid=48&mod=rss
   文文最速新闻: https://rsshub.5l.re/discuz/https%3A%2F%2Fwww.touhou.cc%2Fbbs%2Fforum.php%3Fmod=forumdisplay%26fid=48
   魔女的茶会: https%3A%2F%2Fbbs.nyasama.com%2Fforum.php%3Fmod=forumdisplay%26fid=4
 
-视频:
+Videos:
   # b站收藏夹
   五郎-东方: https://rsshub.5l.re/bilibili/fav/359079394/2299444994
+  五郎-东方动画: https://rsshub.5l.re/bilibili/fav/359079394/2320517394
   御坂14363号-东方: https://rsshub.5l.re/bilibili/fav/699221292/1703917092
 
   # b站动态
@@ -40,7 +41,7 @@
   # niconico-东方tag
   niconico-東方: https://www.nicovideo.jp/tag/%25E6%259D%25B1%25E6%2596%25B9?sort=f&rss=2.0&lang=ja-jp
 
-音乐:
+Music:
   # b站收藏夹
   五郎-东方音乐: https://rsshub.5l.re/bilibili/fav/359079394/2293459894
   御坂14363号-东方音乐: https://rsshub.5l.re/bilibili/fav/699221292/1699573092
@@ -87,7 +88,7 @@
   流派未月亭-网易云: https://rsshub.5l.re/163/music/artist/1050749
   交響アクティブNEETs-网易云: https://rsshub.5l.re/163/music/artist/11996090
 
-图片:
+Photos:
   # pixiv
   pixiv-touhou: https://rsshub.5l.re/pixiv/search/touhou
   pixiv-核燃黑猫: https://rsshub.5l.re/pixiv/user/1408324
@@ -100,7 +101,7 @@
   清澈雨滴-同人漫画: https://rsshub.5l.re/bilibili/user/dynamic/503150289
   炸鸡QwQ-配音手书: https://rsshub.5l.re/bilibili/user/dynamic/1345435780
 
-游戏:
+Games:
   # steam
   官方系列作品-Steam: https://rsshub.5l.re/steam/search/developer=%25E4%25B8%258A%25E6%25B5%25B7%25E3%2582%25A2%25E3%2583%25AA%25E3%2582%25B9%25E5%25B9%25BB%25E6%25A8%2582%25E5%259B%25A3&ndl=1
   东方同人作品-Steam: https://rsshub.5l.re/steam/search/term=touhou&ndl=1
@@ -112,7 +113,7 @@
   东方冰之勇者记: https://rsshub.5l.re/bilibili/user/collection/1079825019/564130
   WILDLOTUS: https://rsshub.5l.re/bilibili/user/dynamic/1561810545
 
-社区:
+Clubs:
   # Twitter
   博麗神主-Twitter: https://rsshub.5l.re/twitter/user/korindo
 
@@ -126,14 +127,14 @@
   胡逆天-爱好者: https://rsshub.5l.re/bilibili/user/dynamic/3621415
   Z一LGW-传教士: https://rsshub.5l.re/bilibili/user/dynamic/11007230
 
-开发:
+Develops:
   # Github
   touhou-midi-collection: https://github.com/AyHa1810/touhou-midi-collection/commits.atom
 
-网站:
+Webiste:
   touhou.cc BBS: https://www.touhou.cc/bbs/?mod=rss
 
-站长:
+Owner:
   SMGoroBlog: https://blog.imc.re/atom.xml
   五郎のb站动态: /bilibili/user/dynamic/359079394
   五郎の知乎动态: /zhihu/people/activities/smgoro
