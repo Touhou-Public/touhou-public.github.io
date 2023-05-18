@@ -1,6 +1,6 @@
 ---
 menu_id: home
-sidebar: [search, welcome, recent, tagcloud, timeline]
+sidebar: [search, welcome, recent, timeline]
 comments: false
 ---
 
