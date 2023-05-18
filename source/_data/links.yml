@@ -24,6 +24,23 @@
       avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305171653198.png
       description: fandom上的Touhou英文wiki
 
+# website
+    - title: TouhouDB
+      url: https://touhoudb.com/
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305181806231.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305181805857.png
+      description: 东方音乐收集库
+    - title: gensokyoradio
+      url: https://gensokyoradio.net/
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305181809953.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305181808151.png
+      description: 东方音乐播放器
+    - title: Manga Translator
+      url: https://cotrans.touhou.ai/
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305181825807.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305181808151.png
+      description: 图像文字翻译网站
+
 # bbs
     - title: Touhou.CC
       url: https://touhou.cc/
@@ -37,17 +54,11 @@
       avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305171654213.png
       description: 官作集结国内东方论坛网站
 
-# website
-    - title: TouhouDB
-      url: https://touhoudb.com/
-      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305181806231.png
-      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305181805857.png
-      description: 东方音乐收集库
-    - title: gensokyoradio
-      url: https://gensokyoradio.net/
-      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305181809953.png
-      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305181808151.png
-      description: 东方音乐播放器
+    - title: 东方小镇
+      url: http://bbs.thproject.net/
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305181840168.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305181840924.png
+      description: 炒鸡老牌的国内东方论坛网站
       
 # social media
     - title: Bilibili-东方频道
@@ -56,17 +67,17 @@
       avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/bilibili.svg
       description: B站东方频道分区
       
-    - title: 微博-东方话题
-      url: https://s.weibo.com/weibo?q=%23%E4%B8%9C%E6%96%B9project%23
-      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305171648540.png
-      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/weibo.svg
-      description: 微博东方话题分区
-      
     - title: 知乎-东方话题
       url: https://www.zhihu.com/topic/19701004/top-answers
       screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305171644611.png
       avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/zhihu.svg
       description: 知乎东方话题分区
+      
+    - title: 微博-东方话题
+      url: https://s.weibo.com/weibo?q=%23%E4%B8%9C%E6%96%B9project%23
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305171648540.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/weibo.svg
+      description: 微博东方话题分区
       
     - title: Youtube-touhou
       url: https://www.youtube.com/hashtag/touhou
@@ -84,7 +95,7 @@
       url: https://twitter.com/hashtag/touhou
       screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305171644443.png
       avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/twitter.svg
-      description: 知乎东方话题分区
+      description: Twitter Touhou tag Article
       
     - title: Pixiv-touhou
       url: https://www.pixiv.net/tags/touhou
