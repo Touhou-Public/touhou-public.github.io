@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 jobs:
   deploy:
-    if: github.repository == 'SMGoro/RSSBOX'
+    if: github.repository == 'Touhou-Public/touhou.pub'
     name: Deploy Hexo Public To Pages
     runs-on: ubuntu-latest
     env:
