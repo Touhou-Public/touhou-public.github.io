@@ -51,13 +51,13 @@ comments: false
 <!-- tab 公告 -->
 
 {% ablock child:iframe %}
-<iframe title="dodochat" src="https://widget.imdodo.com/w/index.html#/channel?cids=1067193,1067194,1067196,1068714,1084722&amp;iid=170663&amp;sig=FuvhXv5EypYyIfAnL%2B2f2g%3D%3D&amp;sort=1&amp;theme=1" style="border: none; width: 100%; height: 800px;"></iframe>
+<iframe title="dodochat" src="https://widget.imdodo.com/w/index.html#/channel?cids=1645943,1645946,1645955,1645947&iid=208930&sig=J9Mz91BVnuAX5xZ85epLOw%3D%3D&theme=1" style="border: none; width: 100%; height: 800px;"></iframe>
 {% endablock %}
 
 <!-- tab 讨论 -->
 
 {% ablock child:iframe %}
-<iframe title="dodochat" src="https://widget.imdodo.com/w/index.html#/channel?cids=1067198,1067200,1067197,1069695,1083784&amp;iid=170663&amp;inter=1&amp;sig=jqaYAey1nn7ezZqr9X1OxA%3D%3D&amp;sort=1&amp;theme=1" style="border: none; width: 100%; height: 800px;"></iframe>
+<iframe title="dodochat" src="https://widget.imdodo.com/w/index.html#/channel?cids=1645944,1645948,1645954&iid=208930&inter=1&sig=scu6qYBK74%2BNY1XGjIE5Yg%3D%3D&theme=1" style="border: none; width: 100%; height: 800px;"></iframe>
 {% endablock %}
 
 <!-- tab Discord -->
