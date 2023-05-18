@@ -8,9 +8,10 @@ on:
     - main
   schedule:
     - cron: "0 */1 * * *"
+  workflow_dispatch:
 jobs:
   deploy:
-    if: github.repository == 'Touhou-Public/touhou.pub'
+    if: github.repository == 'Touhou-Public/touhou-public.github.io'
     name: Deploy Hexo Public To Pages
     runs-on: ubuntu-latest
     env:
