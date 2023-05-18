@@ -9,6 +9,8 @@ order: 10
 
 > 东方Project相关内容收集
 
+- [东方Project使用规定案](https://thwiki.cc/%E4%B8%9C%E6%96%B9Project%E4%BD%BF%E7%94%A8%E8%A7%84%E5%AE%9A%E6%A1%88)
+
 ## Website
 
 ### Wiki
