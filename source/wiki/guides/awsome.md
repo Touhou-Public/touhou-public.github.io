@@ -23,19 +23,20 @@ order: 10
 - [东方小镇](http://bbs.thproject.net/)：炒鸡老牌的国内东方论坛网站
 
 ### Social
-- [Bilibili-东方频道](https://www.bilibili.com/v/channel/166)
-- [知乎-东方话题](https://www.zhihu.com/topic/19701004/top-answers)
-- [微博-东方话题](https://s.weibo.com/weibo?q=%23%E4%B8%9C%E6%96%B9project%23)
-- [Youtube-touhou](https://www.youtube.com/hashtag/touhou)
-- [niconico-東方](https://www.nicovideo.jp/tag/%E6%9D%B1%E6%96%B9)
-- [Twitter-touhou](https://twitter.com/hashtag/touhou)
-- [Pixiv-touhou](https://www.pixiv.net/tags/touhou)
+- [Bilibili-东方频道](https://www.bilibili.com/v/channel/166)： B站东方频道分区
+- [知乎-东方话题](https://www.zhihu.com/topic/19701004/top-answers)： 知乎东方话题分区
+- [微博-东方话题](https://s.weibo.com/weibo?q=%23%E4%B8%9C%E6%96%B9project%23)： 微博东方话题分区
+- [Youtube-touhou](https://www.youtube.com/hashtag/touhou)： Youtube Touhou tag videos
+- [niconico-東方](https://www.nicovideo.jp/tag/%E6%9D%B1%E6%96%B9)： niconico touhou tag videos
+- [Twitter-touhou](https://twitter.com/hashtag/touhou)： Twitter Touhou tag Article
+- [Pixiv-touhou](https://www.pixiv.net/tags/touhou)： Pixiv东方标签绘图
 
 ### Music
 - [TouhouDB](https://touhoudb.com/)： Touhou Music collection Database
 - [gensokyoradio](https://gensokyoradio.net/)： Touhou Music Player on Android, IOS, OR Web.
 - [th-music-video-generator](https://jasonnor.github.io/th-music-video-generator/)： 开源的东方音乐播放器
-- [Touhou Spotify Music (thspotify.moe)](https://www.thspotify.moe/)
+- [Touhou Spotify Music (thspotify.moe)](https://www.thspotify.moe/)： Touhou Music For Spotify
+- [Touhou Piano Library](https://bloak.github.io/touhou_piano_library/index.html)： 东方钢琴谱收集馆
 
 ### Games:
 - [Taisei Project在线游玩](https://play.taisei-project.org/)
