@@ -1,8 +1,8 @@
 ---
 layout: wiki
 wiki: guides
-title: Github-Touhou
-order: 500
+title: Github-repo
+order: 501
 ---
 
 ## Github-repo
