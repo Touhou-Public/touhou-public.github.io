@@ -37,8 +37,11 @@ order: 10
 - [th-music-video-generator](https://jasonnor.github.io/th-music-video-generator/)： 开源的东方音乐播放器
 - [Touhou Spotify Music (thspotify.moe)](https://www.thspotify.moe/)： Touhou Music For Spotify
 - [Touhou Piano Library](https://bloak.github.io/touhou_piano_library/index.html)： 东方钢琴谱收集馆
+- [原曲列表 - THBWiki · 专业性的东方Project维基百科 - TBSGroup (thwiki.cc)](https://thwiki.cc/原曲列表)
 
 ### Videos
+
+- [同人视频列表 - THBWiki · 专业性的东方Project维基百科 - TBSGroup (thwiki.cc)](https://thwiki.cc/同人视频列表)
 
 #### 出圈高热
 
@@ -79,7 +82,7 @@ order: 10
 
 ### Anime
 
-#### 长篇动漫
+#### 长篇动画
 
 - [东方幻想万华镜](https://www.bilibili.com/video/BV18x411v7KX/)
   - [【高清修复】东方幻想万华镜全集](https://www.bilibili.com/video/BV1jS4y1L7oW/)
