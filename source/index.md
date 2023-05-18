@@ -9,8 +9,8 @@ sidebar: [search, welcome, recent, tagcloud, timeline]
 
 {% navbar 
 [主页](/) 
-[订阅](/rss/) 
 [项目](/wiki/) 
+[订阅](/rss/) 
 [博客](https://blog.imc.re/) 
 %}
 
