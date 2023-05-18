@@ -1,9 +1,10 @@
 ---
 menu_id: home
 sidebar: [search, welcome, recent, tagcloud, timeline]
+comments: false
 ---
 
-{% ablock RSSBOX color:info %}
+{% ablock color:info %}
 
 {% image https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305152215774.png download:true fancybox:true %}
 
