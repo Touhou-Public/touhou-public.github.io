@@ -36,6 +36,18 @@
       screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305171640113.png
       avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305171654213.png
       description: 官作集结国内东方论坛网站
+
+# website
+    - title: TouhouDB
+      url: https://touhoudb.com/
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305181806231.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305181805857.png
+      description: 东方音乐收集库
+    - title: gensokyoradio
+      url: https://gensokyoradio.net/
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305181809953.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305181808151.png
+      description: 东方音乐播放器
       
 # social media
     - title: Bilibili-东方频道
