@@ -1,3 +1,10 @@
+---
+layout: wiki
+wiki: guides
+title: Github-Touhou
+order: 500
+---
+
 ## Github-repo
 
 - [touhou-project · GitHub Topics](https://github.com/topics/touhou-project)
