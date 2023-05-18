@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: RSSBOX
-subtitle: 'SMGoroのRSS订阅 | 一些好康的东西'
-description: 'SMGoroのRSS订阅'
-keywords:  RSSBOX, RSS, RSSHub, RSS订阅, SMGoro, @SMGoro, SummerGoro, 东方, touhou, 东方Project
-author: SMGoro
+title: Touhou.Pub
+subtitle: 'Touhou-Public | 东方Project信息站'
+description: 'Touhou Proejct相关信息流的订阅，显示，收集，展示公开站点。'
+keywords:  touhou, 东方, 東方, touhou-project, 东方Project, 東方Project, SummerGoro
+author: Touhou-Public
 language: zh-CN
 timezone: 'Asia/Shanghai'
 avatar: /avatar.png
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://rssbox.imc.re/
+url: https://touhou.pub/
 root: /
 
 # hexo-abbrlink
