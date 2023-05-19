@@ -59,7 +59,7 @@ jobs:
 
     - name: Pull Other repo
       run: |
-        # # pull wehou
+        # pull wehou
         git submodule add https://github.com/Touhou-Public/WeHou.git public/WeHou
 
     - name: Deploy Github
