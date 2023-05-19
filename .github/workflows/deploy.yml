@@ -21,12 +21,6 @@ jobs:
       uses: actions/checkout@main
       with:
         submodules: "true"
-        
-    - name: Pull Other repo
-      run: |
-        # pull Other repo
-        # git submodule add https://github.com/Touhou-Public/WeHou.git source/WeHou
-        git submodule add https://github.com/Bloak/Bloak.github.io.git source/bloak
 
 
     - name: Setup Node.js 14.x
@@ -69,6 +63,12 @@ jobs:
         # Restore last modified time
         git ls-files -z | while read -d '' path; do touch -d "$(git log -1 --format="@%ct" "$path")" "$path"; done
         npm run start
+        
+    - name: Pull Other repo
+      run: |
+        # pull Other repo
+        # git submodule add https://github.com/Touhou-Public/WeHou.git public/WeHou
+        git submodule add https://github.com/Bloak/Bloak.github.io.git public/bloak
 
     - name: Deploy Github
       uses: peaceiris/actions-gh-pages@v3
