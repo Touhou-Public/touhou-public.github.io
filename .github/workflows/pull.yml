@@ -9,9 +9,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      
+      - name: Create directory
+        run: mkdir -p /home/runner/work/touhou-public.github.io/touhou-public.github.io/WeHou
+        
       - name: Checkout
         uses: actions/checkout@v2
-        run: mkdir -p /home/runner/work/touhou-public.github.io/touhou-public.github.io/WeHou
         with:
           repository: Touhou-Public/WeHou
           ref: main
