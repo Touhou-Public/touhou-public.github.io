@@ -1,4 +1,4 @@
-name: Deploy to gh-pages
+name: upload to gh-pages
 
 on:
   push:
@@ -11,6 +11,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+
+      - name: Create directory
+        run: mkdir -p /home/runner/work/touhou-public.github.io/touhou-public.github.io/WeHou
 
       - name: Build and deploy
         uses: JamesIves/github-pages-deploy-action@4.1.2
