@@ -61,7 +61,7 @@ jobs:
       with:
         repository: Touhou-Public/WeHou
         ref: gh-pages
-        path: /WeHou
+        path: /source
 
     - name: Deploy Github
       uses: peaceiris/actions-gh-pages@v3
