@@ -21,10 +21,17 @@ jobs:
       uses: actions/checkout@main
       with:
         submodules: "true"
+        
+    - name: Pull Other repo
+      run: |
+        # pull wehou
+        git submodule add https://github.com/Touhou-Public/WeHou.git source/WeHou
+
     - name: Setup Node.js 14.x
       uses: actions/setup-node@master
       with:
         node-version: "14.x"
+
     - name: Setup Python 3.7
       uses: actions/setup-python@v2
       with:
@@ -35,6 +42,7 @@ jobs:
       run: |
         npm install hexo-cli@4 -g
         pip install -r requirements.txt
+
     - name: Cache node modules
       uses: actions/cache@v1
       id: cache
@@ -43,24 +51,22 @@ jobs:
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
           ${{ runner.os }}-node-
+
     - name: Install Dependencies
       if: steps.cache.outputs.cache-hit != 'true'
       run: |
         npm install
+
     - name: Crawl
       run: |
         rm -rf source/_posts
         python main.py  ${{ secrets.CORS_API }}  ${{ secrets.RSSHUB_API }}
+
     - name: Generate Public Files
       run: |
         # Restore last modified time
         git ls-files -z | while read -d '' path; do touch -d "$(git log -1 --format="@%ct" "$path")" "$path"; done
         npm run start
-
-    - name: Pull Other repo
-      run: |
-        # pull wehou
-        git submodule add https://github.com/Touhou-Public/WeHou.git public/WeHou
 
     - name: Deploy Github
       uses: peaceiris/actions-gh-pages@v3
