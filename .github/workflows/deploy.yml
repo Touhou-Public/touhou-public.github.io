@@ -27,7 +27,7 @@ jobs:
         # pull Other repo
         git config advice.addIgnoredFile false
         # git submodule add https://github.com/Touhou-Public/WeHou.git public/WeHou
-        git submodule -f add https://github.com/Bloak/Bloak.github.io.git public/bloak
+        git submodule add -f https://github.com/Bloak/Bloak.github.io.git public/bloak
 
     - name: Setup Node.js 14.x
       uses: actions/setup-node@master
