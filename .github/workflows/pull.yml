@@ -1,4 +1,4 @@
-name: upload to gh-pages
+name: Pull Repo
 
 on:
   push:
@@ -6,17 +6,19 @@ on:
       - main
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v2
-
-      - name: Create directory
         run: mkdir -p /home/runner/work/touhou-public.github.io/touhou-public.github.io/WeHou
+        with:
+          repository: Touhou-Public/WeHou
+          ref: main
+          path: WeHou
 
-      - name: Build and deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.2
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
           folder: WeHou
