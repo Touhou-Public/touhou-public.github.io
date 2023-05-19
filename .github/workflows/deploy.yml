@@ -67,7 +67,7 @@ jobs:
       run: |
         # pull Other repo
         git config advice.addIgnoredFile false
-        git submodule add -f https://github.com/Touhou-Public/WeHou.git public/WeHou
+        git submodule add -f https://github.com/Touhou-Public/WeHou.git public/wehou
         git submodule add -f https://github.com/Bloak/Bloak.github.io.git public/bloak
 
     - name: Deploy Github
