@@ -26,7 +26,7 @@ jobs:
       run: |
         # pull Other repo
         # git submodule add https://github.com/Touhou-Public/WeHou.git source/WeHou
-        git submodule add https://github.com/Bloak/Bloak.github.io.git/touhou_piano_library source/touhou_piano_library
+        git submodule add https://github.com/Bloak/Bloak.github.io.git source/bloak
 
 
     - name: Setup Node.js 14.x
