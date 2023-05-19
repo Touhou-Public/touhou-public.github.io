@@ -10,7 +10,7 @@ keywords:  touhou, 东方, 東方, touhou-project, 东方Project, 東方Project,
 author: Touhou-Public
 language: zh-CN
 timezone: 'Asia/Shanghai'
-avatar: /avatar.png
+avatar: /assets/logo/touhou_lite_color.svg
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://touhou.pub/
