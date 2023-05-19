@@ -56,6 +56,12 @@ jobs:
         # Restore last modified time
         git ls-files -z | while read -d '' path; do touch -d "$(git log -1 --format="@%ct" "$path")" "$path"; done
         npm run start
+    - name: Checkout other repository
+      uses: actions/checkout@v2
+      with:
+        repository: Touhou-Public/WeHou
+        ref: gh-pages
+        path: /WeHou
 
     - name: Deploy Github
       uses: peaceiris/actions-gh-pages@v3
