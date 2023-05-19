@@ -57,6 +57,17 @@ jobs:
         git ls-files -z | while read -d '' path; do touch -d "$(git log -1 --format="@%ct" "$path")" "$path"; done
         npm run start
 
+    # pull wehou
+    - name: Create directory
+      run: mkdir -p /home/runner/work/touhou-public.github.io/touhou-public.github.io/public/WeHou
+
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        repository: Touhou-Public/WeHou
+        ref: master
+        path: ./public/WeHou
+
     - name: Deploy Github
       uses: peaceiris/actions-gh-pages@v3
       with:
@@ -66,20 +77,3 @@ jobs:
         user_email: 'github-actions[bot]@users.noreply.github.com'
         force_orphan: true
         branch: gh-pages
-
-    # pull wehou
-    - name: Create directory
-      run: mkdir -p /home/runner/work/touhou-public.github.io/touhou-public.github.io/WeHou
-
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        repository: Touhou-Public/WeHou
-        ref: master
-        path: WeHou
-
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@4.1.4
-      with:
-        branch: gh-pages
-        folder: WeHou
