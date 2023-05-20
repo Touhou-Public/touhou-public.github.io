@@ -17,9 +17,17 @@ comments: false
 
 {% endablock %}
 
-# RSSBOX
+# Touhou-Public
 
-五郎订阅的各种奇奇怪怪的信息流，目前正在收集东方相关信息中。。
+{% image /assets/logo/touhou_lite_colo.svg logo fancybox:true %}
+
+> 以 [纯狐](https://thwiki.cc/纯狐) 为原型设计的Logo，代表 **纯化程度的能力** 
+> 剔除资本大数据的干扰，让东方以互联网最原始的形态呈现，便是本网站的初心。
+> ~~可能也包含了对资本纯粹的怨恨x~~
+
+## 如何使用本网站？
+
+> 点击下方链接查看指南项目就知道辣~
 
 {% link https://touhou.pub/wiki/guides/index.html desc:true %}
 
@@ -40,15 +48,29 @@ comments: false
 
 > 有的时候懒得手写了，可以看 [Github Commits](https://github.com/Touhou-Public/touhou-public.github.io/commits/main) 记录x
 
+{% timeline %}
+
+<!-- node 2023 年 5 月 19 日 -->
 - 2023.5.19 完善[入坑指南项目](/wiki/guides/)，增加github项目合集，Awasome-Touhou等页面
+<!-- node 2023 年 5 月 18 日 -->
 - 2023.5.18 完善[入坑指南项目](/wiki/guides/)，增加新订阅源。
+<!-- node 2023 年 5 月 17 日 -->
 - 2023.5.17 创建[项目列表](/wiki)，新建[入坑指南项目](/wiki/guides/)
+<!-- node 2023 年 5 月 16 日 -->
 - 2023.5.16 丰富订阅源，增设自建RSSHub，实现网易云音乐在线播放，修改b站播放器适配问题
+<!-- node 2023 年 5 月 15 日 -->
 - 2023.5.15 更换RSSBOX订阅源为东方相关订阅源
+
+{% endtimeline %}
+
+
+本网站还在构建中，欢迎各路大佬加入！
+
+{% link https://github.com/Touhou-Public desc:true %}
 
 {% ablock color:info %}
 
-# <center>IMC.RE 讨论群</center>
+# <center>讨论群</center>
 
 {% tabs active:1 %}
 
