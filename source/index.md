@@ -19,7 +19,7 @@ comments: false
 
 # Touhou-Public
 
-{% image /assets/logo/touhou_lite_colo.svg logo fancybox:true %}
+{% image /assets/logo/touhou_lite_color.svg logo fancybox:true %}
 
 > 以 [纯狐](https://thwiki.cc/纯狐) 为原型设计的Logo，代表 **纯化程度的能力** 
 > 剔除资本大数据的干扰，让东方以互联网最原始的形态呈现，便是本网站的初心。
