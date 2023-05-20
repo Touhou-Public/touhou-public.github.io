@@ -17,6 +17,7 @@ order: 800
 
 以下精选了几篇东方同人文章，提供链接，供君取用：
 
+- [《东方拾物谭》](https://blog.imc.re/categories/Article/%E4%B8%9C%E6%96%B9%E6%8B%BE%E7%89%A9%E8%B0%AD/) ~~(站长编写，臭不要脸x)~~
 - [晴雨](https://firebook.store/book/375/chapter/2248)
 - [杀死那个巫女小姐](https://firebook.store/book/407/chapter/2438)
 - [天花板高两米七](https://firebook.store/book/406/chapter/2436)
