@@ -1,5 +1,7 @@
 # touhou rss collection 
 
+# 由于收集过多导致github action hexo npm编译内存不足，所以作为备份收录，主链接只用来展示部分收集。
+
 Articles:
   知乎话题-东方Project: https://rsshub.5l.re/zhihu/topic/19701004
   # 文文最速新闻: https://www.touhou.cc/bbs/forum.php?mod=forumdisplay&fid=48&mod=rss
@@ -11,16 +13,44 @@ Videos:
   五郎-东方: https://rsshub.5l.re/bilibili/fav/359079394/2299444994
   五郎-东方动画: https://rsshub.5l.re/bilibili/fav/359079394/2320517394
   御坂14363号-东方: https://rsshub.5l.re/bilibili/fav/699221292/1703917092
+   
+   # b站收藏夹-东方音像馆
   东方音像馆: https://rsshub.5l.re/bilibili/user/dynamic/630991474
   【东方音像馆】动画: https://rsshub.5l.re/bilibili/fav/630991474/2039128274
-  #【东方音像馆】原作背景设定解析视频: https://rsshub.5l.re/bilibili/fav/630991474/1531327474
+  【东方音像馆】原作背景设定解析视频: https://rsshub.5l.re/bilibili/fav/630991474/1531327474
   【东方同人】手书/动画/MMD/游戏: https://rsshub.5l.re/bilibili/fav/630991474/2058051274
   【东方音像馆】捏他: https://rsshub.5l.re/bilibili/fav/630991474/1531504474
   东方同人视频神中神: https://rsshub.5l.re/bilibili/fav/630991474/2052123874
   东方同人视频佳作推荐: https://rsshub.5l.re/bilibili/fav/630991474/2045619274
+  【东方春华宴】同人视频推荐刊｜新年特辑: https://rsshub.5l.re/bilibili/fav/630991474/1514475374
+  【东方春华宴】同人视频推荐刊｜新年特辑2: https://rsshub.5l.re/bilibili/fav/630991474/2137636374
+  【东方春华宴】同人视频推荐刊｜新年特辑3: https://rsshub.5l.re/bilibili/fav/630991474/2038263774
+  【东方春华宴】年味东方同人视频大全: https://rsshub.5l.re/bilibili/fav/630991474/1526296374
+  【东方华灯宴】历年单品及相关视频整合: https://rsshub.5l.re/bilibili/fav/630991474/1535043174
+  【华灯璀璨】五届华灯宴节目TOP100: https://rsshub.5l.re/bilibili/fav/630991474/1534625874
+  【东方新春宴】单品合辑: https://rsshub.5l.re/bilibili/fav/630991474/2047032974
+  【东方华灯宴】幕后及相关作品: https://rsshub.5l.re/bilibili/fav/630991474/2056876974
+  【东方拜年祭】: https://rsshub.5l.re/bilibili/fav/630991474/1549283074
+  【东方拜年祭】精选作品: https://rsshub.5l.re/bilibili/fav/630991474/2211496774
+  【东方生草宴】: https://rsshub.5l.re/bilibili/fav/630991474/2052284574
+  各种拜年祭里的东方: https://rsshub.5l.re/bilibili/fav/630991474/2057218674
+  东方MAD合作单品: https://rsshub.5l.re/bilibili/fav/630991474/2045174874
+  【东方碎月祭】: https://rsshub.5l.re/bilibili/fav/630991474/1788981974
+  【东方夏夜祭】: https://rsshub.5l.re/bilibili/fav/630991474/2038851974
+  【东方圣诞祭】圣诞同人特辑: https://rsshub.5l.re/bilibili/fav/630991474/1531604374
+  【东方万圣祭】: https://rsshub.5l.re/bilibili/fav/630991474/1619365374
+  【东方捏他祭】万物皆可东方: https://rsshub.5l.re/bilibili/fav/630991474/1522277874
+  【东方恋色祭】: https://rsshub.5l.re/bilibili/fav/630991474/1529173474
+  【东方音像馆】同人音乐: https://rsshub.5l.re/bilibili/fav/630991474/1531256274
+  【东方儿童节】: https://rsshub.5l.re/bilibili/fav/630991474/2183274774
+  【东方节日】: https://rsshub.5l.re/bilibili/fav/630991474/2214493274
+  【欧美东方乡】: https://rsshub.5l.re/bilibili/fav/630991474/2229493574
   【东方音像馆】Bad Apple: https://rsshub.5l.re/bilibili/fav/630991474/1532146474
   【东方音像馆】MC联动: https://rsshub.5l.re/bilibili/fav/630991474/1534255574
   【东方音像馆】整活: https://rsshub.5l.re/bilibili/fav/630991474/1531517074
+  【布偶/FUMO】: https://rsshub.5l.re/bilibili/fav/630991474/2113623374
+  【展会/活动/圣地巡礼】: https://rsshub.5l.re/bilibili/fav/630991474/2057358474
+  【东方音像馆】宅舞: https://rsshub.5l.re/bilibili/fav/630991474/1534961874
   【东方音像馆】MMD舞蹈: https://rsshub.5l.re/bilibili/fav/630991474/1531422574
   【东方音像馆】MMD日常: https://rsshub.5l.re/bilibili/fav/630991474/1531269674
   【东方音像馆】MMD剧情: https://rsshub.5l.re/bilibili/fav/630991474/1531332674
@@ -29,10 +59,23 @@ Videos:
   【东方音像馆】MMD短篇: https://rsshub.5l.re/bilibili/fav/630991474/1531329274
   【东方音像馆】日语MMD: https://rsshub.5l.re/bilibili/fav/630991474/1531155474
   【东方音像馆】3D: https://rsshub.5l.re/bilibili/fav/630991474/1534398374
+  【东方音像馆】语言类: https://rsshub.5l.re/bilibili/fav/630991474/1531357674
+  【东方音像馆】舞台剧: https://rsshub.5l.re/bilibili/fav/630991474/1534512674
+  【东方音像馆】音乐剧: https://rsshub.5l.re/bilibili/fav/630991474/1534543174
   【东方音像馆】手书剧情: https://rsshub.5l.re/bilibili/fav/630991474/1534319574
   【东方音像馆】手书: https://rsshub.5l.re/bilibili/fav/630991474/1531254974
+  【东方音像馆】东方风同人音乐: https://rsshub.5l.re/bilibili/fav/630991474/1532060474
+  【东方音像馆】组曲｜串烧: https://rsshub.5l.re/bilibili/fav/630991474/1531535274
+  【东方同音录】原曲拼接: https://rsshub.5l.re/bilibili/fav/630991474/1483272974
+  【东方音像馆】音MAD: https://rsshub.5l.re/bilibili/fav/630991474/1531486674
+  【东方音像馆】AMV/MAD/混剪: https://rsshub.5l.re/bilibili/fav/630991474/1534608974
   【东方音像馆】MAD静止系PV: https://rsshub.5l.re/bilibili/fav/630991474/1531324574
-
+  【东方音像馆】动画: https://rsshub.5l.re/bilibili/fav/630991474/1570584674
+  【东方音像馆】插画: https://rsshub.5l.re/bilibili/fav/630991474/1534515174
+  【东方音像馆】游戏魔改/mod: https://rsshub.5l.re/bilibili/fav/630991474/1531254874
+  【东方音像馆】同人游戏: https://rsshub.5l.re/bilibili/fav/630991474/1531509874
+  【东方音像馆】原作STG: https://rsshub.5l.re/bilibili/fav/630991474/1534837874
+  谈谈东方的商业化进程: https://rsshub.5l.re/bilibili/user/collection/12246/1265901
 
   # b站动态
   东方音像馆: https://rsshub.5l.re/bilibili/user/dynamic/630991474
@@ -67,7 +110,8 @@ Music:
   # b站收藏夹
   五郎-东方音乐: https://rsshub.5l.re/bilibili/fav/359079394/2293459894
   御坂14363号-东方音乐: https://rsshub.5l.re/bilibili/fav/699221292/1699573092
-  【东方音像馆】同人音乐: https://rsshub.5l.re/bilibili/fav/630991474/1531256274
+
+  # b站收藏夹-东方音像馆
   【东方同音录】温暖的神社｜曲风大全: https://rsshub.5l.re/bilibili/fav/630991474/1381836274
   【东方同音录】温暖的神社｜热门曲: https://rsshub.5l.re/bilibili/fav/630991474/1450130374
   【东方同音录】温暖的神社｜风格改编: https://rsshub.5l.re/bilibili/fav/630991474/1382777374
@@ -76,9 +120,13 @@ Music:
   【东方同音录】温暖的神社｜创意: https://rsshub.5l.re/bilibili/fav/630991474/1383201874
   【东方音乐】原曲同人串烧/相关/分析: https://rsshub.5l.re/bilibili/fav/630991474/2057360574
   【原曲】再翻译/分析: https://rsshub.5l.re/bilibili/fav/630991474/2057763174
-  
-
-
+  【东方同音奏】温暖的神社: https://rsshub.5l.re/bilibili/fav/630991474/1467537074
+  【东方同音录】温暖的神社｜其他: https://rsshub.5l.re/bilibili/fav/630991474/1513783674
+  【东方同音录】温暖的神社｜音mad: https://rsshub.5l.re/bilibili/fav/630991474/1405237874
+  【东方同音录】温暖的神社｜合辑: https://rsshub.5l.re/bilibili/fav/630991474/1383114774
+  【东方同音录】Cookie☆温暖的神社①: https://rsshub.5l.re/bilibili/fav/630991474/1381490374
+  【东方同音录】Cookie☆温暖的神社②: https://rsshub.5l.re/bilibili/fav/630991474/1381836574
+  【东方同音录】Cookie☆温暖的神社③: https://rsshub.5l.re/bilibili/fav/630991474/1381576174
 
   # b站动态
   触手猴-钢琴演奏: https://rsshub.5l.re/bilibili/user/dynamic/489391680
@@ -110,6 +158,7 @@ Music:
   东方永夜抄-钢琴演奏: https://rsshub.5l.re/bilibili/user/channel/475040596/595318
   暁Records-PV: https://rsshub.5l.re/bilibili/user/collection/448823/956606
   囧仙-幻奏盛宴: https://rsshub.5l.re/bilibili/user/channel/12246/894824
+  东方兽王园-BGM: https://rsshub.5l.re/bilibili/user/collection/82759/1352943
 
   # 网易云:
   上海爱丽丝幻乐团_ZUN-网易云: https://rsshub.5l.re/163/music/artist/15345
@@ -146,9 +195,6 @@ Games:
   The_495th_Comple: https://rsshub.5l.re/bilibili/user/dynamic/1629262586
   东方冰之勇者记: https://rsshub.5l.re/bilibili/user/collection/1079825019/564130
   WILDLOTUS: https://rsshub.5l.re/bilibili/user/dynamic/1561810545
-  【东方音像馆】游戏魔改/mod: https://rsshub.5l.re/bilibili/fav/630991474/1531254874
-  【东方音像馆】原作STG: https://rsshub.5l.re/bilibili/fav/630991474/1534837874
-  【东方音像馆】同人游戏: https://rsshub.5l.re/bilibili/fav/630991474/1531509874
 
 Clubs:
   # Twitter
