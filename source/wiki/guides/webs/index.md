@@ -7,7 +7,32 @@ order: 600
 
 # 东方网站指南
 
+> 东方Project相关的网站一览
 
-## 东方网站
+## Wiki
 
-{% sites touhou %}
+{% sites touhou-wiki %}
+
+## Music
+
+{% sites touhou-music %}
+
+## tools
+
+{% sites touhou-tools %}
+
+## BBS
+
+{% sites touhou-bbs %}
+
+## social
+
+{% sites touhou-social %}
+
+## games
+
+{% sites touhou-games %}
+
+## clubs
+
+{% sites touhou-clubs %}

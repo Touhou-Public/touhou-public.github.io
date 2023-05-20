@@ -8,3 +8,7 @@ order: 700
 # 东方社团指南
 
 - [同人社团列表- THBWiki](https://thwiki.cc/同人社团列表)
+
+## 社团相关网站
+
+{% sites touhou-clubs %}

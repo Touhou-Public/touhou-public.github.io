@@ -12,3 +12,7 @@ order: 400
 - [分类:同人专辑 - THBWiki](https://thwiki.cc/%E5%88%86%E7%B1%BB:%E5%90%8C%E4%BA%BA%E4%B8%93%E8%BE%91)
 
 - [Touhou Piano Library](https://bloak.github.io/touhou_piano_library/index.html)
+
+## 音乐相关网站
+
+{% sites touhou-music %}
