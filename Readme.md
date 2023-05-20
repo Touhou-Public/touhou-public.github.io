@@ -2,7 +2,7 @@
 
  > 东方相关内容信息流收集网站
 
-![logo](/assets/logo/touhou_lite_color.svg)
+![logo](https://touhou.pub/assets/logo/touhou_lite_color.svg)
 
 > 以 [纯狐](https://thwiki.cc/纯狐) 为原型设计的Logo，代表 **纯化程度的能力** 
 > 剔除资本大数据的干扰，让东方以互联网最原始的形态呈现，便是本网站的初心。
