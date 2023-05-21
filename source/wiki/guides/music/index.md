@@ -322,3 +322,26 @@ order: 400
   - [【东方】从红到虹的终boss组曲](https://www.bilibili.com/video/BV1Lb4y1E7JQ/)
   - [【东方】红到虹的EX组曲](https://www.bilibili.com/video/BV1pG411b7Qq/)
   - [【东方组曲·极】3分钟100首~148次神衔接 | 以犯规对不可能的组曲](https://www.bilibili.com/video/BV1Nt4y1q7HW)
+
+
+  ### 东方同音录合集
+
+  
+- [【东方音像馆】东方风同人音乐](https://www.bilibili.com/medialist/detail/ml1532060474)
+- [【东方音像馆】组曲｜串烧](https://www.bilibili.com/medialist/detail/ml1531535274)
+- [【东方同音录】原曲拼接](https://www.bilibili.com/medialist/detail/ml1483272974)
+- [【东方同音录】温暖的神社｜曲风大全](https://www.bilibili.com/medialist/detail/ml1381836274)
+- [【东方同音录】温暖的神社｜热门曲](https://www.bilibili.com/medialist/detail/ml1450130374)
+- [【东方同音录】温暖的神社｜风格改编](https://www.bilibili.com/medialist/detail/ml1382777374)
+- [【东方同音录】温暖的神社｜拼合](https://www.bilibili.com/medialist/detail/ml1381763674)
+- [【东方同音录】温暖的神社｜良曲萃集](https://www.bilibili.com/medialist/detail/ml1382980374)
+- [【东方同音录】温暖的神社｜创意](https://www.bilibili.com/medialist/detail/ml1383201874)
+- [【东方音乐】原曲同人串烧/相关/分析](https://www.bilibili.com/medialist/detail/ml2057360574)
+- [【原曲】再翻译/分析](https://www.bilibili.com/medialist/detail/ml2057763174)
+- [【东方同音奏】温暖的神社](https://www.bilibili.com/medialist/detail/ml1467537074)
+- [【东方同音录】温暖的神社｜其他](https://www.bilibili.com/medialist/detail/ml1513783674)
+- [【东方同音录】温暖的神社｜音mad](https://www.bilibili.com/medialist/detail/ml1405237874)
+- [【东方同音录】温暖的神社｜合辑](https://www.bilibili.com/medialist/detail/ml1383114774)
+- [【东方同音录】Cookie☆温暖的神社①](https://www.bilibili.com/medialist/detail/ml1381490374)
+- [【东方同音录】Cookie☆温暖的神社②](https://www.bilibili.com/medialist/detail/ml1381836574)
+- [【东方同音录】Cookie☆温暖的神社③](https://www.bilibili.com/medialist/detail/ml1381576174)
