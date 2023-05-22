@@ -37,11 +37,11 @@ comments: false
 
 {% link https://touhou.pub/wiki/guides/index.html desc:false %}
 
-## 导航站
+<h1 class="marisafont">Website</h1>
 
 {% link https://touhou.pub/webs/ desc:false %}
 
-## Todo
+<h1 class="reimufont">Todo</h1>
 
 - 收集东方相关信息流订阅源（长期任务）
 - 收集东方相关网站，创作者等信息（长期任务）
@@ -49,17 +49,20 @@ comments: false
 - 开设运维东方相关社区（待定？）
 - 将Hexo换成Hugo，尝试解决订阅源过多导致的内存溢出问题
 
-## Finished
+<h1 class="yuyukofont">Finished</h1>
 - ~~创建Github组织专门管理东方相关开发资源~~
 - ~~妥善安排东方专属域名托管~~
 
 
-## Logs
+<h1 class="yakumofont">Logs</h1>
 
 > 有的时候懒得手写了，可以看 [Github Commits](https://github.com/Touhou-Public/touhou-public.github.io/commits/main) 记录x
 
 {% timeline %}
 
+<!-- node 2023 年 5 月 22 日 -->
+- 2023.5.22 购买[TOHO FONT PROJECT](http://font.heartx.info/)并增设作为网站特色字体
+- 将[网站导航](https://touhou.pub/webs/)作为独立页面展示
 <!-- node 2023 年 5 月 19 日 -->
 - 2023.5.19 完善[入坑指南项目](/wiki/guides/)，增加github项目合集，Awasome-Touhou等页面
 <!-- node 2023 年 5 月 18 日 -->

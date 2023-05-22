@@ -33,6 +33,6 @@ order: 100
 
 {% sites touhou-games %}
 
-## clubs
+## circles
 
-{% sites touhou-clubs %}
+{% sites touhou-circles %}

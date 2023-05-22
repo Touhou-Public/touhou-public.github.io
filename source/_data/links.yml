@@ -97,6 +97,43 @@
       screenshot: https://smgimg.pages.dev/media/small/uploads/202305221953701.png
       avatar: https://smgimg.pages.dev/media/small/uploads/202305221953811.png
       description: 东方相关群组收集网站
+      
+    - title: 封面展示站
+      url: https://img.thwiki.cc/
+      screenshot: 东方官作封面展示站
+      avatar: https://img.thwiki.cc/favicon.ico
+      description: 东方相关群组收集网站
+      
+    - title: TOUHOU98 FONT
+      url: https://touhou98.touhou.moe/
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305222356925.png
+      avatar: https://touhou98.touhou.moe/favicon.ico
+      description: 东方相关群组收集网站
+      
+    - title: TOHO FONT PROJECT
+      url: http://font.heartx.info/
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305222357304.png
+      avatar: 
+      description: 东方同人字体设计集
+      
+    - title: 幻想乡柱状地图
+      url: https://map.thwiki.cc/
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305222359676.png
+      avatar: https://map.thwiki.cc/favicon.ico
+      description: 东方同人字体设计集
+      
+    - title: 同人歌词库
+      url: https://lyrics.thwiki.cc/
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305230000283.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305230000206.png
+      description: 一个 东方Project 同人歌词库
+      
+    - title: 附带文档总页
+      url: https://omake.thwiki.cc/
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305230002978.png
+      avatar: https://smgimg.pages.dev/media/small/uploads/202305171653854.png
+      description: 一个 东方Project 同人歌词库
+
 
 'touhou-bbs':
     - title: Touhou.CC
@@ -197,6 +234,12 @@
       avatar: https://smgimg.pages.dev/media/small/uploads/202305222006303.png
       description: 东方题材的2048小游戏
 
+    - title: puzzle
+      url: https://puzzle.touhou.moe/
+      screenshot: 
+      avatar: 
+      description: 东方neta为主的推理型游戏
+
     - title: 大家的幻想乡
       url: http://www.touhou.ren/
       screenshot: 
@@ -227,7 +270,7 @@
       avatar: 
       description: 使用Lua开发STG游戏的引擎
       
-'touhou-clubs':
+'touhou-circles':
     - title: 上海爱丽丝幻乐团
       url: http://www16.big.or.jp/~zun/top.html
       screenshot: https://smgimg.pages.dev/media/small/uploads/202305221820025.png
@@ -240,17 +283,29 @@
       avatar: https://smgimg.pages.dev/media/small/uploads/202305171653854.png
       description: 东方同人交响乐团
 
-    - title: NEETS
-      url: http://neets.tokyo/
-      screenshot: https://smgimg.pages.dev/media/small/uploads/202305202135505.png
-      avatar: https://smgimg.pages.dev/media/small/uploads/202305202135285.png
-      description: 东方同人交响乐团
-
     - title: 京都幻想剧团
       url: http://kyotofantasytroupe.net/
       screenshot: https://smgimg.pages.dev/media/small/uploads/202305202150499.png
       avatar: https://smgimg.pages.dev/media/small/uploads/202305202150884.png
       description: 东方同人动画社团
+
+    - title: 京华万象展官网
+      url: https://bj.thonly.name/
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305222351212.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305222350460.png
+      description: 中国东方同人社团展会
+
+    - title: 幻奏盛宴官网
+      url: https://touhou-symphony.net/
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305222353660.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305222352526.png
+      description: 东方Project同人音乐演出活动
+
+    - title: NEETS
+      url: http://neets.tokyo/
+      screenshot: https://smgimg.pages.dev/media/small/uploads/202305202135505.png
+      avatar: https://smgimg.pages.dev/media/small/uploads/202305202135285.png
+      description: 东方同人交响乐团
 
     - title: 充满魔力的土地下
       url: http://touhoudog.net/
@@ -275,6 +330,12 @@
       screenshot: https://smgimg.pages.dev/media/small/uploads/202305202207384.png
       avatar: https://smgimg.pages.dev/media/small/uploads/202305202208870.png
       description: 东方同人社团信息查询站
+
+    - title: 氷結幻想
+      url: http://hyouketsu.web.fc2.com/
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305230009980.png
+      avatar: 
+      description: 东方同人音乐社团网站
 
 'contact':
     - title: Dodo
