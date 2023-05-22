@@ -5,6 +5,12 @@
       avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305171653854.png
       description: 国内优秀的中文东方wiki
 
+    - title: Touhou.Info
+      url: http://thwiki.info/
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305221818698.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305221817950.png
+      description: 日本非官方性质的东方wiki
+
     - title: Touhou Wiki
       url: https://en.touhouwiki.net/wiki/Touhou_Wiki
       screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305171634490.png
@@ -35,6 +41,13 @@
       screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305202243912.png
       avatar: https://touhou.pub/touhou_piano_library/assets/images/logo.svg
       description: 东方乐谱收集库
+
+    - title: th-music-video-generator
+      url: https://touhou-public.github.io/th-music-video-generator/
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305221803842.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305221802873.png
+      description: 东方音乐在线播放器
+
 
     - title: 東方同人音楽流通
       url: https://touhou-music.jp/
@@ -71,6 +84,18 @@
       url: https://touhou.group/
       screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305201646256.png
       avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305201646799.png
+      description: 东方相关群组收集网站
+      
+    - title: THBWiki工具箱
+      url: https://tool.thwiki.cc/
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305221809075.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305171653854.png
+      description: 东方相关群组收集网站
+      
+    - title: 中文东方人气投票
+      url: https://touhou.vote/
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305221953701.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305221953811.png
       description: 东方相关群组收集网站
 
 'touhou-bbs':
@@ -160,6 +185,18 @@
       avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305202131168.png
       description: 东方题材的开源音乐游戏
 
+    - title: WeHou
+      url: http://touhou.pub/WeHou/
+      screenshot: https://touhou.pub/WeHou/img/demo8.jpg
+      avatar: https://touhou.pub/assets/logo/touhou_lite_color.svg
+      description: 在线游玩网页STG
+
+    - title: 为阿求续命
+      url: https://akyuu.touhou.moe/
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305222005668.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305222006303.png
+      description: 东方题材的2048小游戏
+
     - title: 大家的幻想乡
       url: http://www.touhou.ren/
       screenshot: 
@@ -191,6 +228,18 @@
       description: 使用Lua开发STG游戏的引擎
       
 'touhou-clubs':
+    - title: 上海爱丽丝幻乐团
+      url: http://www16.big.or.jp/~zun/top.html
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305221820025.png
+      avatar: 
+      description: 上海爱丽丝幻乐团官网
+
+    - title: 梦缘社
+      url: https://dream.thwiki.cc/
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305222001162.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305171653854.png
+      description: 东方同人交响乐团
+
     - title: NEETS
       url: http://neets.tokyo/
       screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305202135505.png
@@ -201,7 +250,7 @@
       url: http://kyotofantasytroupe.net/
       screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305202150499.png
       avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305202150884.png
-      description: 东方符斗祭同人游戏论坛
+      description: 东方同人动画社团
 
     - title: 充满魔力的土地下
       url: http://touhoudog.net/
