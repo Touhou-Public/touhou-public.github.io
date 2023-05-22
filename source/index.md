@@ -50,6 +50,7 @@ comments: false
 - 将Hexo换成Hugo，尝试解决订阅源过多导致的内存溢出问题
 
 <h1 class="yuyukofont">Finished</h1>
+
 - ~~创建Github组织专门管理东方相关开发资源~~
 - ~~妥善安排东方专属域名托管~~
 
