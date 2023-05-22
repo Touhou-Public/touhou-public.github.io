@@ -78,6 +78,33 @@ comments: false
 
 {% link https://github.com/Touhou-Public desc:true %}
 
+{% ablock color:info %}
+
+# <center>讨论群</center>
+
+{% tabs active:1 %}
+
+<!-- tab 公告 -->
+
+{% ablock child:iframe %}
+<iframe title="dodochat" src="https://widget.imdodo.com/w/index.html#/channel?cids=1645943,1645946,1645955,1645947&iid=208930&sig=J9Mz91BVnuAX5xZ85epLOw%3D%3D&theme=1" style="border: none; width: 100%; height: 800px;"></iframe>
+{% endablock %}
+
+<!-- tab 讨论 -->
+
+{% ablock child:iframe %}
+<iframe title="dodochat" src="https://widget.imdodo.com/w/index.html#/channel?cids=1645944,1645948,1645954&iid=208930&inter=1&sig=scu6qYBK74%2BNY1XGjIE5Yg%3D%3D&theme=1" style="border: none; width: 100%; height: 800px;"></iframe>
+{% endablock %}
+
+<!-- tab Discord -->
+{% ablock child:iframe %}
+<iframe title="WidgetBot Discord chat embed" allow="clipboard-write" src="https://e.widgetbot.io/channels/769348161470464001/1012258700922208287?api=82547ba4-1c9a-4f26-af08-c1fe372a4bb4" style="border: none; width: 100%; height: 800px;"></iframe>
+{% endablock %}
+
+{% endtabs %}
+
+{% endablock %}
+
 # 其他联系方式
 
 {% friends contact %}
