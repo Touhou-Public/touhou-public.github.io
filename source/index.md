@@ -6,18 +6,24 @@ comments: false
 
 {% ablock color:info %}
 
+<center>
+<h1 class="yakumofont">Touhou-Public</h1>
+</center>
+
 {% image https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305152215774.png download:true fancybox:true %}
 
 {% navbar 
 [主页](/) 
+[网站](/webs/) 
 [项目](/wiki/) 
 [订阅](/rss/) 
-[博客](https://blog.imc.re/) 
+[Org](https://github.com/Touhou-Public)
 %}
 
 {% endablock %}
 
-# Touhou-Public
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link href="https://cdn.jsdelivr.net/npm/font-touhou98/dist/touhou98.css" rel="stylesheet" />
 
 {% image https://touhou.pub/assets/logo/touhou_lite_color.svg logo fancybox:true %}
 
@@ -29,7 +35,13 @@ comments: false
 
 > 点击下方链接查看指南项目就知道辣~
 
-{% link https://touhou.pub/wiki/guides/index.html desc:true %}
+**当前指南还在编辑中，欢迎各位前来添砖加瓦！**
+
+{% link https://touhou.pub/wiki/guides/index.html desc:false %}
+
+## 导航站
+
+{% link https://touhou.pub/webs/ desc:false %}
 
 ## Todo
 

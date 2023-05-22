@@ -30,11 +30,11 @@ related:
 
 welcome:
   layout: markdown
-  title: 化繁为简
+  title: Touhou-Public
   content: |
-    纯静态托管RSS订阅查看网站，好耶！
+    东方Project相关信息查看公式站
     <br>
-    ~~折腾了那么久，可算弄好了~~
+    纯静态开源的站点，欢迎加入共同维护
     
 tagcloud:
   layout: tagcloud

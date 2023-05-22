@@ -20,12 +20,12 @@ sidebar:
     # title: '[<img no-lazy height="32px" src="https://q1.qlogo.cn/g?b=qq&nk=2128336160&s=640"/>](/)'
   logo:
     avatar: '[config.avatar](/rss)' # you can set avatar link in _config.yml or '[https://xxx.png](/about/)'
-    title: '[config.title](/)' # you can set html tag like: '[<img no-lazy height="32px" src="xxx"/>](/)'
+    title: '[<h1 class="yuyukofont">Touhou.Pub</h1>](/)' #config.title you can set html tag like: '[<img no-lazy height="32px" src="xxx"/>](/)'
   menu:
     home: '[btn.home](/)'
     wiki: '[项目](/wiki)'
     post: '[RSS](/rss)'
-    blog: '[博客](https://blog.imc.re/)'
+    blog: '[Org](https://github.com/Touhou-Public)'
   widgets:
     #### 自动生成的页面 ####
     # 主页
@@ -90,15 +90,20 @@ footer:
        url: 'https://blog.imc.re/contact'
   sitemap:
      '文章':
+       - '[订阅](/rss)'
        - '[分类](/categories)'
        - '[标签](/tags)'
        - '[归档](/archives)'
+     '项目':
+       - '[指南](/wiki/guides)'
+       - '[导航](/webs)'
      '更多':
+       - '[Github](https://github.com/Touhou-Public)'
        - '[博客](https://blog.imc.re/)'
        - '[IMC.RE](https://imc.re/)'
   content: | # 支持 Markdown 格式
-    [@RSSBOX](/) 2023 author by [MHuiG](https://github.com/MHG-LAB/RSSBOX) powered by SummerGoro。<br>
-    本博客所有文章除特别声明外，均采用 [GLWT（Good Luck With That，祝你好运）公共许可证](https://github.com/me-shaon/GLWTPL/blob/master/translations/LICENSE_zh-CN) 许可协议，转载请注明出处。
+    [@Touhou.Pub](/) 2023 powered by [Touhou-Public](https://github.com/Touhou-Public)。<br>
+    本网站所有内容除特别声明外，均采用 [GLWT（Good Luck With That，祝你好运）公共许可证](https://github.com/me-shaon/GLWTPL/blob/master/translations/LICENSE_zh-CN) 许可协议，转载请注明出处。
 
 lazyload:
   enable: true # [hexo clean && hexo s] is required after changing this value.
