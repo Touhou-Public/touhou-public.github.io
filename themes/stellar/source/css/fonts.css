@@ -78,7 +78,7 @@
 /* 华康金文体 */
 @font-face {
     font-family: 'DFJinWen';
-    src: url('../fonts/DFPJinWenW3-P.ttf') format('truetype');
+    src: url('../fonts/DFPJinWenW3-F.ttf') format('truetype');
 }
 .DFJinWen {
     font-family: 'DFJinWen';
