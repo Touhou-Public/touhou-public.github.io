@@ -9,6 +9,10 @@ order: 100
 
 > 东方Project相关的网站一览
 
+## Top
+
+{% sites touhou-top %}
+
 ## Wiki
 
 {% sites touhou-wiki %}

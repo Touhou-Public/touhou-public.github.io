@@ -1,3 +1,22 @@
+'touhou-top':
+    - title: 上海爱丽丝幻乐团
+      url: http://www16.big.or.jp/~zun/top.html
+      screenshot: https://smgimg.pages.dev/media/small/uploads/202305221820025.png
+      avatar: 
+      description: 上海爱丽丝幻乐团官网
+
+    - title: 东方四方山新闻
+      url: https://touhou-project.news/
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305231210896.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305231211313.png
+      description: 东方Project相关新闻网站
+
+    - title: Touhou.Pub
+      url: https://touhou.pub/
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305231215773.png
+      avatar: https://touhou.pub/assets/logo/touhou_lite_color.svg
+      description: Touhou Public Website
+
 'touhou-wiki':
     - title: THBWiki
       url: https://thwiki.cc/
@@ -132,7 +151,13 @@
       url: https://omake.thwiki.cc/
       screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305230002978.png
       avatar: https://smgimg.pages.dev/media/small/uploads/202305171653854.png
-      description: 一个 东方Project 同人歌词库
+      description: 一个 东方Project 官方文档库
+      
+    - title: 博丽神社崇敬会
+      url: https://shop.hakurei-sukeikai.com/
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305231249178.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305231211313.png
+      description: 东方Project公认同人商店
 
 
 'touhou-bbs':
@@ -164,23 +189,23 @@
     - title: Bilibili-东方频道
       url: https://www.bilibili.com/v/channel/166
       screenshot: https://smgimg.pages.dev/media/small/uploads/202305171641399.png
-      avatar: https://smgimg.pages.dev/media/small/icon/iconfont/bilibili.svg
+      avatar: https://smgimg.pages.dev/icon/iconfont/bilibili.svg
       description: B站东方频道分区
       
     - title: 知乎-东方话题
       url: https://www.zhihu.com/topic/19701004/top-answers
       screenshot: https://smgimg.pages.dev/media/small/uploads/202305171644611.png
-      avatar: https://smgimg.pages.dev/media/small/icon/iconfont/zhihu.svg
+      avatar: https://smgimg.pages.dev/icon/iconfont/zhihu.svg
       description: 知乎东方话题分区
       
     - title: 微博-东方话题
       url: https://s.weibo.com/weibo?q=%23%E4%B8%9C%E6%96%B9project%23
       screenshot: https://smgimg.pages.dev/media/small/uploads/202305171648540.png
-      avatar: https://smgimg.pages.dev/media/small/icon/iconfont/weibo.svg
+      avatar: https://smgimg.pages.dev/icon/iconfont/weibo.svg
       description: 微博东方话题分区
       
     - title: 贴吧-东方吧
-      url: https://tieba.baidu.com/f?kw=%B6%AB%B7%BDproject&fr=ala0&tpl=5
+      url: https://tieba.baidu.com/f?kw=%B6%AB%B7%BD
       screenshot: https://smgimg.pages.dev/media/small/uploads/202305202102602.png
       avatar: https://smgimg.pages.dev/media/small/uploads/202305202100512.png
       description: 百度贴吧中的东方集中营
@@ -188,7 +213,7 @@
     - title: Youtube-touhou
       url: https://www.youtube.com/hashtag/touhou
       screenshot: https://smgimg.pages.dev/media/small/uploads/202305171641184.png
-      avatar: https://smgimg.pages.dev/media/small/icon/iconfont/youtube.svg
+      avatar: https://smgimg.pages.dev/icon/iconfont/youtube.svg
       description: Youtube Touhou tag videos
       
     - title: niconico-東方
@@ -200,7 +225,7 @@
     - title: Twitter-touhou
       url: https://twitter.com/hashtag/touhou
       screenshot: https://smgimg.pages.dev/media/small/uploads/202305171644443.png
-      avatar: https://smgimg.pages.dev/media/small/icon/iconfont/twitter.svg
+      avatar: https://smgimg.pages.dev/icon/iconfont/twitter.svg
       description: Twitter Touhou tag Article
       
     - title: Pixiv-touhou
@@ -269,19 +294,32 @@
       screenshot:  
       avatar: 
       description: 使用Lua开发STG游戏的引擎
+
+    - title: 東方LostWorld
+      url: https://touhoulostword.com/
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305231235988.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305231235625.png
+      description: 東方LostWorld手游官网
+
+    - title: Touhou_AR
+      url: https://touhou-ar.damo.games/
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305231236681.png
+      avatar: 
+      description: 東方 Arcadia Record 手游官网
       
 'touhou-circles':
-    - title: 上海爱丽丝幻乐团
-      url: http://www16.big.or.jp/~zun/top.html
-      screenshot: https://smgimg.pages.dev/media/small/uploads/202305221820025.png
-      avatar: 
-      description: 上海爱丽丝幻乐团官网
 
     - title: 梦缘社
       url: https://dream.thwiki.cc/
       screenshot: https://smgimg.pages.dev/media/small/uploads/202305222001162.png
       avatar: https://smgimg.pages.dev/media/small/uploads/202305171653854.png
-      description: 东方同人交响乐团
+      description: 国内东方同人文刊乐团
+
+    - title: 黄昏边境
+      url: http://tasofro.net/
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305231221346.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305231221840.png
+      description: 黄昏边境-tasofro社团官网
 
     - title: 京都幻想剧团
       url: http://kyotofantasytroupe.net/
@@ -294,6 +332,12 @@
       screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305222351212.png
       avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305222350460.png
       description: 中国东方同人社团展会
+
+    - title: 博丽神社例大祭
+      url: https://reitaisai.com/
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305231227547.png
+      avatar: 
+      description: 日本博丽神社例大祭官网
 
     - title: 幻奏盛宴官网
       url: https://touhou-symphony.net/
@@ -341,32 +385,32 @@
     - title: Dodo
       url: https://l.imc.re/dodo
       screenshot:
-      avatar: 'https://smgimg.pages.dev/media/small/icon/dodo.ico'
+      avatar: 'https://smgimg.pages.dev/icon/dodo.ico'
       description:
     - title: QQ群
       url: https://l.imc.re/qqgroup
       screenshot:
-      avatar: 'https://smgimg.pages.dev/media/small/icon/iconfont/social-qq.svg'
+      avatar: 'https://smgimg.pages.dev/icon/iconfont/social-qq.svg'
       description:
     - title: Discord
       url: https://l.imc.re/discord
       screenshot:
-      avatar: 'https://smgimg.pages.dev/media/small/icon/iconfont/discord.svg'
+      avatar: 'https://smgimg.pages.dev/icon/iconfont/discord.svg'
       description:
     - title: Bilibili
       url: https://l.imc.re/bilibili
       screenshot:
-      avatar: 'https://smgimg.pages.dev/media/small/icon/iconfont/bilibili.svg'
+      avatar: 'https://smgimg.pages.dev/icon/iconfont/bilibili.svg'
       description:
     - title: Zhihu
       url: https://l.imc.re/zhihu
       screenshot:
-      avatar: 'https://smgimg.pages.dev/media/small/icon/iconfont/zhihu.svg'
+      avatar: 'https://smgimg.pages.dev/icon/iconfont/zhihu.svg'
       description:
     - title: Github
       url: https://l.imc.re/github
       screenshot:
-      avatar: 'https://smgimg.pages.dev/media/small/icon/iconfont/social-github.svg'
+      avatar: 'https://smgimg.pages.dev/icon/iconfont/social-github.svg'
       description:
 
 'IMC':
