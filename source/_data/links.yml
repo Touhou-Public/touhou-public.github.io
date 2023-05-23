@@ -17,6 +17,12 @@
       avatar: https://touhou.pub/assets/logo/touhou_lite_color.svg
       description: Touhou Public Website
 
+    - title: Touhou-Public
+      url: https://github.com/Touhou-Public
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305231251070.png
+      avatar: 'https://smgimg.pages.dev/icon/iconfont/social-github.svg'
+      description: Touhou-Public Github Org
+
 'touhou-wiki':
     - title: THBWiki
       url: https://thwiki.cc/
@@ -408,10 +414,10 @@
       avatar: 'https://smgimg.pages.dev/icon/iconfont/zhihu.svg'
       description:
     - title: Github
-      url: https://l.imc.re/github
-      screenshot:
+      url: https://github.com/Touhou-Public
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305231251070.png
       avatar: 'https://smgimg.pages.dev/icon/iconfont/social-github.svg'
-      description:
+      description: Touhou-Public Github Org
 
 'IMC':
   - title: IMC.RE
