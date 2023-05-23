@@ -297,8 +297,8 @@
 
     - title: LuaSTG
       url: http://www.en.luastg.shoutwiki.com/wiki/Main_Page
-      screenshot:  
-      avatar: 
+      screenshot: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305231305279.png
+      avatar: https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305231304424.png
       description: 使用Lua开发STG游戏的引擎
 
     - title: 東方LostWorld
