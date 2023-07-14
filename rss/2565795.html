@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.19.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="https://gcore.jsdelivr.net">
+  <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="//unpkg.com">
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>夏五郎赞同了文章: OpenMediaVault：你的开源 NAS 系统 - Touhou.Pub</title>
+
+  
+    <meta name="description" content="我在本专栏里介绍过 HomeLab 服务器的虚拟化的方案，推荐过一些看起来不错的硬件，那么接下来将要讨论搭建 Nas 系统的相关话题了。Nas 系统方案有很多：标准 Linux，黑群晖，FreeNas，ClearOS，OpenMediaVault。标准 Linux 当然什么都能，但是配置太麻烦了，配置个 samba 或者 ftp 很简单，但你要配置的好就需要查很多资料，你想统一他们的权限也比较麻">
+<meta property="og:type" content="article">
+<meta property="og:title" content="夏五郎赞同了文章: OpenMediaVault：你的开源 NAS 系统">
+<meta property="og:url" content="https://touhou.pub/rss/2565795.html">
+<meta property="og:site_name" content="Touhou.Pub">
+<meta property="og:description" content="我在本专栏里介绍过 HomeLab 服务器的虚拟化的方案，推荐过一些看起来不错的硬件，那么接下来将要讨论搭建 Nas 系统的相关话题了。Nas 系统方案有很多：标准 Linux，黑群晖，FreeNas，ClearOS，OpenMediaVault。标准 Linux 当然什么都能，但是配置太麻烦了，配置个 samba 或者 ftp 很简单，但你要配置的好就需要查很多资料，你想统一他们的权限也比较麻">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-1eebdc9732e171adeb06314d99bbc2a2_1440w.jpg">
+<meta property="og:image" content="https://pic2.zhimg.com/v2-ee99626bb926d7b5c5dc848660aed059_1440w.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-36b0703c970850e5be9c50a5cf15f77c_1440w.jpg">
+<meta property="og:image" content="https://pic2.zhimg.com/v2-e5e9f3c21e7efa3ce59292daac1cace1_1440w.jpg">
+<meta property="og:image" content="https://pic2.zhimg.com/v2-a26c6bcb590a846c9237bf954cf223a9_1440w.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-ec4c91df07d5f04e2ea4bd6ec26237e6_1440w.jpg">
+<meta property="og:image" content="https://pic2.zhimg.com/v2-05c9faab1613b352082854ee8b52d9bd_1440w.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-640e3c411b7da568361cd1f57e77522c_1440w.jpg">
+<meta property="og:image" content="https://pic1.zhimg.com/v2-311e113e73ca6f30914d905fb23076a8_1440w.jpg">
+<meta property="og:image" content="https://pic3.zhimg.com/v2-303ef0d5e02c34a5da201465247c72aa_1440w.jpg">
+<meta property="og:image" content="https://pic2.zhimg.com/v2-540d889011192aba41d376ede5a41679_1440w.jpg">
+<meta property="article:published_time" content="2023-06-25T14:09:14.000Z">
+<meta property="article:modified_time" content="2023-06-25T14:09:14.000Z">
+<meta property="article:author" content="Touhou-Public">
+<meta property="article:tag" content="Owner">
+<meta property="article:tag" content="五郎の知乎动态">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://pic3.zhimg.com/v2-1eebdc9732e171adeb06314d99bbc2a2_1440w.jpg">
+  
+  
+  
+  <meta name="keywords" content="Owner,五郎の知乎动态">
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Touhou.Pub" type="application/atom+xml">
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+
+  
+    <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+    <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+    <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+  
+
+
+  
+
+  <link href="https://cdn.jsdelivr.net/npm/font-touhou98/dist/touhou98.css" rel="stylesheet">
+  <link href="/css/fonts.css" rel="stylesheet">
+<!--百度统计-->
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?b427d26cc6155f11e2a036ccfa4e01da";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+  
+<!--Google Adsense-->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4773172018528901" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  
+
+
+
+
+  <div class="l_body" id="start">
+    <aside class="l_left" layout="post">
+    
+
+  
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/rss"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/assets/logo/touhou_lite_color.svg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title"><h1 class="yuyukofont">Touhou.Pub</h1></div><div class="sub normal cap"><p class="touhou98">Touhou-Public</p></div><div class="sub hover cap" style="opacity:0"> 东方Project信息站</div></a></div>
+
+<nav class="menu dis-select"><a class="nav-item" href="/">主页</a><a class="nav-item" href="/wiki">项目</a><a class="nav-item active" href="/rss">RSS</a><a class="nav-item" target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Touhou-Public">Org</a></nav>
+</header>
+
+
+<div class="widgets">
+
+
+<widget class="widget-wrapper recent"><div class="widget-header cap theme dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg class="icon" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8938"><path d="M800.966 947.251c0-404.522-320.872-732.448-716.69-732.448V62.785c477.972 0 865.44 395.987 865.44 884.466h-148.75z m-162.273 0h-148.74c0-228.98-181.628-414.598-405.678-414.598v-152.01c306.205 0 554.418 253.68 554.418 566.608z m-446.24-221.12c59.748 0 108.189 49.503 108.189 110.557 0 61.063-48.44 110.563-108.188 110.563-59.747 0-108.18-49.5-108.18-110.563 0-61.054 48.433-110.556 108.18-110.556z" p-id="8939"/></svg></a></div><div class="widget-body related-posts fs14"><a class="item title" href="/rss/1f972eaf.html"><span class="title">The Touhou Empires</span></a><a class="item title" href="/rss/1e67efb1.html"><span class="title">Touhou Crisis</span></a><a class="item title" href="/rss/bebdd4ea.html"><span class="title">Touhou DollDraft</span></a><a class="item title" href="/rss/dfe5e379.html"><span class="title">Touhou Fantasia / 东方梦想曲</span></a><a class="item title" href="/rss/93f58688.html"><span class="title">Touhou Fractured Transience</span></a></div></widget>
+
+
+
+
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/rss/" placeholder="文章搜索"><svg t="1670596976048" class="icon search-icon" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"/></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+
+
+
+<widget class="widget-wrapper recent"><div class="widget-header cap theme dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg class="icon" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8938"><path d="M800.966 947.251c0-404.522-320.872-732.448-716.69-732.448V62.785c477.972 0 865.44 395.987 865.44 884.466h-148.75z m-162.273 0h-148.74c0-228.98-181.628-414.598-405.678-414.598v-152.01c306.205 0 554.418 253.68 554.418 566.608z m-446.24-221.12c59.748 0 108.189 49.503 108.189 110.557 0 61.063-48.44 110.563-108.188 110.563-59.747 0-108.18-49.5-108.18-110.563 0-61.054 48.433-110.556 108.18-110.556z" p-id="8939"/></svg></a></div><div class="widget-body related-posts fs14"><a class="item title" href="/rss/1f972eaf.html"><span class="title">The Touhou Empires</span></a><a class="item title" href="/rss/1e67efb1.html"><span class="title">Touhou Crisis</span></a><a class="item title" href="/rss/bebdd4ea.html"><span class="title">Touhou DollDraft</span></a><a class="item title" href="/rss/dfe5e379.html"><span class="title">Touhou Fantasia / 东方梦想曲</span></a><a class="item title" href="/rss/93f58688.html"><span class="title">Touhou Fractured Transience</span></a></div></widget>
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/Touhou-Public/" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/social-github.svg"></a><a class="social" href="https://space.bilibili.com/359079394" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/bilibili.svg"></a><a class="social" href="https://l.imc.re/zhihu" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/zhihu.svg"></a><a class="social" href="https://l.imc.re/discord" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/discord.svg"></a><a class="social" href="https://blog.imc.re/contact" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/comments.svg"></a></div></footer>
+
+    </aside>
+    <div class="l_main">
+      
+
+      
+
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/owner/">Owner</a> <span class="sep"></span> <a class="cap breadcrumb-link" href="/categories/owner/%E4%BA%94%E9%83%8E%E3%81%AE%E7%9F%A5%E4%B9%8E%E5%8A%A8%E6%80%81/">五郎の知乎动态</a></div><div id="post-meta">发布于&nbsp;<time datetime="2023-06-25T14:09:14.000Z">2023-06-25</time></div></div>
+
+<article class="md-text content post">
+<h1 class="article-title"><span>夏五郎赞同了文章: OpenMediaVault：你的开源 NAS 系统</span></h1>
+<div>
+<p data-pid="WIkrCEMK">我在本专栏里介绍过 HomeLab 服务器的虚拟化的方案，推荐过一些看起来不错的硬件，那么接下来将要讨论搭建 Nas 系统的相关话题了。</p><p data-pid="sGPuWCoR">Nas 系统方案有很多：标准 Linux，黑群晖，FreeNas，ClearOS，OpenMediaVault。标准 Linux 当然什么都能，但是配置太麻烦了，配置个 samba 或者 ftp 很简单，但你要配置的好就需要查很多资料，你想统一他们的权限也比较麻烦，总之就是一地的碎螺丝等着你去捡，一不小心碰到哪里了，一个错误操作你的数据就挂了。</p><p data-pid="WAbTI7Sy">黑群晖使用相对简单，但是破解的东西总归不大好，你要选择能兼容你设备的版本，而且哪天它群晖一升级，破解跟进不利，你就锁死版本了。还有一个问题是黑群晖用的魔改 linux，不是一个标准发行版，很多事情你做不了，或者得绕很大一个圈去做，后面会说到。</p><p data-pid="ZqT9yTWn">ClearOS 是相对比较完善的系统，但是免费版本功能太少，好用的模块都要付费，FreeNas 有 zfs，但是是 FreeBSD 系统，连 Docker 都跑不起来，再多插件也没用。</p><p data-pid="3hoDaHxx">所以推荐今天的主角，基于 Debian 的免费开源的 <a class="wrap external" href="https://www.openmediavault.org/" rel="external nofollow noopener noreferrer" target="_blank">OpenMediaVault</a> 下面简称 OMV：</p><figure data-size="normal"><img class="origin_image zh-lightbox-thumb lazy" data-caption data-original="https://pic3.zhimg.com/v2-1eebdc9732e171adeb06314d99bbc2a2_r.jpg" data-original-token="v2-4b20ecb0423efbb8bef8e5565df31a7c" data-rawheight="882" data-rawwidth="1406" data-size="normal" referrerpolicy="no-referrer" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic3.zhimg.com/v2-1eebdc9732e171adeb06314d99bbc2a2_1440w.jpg"></figure><p data-pid="8iePD8c_">大概是这么样一个传统 Nas 的界面，提供简单清晰的界面让你方便的管理你的：存储设备，访问权限，以及网络服务，这三者基本上是 Nas 系统最基础的功能了。同时 OMV 支持插件，透过插件可以安装其他常用服务，还有 docker 之类的东西。</p><p data-pid="fI6-m5I4">那么把 OMV 安装在哪里呢？OMV 如果安装在物理机上也不是不可以，但是它的虚拟机功能实在太弱，不够完善，因此还是建议物理机上直接上专业的虚拟化系统，比如 ProxmoxVE 或者自己搭建  KVM + WebVirtMgr 之类的，保证物理机的简单纯粹，就做好虚拟化一件事情就好，OMV 放在虚拟机中折腾挂了也不怕，可以方便的备份，快照，迁移。</p><p data-pid="QyinwBuw">关于 Nas 系统虚拟化的必要性我前文《<a class="internal" target="_blank" rel="external nofollow noopener noreferrer" href="https://zhuanlan.zhihu.com/p/55025102">Nas 系统的虚拟化方案</a>》中已详细讨论过，因此一种常见的结构是：</p><figure data-size="normal"><img class="origin_image zh-lightbox-thumb lazy" data-original="https://pic2.zhimg.com/v2-ee99626bb926d7b5c5dc848660aed059_r.jpg" data-original-token="v2-efb9625d1c11b05cd6ecf5810b4351b0" data-rawheight="326" data-rawwidth="529" data-size="normal" referrerpolicy="no-referrer" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic2.zhimg.com/v2-ee99626bb926d7b5c5dc848660aed059_1440w.jpg"><figcaption>OMV 安装在虚拟机中（右上角）</figcaption></figure><p data-pid="Y42EsAHk">物理机的 Hypervisor 配置好后，基本就不需要去动了，同时保持 Hypervisor 上只启动和虚拟机相关的有限的几个服务，其他端口可以全部关闭，越简单的东西越稳定安全。还有一个好处是你可以在不同的虚拟机内尝试不同的 Nas 系统，折腾出错删除重建就行，不会把你整套系统给弄挂掉。</p><p data-pid="-svB_MXB">同时所有虚拟机都是通过网桥（bridge）的方式和物理机接入同一个内网，拥有和物理机同级的 IP，可以让你家里的所有设备直接一个 IP 就能访问。</p><p data-pid="-RbV-hh4"><b>存储设备管理</b></p><p data-pid="OfColXv0">那么虚拟化安装 OMV 以后第一个问题就是怎么管理存储设备，物理机 Hypervisor 的系统装在 SSD 上，但是假设你有四块 HDD 硬盘挂载在物理机上上，你怎么是让物理机管理他们呢？还是让 OMV 管理他们？传统有两种方法来完成这个事情：</p><p data-pid="y8WvNwsR"><b>方案1：</b>物理机管理存储设备，你的 zfs/raid(mdadm) 在物理机上建立，然后新建 200G 一个的独立 qcow2 虚拟磁盘设备给 OMV，这是最简单，也是性能最差的方案，而且外层磁盘出错时，你一整个 qcow2 内的文件恢复很麻烦。</p><p data-pid="NUntsiOA"><b>方案2：</b>OMV 管理存储设备，物理机那里通过 KVM 的 PCI 透传，将存储设备+USB端口全部透传给 OMV，注意关闭写 cache，然后在 OMV 那里看起来和本机的存储设备/USB端口一样，然后在 OMV 里面组建 Raid/ZFS 其他虚拟机想访问这些存储设备可以用 OMV 提供出来的 NFS/Samba 协议进行访问，这是我推荐的方案。</p><p data-pid="Qi71Oj1v">这两个方案的配置方法，我在《<a class="internal" target="_blank" rel="external nofollow noopener noreferrer" href="https://zhuanlan.zhihu.com/p/55025102">Nas 系统的虚拟化方案</a>》 中提到过，而如果你选用了 OMV 这种基于标准 Linux 发行版的系统的话，还有更好的第三种方案供你选择。</p><p data-pid="OvxRcbSu"><b>第三种存储方案</b></p><p data-pid="QVO3k_Ap">这种方案继续使用物理机 Hypervisor 那里管理所有存储设备，建立 zfs 和 raid，然后透过 9p （或者称为 VirtFS），用共享文件夹的方式，将某个文件夹共享给虚拟机内的 OMV，然后 OMV 的 fstab 中 mount 到本地文件夹并提供服务：</p><ul><li data-pid="8j5IyS_l">物理机管理存储 -&gt; 9p文件夹共享 -&gt; 虚拟机 mount -&gt; OMV 提供服务</li></ul><p data-pid="B28HqjOV">这种方案的好处是，不论物理机还是其他虚拟机都可以直接访问你的单个文件，存储资源不会像先前 PCI 透传那样被 OMV 垄断导致其他虚拟机或者物理机想访问就只能透过 OMV 的 nfs/samba 服务。第三种方案只要物理机配置好 raid/zfs 后，就可以让数据在物理机和所有虚拟机中间全部透明化，物理机也可以自由的用 HDD 资源新建大点的虚拟磁盘给 windows 虚拟机用，不用所有虚拟磁盘都放在物理机的 ssd 上面。</p><p data-pid="KPpbkpmE">先在物理机上修改 OMV 的虚拟机配置文件 XML：</p><div class="highlight"><pre><code class="language-xml"><span class="nt">&lt;filesystem</span> <span class="na">type=</span><span class="s">'mount'</span> <span class="na">accessmode=</span><span class="s">'mapped'</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;source</span> <span class="na">dir=</span><span class="s">'/home/data/kvm/kfs'</span><span class="nt">/&gt;</span>
+      <span class="nt">&lt;target</span> <span class="na">dir=</span><span class="s">'kfs'</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/filesystem&gt;</span></code></pre></div><p data-pid="QaSWQXpa">这样相当于把物理机的 <code>/home/data/kvm/kfs</code> 文件夹共享给 OMV 的虚拟机，并取个名字叫做 "kfs"，虚拟机内可以用这个名字 mount。由于我物理机用的是 WebVirtMgr，可以直接在页面上修改虚拟机 xml，如果你用 ProxmoxVE 的话，需要找一下最新版界面上好像有相关配置，没有的话，登录 ProxmoxVE 终端，用命令行修改配置。</p><p data-pid="TRsNGyC7">物理机注意准备下相关目录和权限：</p><div class="highlight"><pre><code class="language-bash">sudo mkdir /home/data/kvm/kfs
+sudo chown libvirt-qemu:libvirt-qemu /home/data/kvm/kfs</code></pre></div><p data-pid="tNARdefM">注意上面共享目录的权限需要和你虚拟机运行权限相同，qemu.conf 里有这个配置，你还可以在物理机 ps aux 看看虚拟机进程所属的用户和组。接下来 OMV 虚拟机中编辑 /etc/modules 文件，添加下面几行：</p><div class="highlight"><pre><code class="language-text">loop
+virtio
+9p
+9pnet
+9pnet_virtio</code></pre></div><p data-pid="nvZ6OU_C">虚拟机内加载内核模块：</p><div class="highlight"><pre><code class="language-bash">sudo service kmod start</code></pre></div><p data-pid="20A2wtCd">然后测试 mount：</p><div class="highlight"><pre><code class="language-bash">sudo mkdir /mnt/kfs
+sudo mount -t 9p -o <span class="nv">trans</span><span class="o">=</span>virtio kfs /mnt/kfs</code></pre></div><p data-pid="yeIL5TO2">这样，虚拟机中的 /mnt/kfs 就映射到了物理机的 /home/data/kvm/kfs 路径下。</p><p data-pid="NYDu1G-4">测试成功的话，设置 /etc/fstab：</p><div class="highlight"><pre><code class="language-text">kfs             /mnt/kfs        9p      trans=virtio    0       0</code></pre></div><p data-pid="3CDNU4W0">修改完后，mount -a 测试，测试通过重启虚拟机即可。当然实在懒得折腾可以在物理机上启动一个 nfs 服务，然后虚拟机里面 mount 物理机的 nfs 文件夹，实测性能也还行。</p><p data-pid="0QfzrP4E">上面已经把物理机的 /home/data/kvm/kfs 共享给 OMV 并且 mount 到 /mnt/kfs 下面了，接下来进入 OMV 插件管理页面，安装 sharerootfs 这个插件：</p><figure data-size="normal"><img class="origin_image zh-lightbox-thumb lazy" data-caption data-original="https://pic1.zhimg.com/v2-36b0703c970850e5be9c50a5cf15f77c_r.jpg" data-original-token="v2-f046370ba046f2f46451dfac2d7760e4" data-rawheight="374" data-rawwidth="827" data-size="normal" referrerpolicy="no-referrer" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic1.zhimg.com/v2-36b0703c970850e5be9c50a5cf15f77c_1440w.jpg"></figure><p data-pid="pUy5_rRB">这个插件可以让你在 OMV 里面把刚才配置的 /mnt/kfs 文件夹共享给所有服务，接着配置：</p><figure data-size="normal"><img class="origin_image zh-lightbox-thumb lazy" data-original="https://pic2.zhimg.com/v2-e5e9f3c21e7efa3ce59292daac1cace1_r.jpg" data-original-token="v2-cd9f812d50b4da56090548605ea2f21d" data-rawheight="581" data-rawwidth="913" data-size="normal" referrerpolicy="no-referrer" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic2.zhimg.com/v2-e5e9f3c21e7efa3ce59292daac1cace1_1440w.jpg"><figcaption>安装了插件后，就可以添加 OMV 根文件目录下的某个目录作为共享了</figcaption></figure><p data-pid="tQf9t3is">找到 OMV 左边的 “共享文件夹”项目，然后点击 “添加”，把你刚才写到 fstab 里的 kfs 共享目录添加进去，我添加的是 kfs 下面一个名为 share 的文件夹，OMV 里提前准备：</p><div class="highlight"><pre><code class="language-bash">$ mkdir /mnt/kfs/share
+$ chown root:users /mnt/kfs/share
+$ chmod <span class="m">775</span> /mnt/kfs/share</code></pre></div><p data-pid="muvq7SHA">总之该 /mnt/kfs/share 文件夹要在 OMV 里保证 users 组可以有读写权限，添加完毕以后，继续在页面上配置哪些用户对这个共享文件夹有权限了：</p><figure data-size="normal"><img class="origin_image zh-lightbox-thumb lazy" data-caption data-original="https://pic2.zhimg.com/v2-a26c6bcb590a846c9237bf954cf223a9_r.jpg" data-original-token="v2-43e4383696e0423fcb15d81179e5a160" data-rawheight="454" data-rawwidth="710" data-size="normal" referrerpolicy="no-referrer" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic2.zhimg.com/v2-a26c6bcb590a846c9237bf954cf223a9_1440w.jpg"></figure><p data-pid="Q0Xds_MR">于是你就可以在 OMV 页面中把该目录开放给 samba/ftp/nfs 等一系列服务了。至于性能嘛，比起直接 PCI 透传，中间多了一道 9p 文件共享，当然有所下降，但是还好，我内网笔记本透过 wifi 从 FTP 下载文件差不多 50MB/s 的速度，最重要的是避免了 OMV 完全垄断掉所有 HDD 存储设备。</p><p data-pid="WV_8jDGc"><b>容器管理</b></p><p data-pid="qAFuU7Ud">自从 OMV5 以后，用户可以透过 OMV-Extras 扩展安装各种 docker 服务：</p><figure data-size="normal"><img class="origin_image zh-lightbox-thumb lazy" data-caption data-original="https://pic3.zhimg.com/v2-ec4c91df07d5f04e2ea4bd6ec26237e6_r.jpg" data-original-token="v2-73865762e046d95e5d345a56741d14a3" data-rawheight="756" data-rawwidth="1042" data-size="normal" referrerpolicy="no-referrer" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic3.zhimg.com/v2-ec4c91df07d5f04e2ea4bd6ec26237e6_1440w.jpg"></figure><p data-pid="0G9PKiIj">在 OMV5 中安装好 OMV-Extras 后，点击左侧的 OMV-Extras 就会看到 Docker 设置页面，进去最重要的一项设置就是 Docker 存储，你可以把它挪到某个 9p 共享文件夹中来保存 docker 的各种数据，也可以继续放在 OMV 的根文件系统下，默认保存 docker 数据，等到具体新建 docker 容器的时候再按照具体需要把数据文件夹映射到 9p 的 HDD 上面去。</p><p data-pid="T3TJj9HB">在 OMV5 的 docker 中自带了 portainer，点击右上角的“打开 web 页面”即可，然后连接到本地 docker：</p><figure data-size="normal"><img class="origin_image zh-lightbox-thumb lazy" data-caption data-original="https://pic2.zhimg.com/v2-05c9faab1613b352082854ee8b52d9bd_r.jpg" data-original-token="v2-27de1b3706fea52fbe31e51dc63c982e" data-rawheight="708" data-rawwidth="1134" data-size="normal" referrerpolicy="no-referrer" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic2.zhimg.com/v2-05c9faab1613b352082854ee8b52d9bd_1440w.jpg"></figure><p data-pid="Q1-qG0xa">Portainer 提供图形化的界面让你管理各个容器，先当于图形化编写 docker-compose 文件的感觉。你基本可以在 Portainer 里面干完所有 docker 相关的事情，当然仍然可以全程用 docker-compose 文件初始化各种服务，然后用 portainer 进行监控和启停。</p><p data-pid="F6Etra8k"><b>常用 Docker 服务</b></p><p data-pid="NTtr_bOk">一些常用的 docker 服务：</p><ul><li data-pid="g0TEzs_4">MySQL：</li></ul><figure data-size="normal"><img class="origin_image zh-lightbox-thumb lazy" data-caption data-original="https://pic1.zhimg.com/v2-640e3c411b7da568361cd1f57e77522c_r.jpg" data-original-token="v2-25e505285f6886e2e06669e6be43dfd2" data-rawheight="222" data-rawwidth="914" data-size="normal" referrerpolicy="no-referrer" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic1.zhimg.com/v2-640e3c411b7da568361cd1f57e77522c_1440w.jpg"></figure><p data-pid="SgieqYYp">为整个内网和其他容器提供数据库服务。</p><ul><li data-pid="q98or-CZ">NextCloud：</li></ul><figure data-size="normal"><img class="origin_image zh-lightbox-thumb lazy" data-caption data-original="https://pic1.zhimg.com/v2-311e113e73ca6f30914d905fb23076a8_r.jpg" data-original-token="v2-91ebf1c0789914b9b7f315af219e0f7a" data-rawheight="900" data-rawwidth="1600" data-size="normal" referrerpolicy="no-referrer" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic1.zhimg.com/v2-311e113e73ca6f30914d905fb23076a8_1440w.jpg"></figure><p data-pid="xrjHliGJ">个人存储云，相当于 dropbox，怎么能少得了呢？</p><ul><li data-pid="XpTz0kh8">Gogs：</li></ul><figure data-size="normal"><img class="origin_image zh-lightbox-thumb lazy" data-caption data-original="https://pic3.zhimg.com/v2-303ef0d5e02c34a5da201465247c72aa_r.jpg" data-original-token="v2-620ace03af80586121a499a1cc35ae6d" data-rawheight="866" data-rawwidth="1261" data-size="normal" referrerpolicy="no-referrer" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic3.zhimg.com/v2-303ef0d5e02c34a5da201465247c72aa_1440w.jpg"></figure><p data-pid="xo7krWR1">轻量级 Git 服务，提供类似 GitLab 的功能，但是速度非常快，内存占用很低，自己的代码自己管理。</p><ul><li data-pid="fysIsFIr">Piwigo：</li></ul><figure data-size="normal"><img class="origin_image zh-lightbox-thumb lazy" data-caption data-original="https://pic2.zhimg.com/v2-540d889011192aba41d376ede5a41679_r.jpg" data-original-token="v2-5c3772358c7cb0e9a38db3dd0083c2e3" data-rawheight="389" data-rawwidth="932" data-size="normal" referrerpolicy="no-referrer" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://pic2.zhimg.com/v2-540d889011192aba41d376ede5a41679_1440w.jpg"></figure><p data-pid="8mvBmaNa">家里的照片，用它统一管理起来，并且提供友善的界面和缩略图生成。</p><p data-pid="BgRKBwYV">Nas+Docker 说起来就一大堆内容了，有兴趣自己探索吧。</p><p data-pid="9KsDySPh"><b>外网穿透</b></p><p data-pid="I471E-kL">家里提供了那么多的服务，比如我想在外面访问 gogs 的代码服务的话，那么内网穿透少不了，家里网络稳定有外网 IP 的话，推荐动态域名和路由器内网端口映射，没有的话，使用 FRP 进行内网穿透：</p><a class="internal" data-draft-node="block" data-draft-type="link-card" target="_blank" rel="external nofollow noopener noreferrer" href="https://zhuanlan.zhihu.com/p/57477087">韦易笑：内网穿透：在公网访问你家的 NAS</a><p data-pid="_TYJA8E_">而且 Frp 推荐直接搭建在 OMV 的服务器上，因为 OMV 自身提供的服务多，装个 supervisor 把 Frp 托管起来。</p><p data-pid="7V1zN9lK"><b>关于备份</b></p><p data-pid="XC3PbCQv">OMV 自身根文件夹的备份可以用物理机上的快照，或者关了机直接备份一下 OMV 的 qcow2 磁盘文件，恢复也这样恢复。至于 HDD 上的数据的话，本身就处在 Raid/Zfs 中，你可以定期拷贝一下，我的建议是把 USB 端口透传给 OMV ，需要备份时插上 USB 硬盘，然后再 OMV 内部直接操作备份。</p><p data-pid="OtOxu2du">除此之外对于重要数据，还需要写一些同步脚本定时同步到外地的服务器上。</p><p data-pid="EJeFlZ0p">--</p><p data-pid="zKa2axYR">相关阅读：</p><ul><li data-pid="oxZj_gqv">《<a class="internal" target="_blank" rel="external nofollow noopener noreferrer" href="https://zhuanlan.zhihu.com/p/49118355">KVM 虚拟化环境搭建 - ProxmoxVE</a>》</li><li data-pid="BOnHnxOY">《<a class="internal" target="_blank" rel="external nofollow noopener noreferrer" href="https://zhuanlan.zhihu.com/p/49120559">KVM 虚拟化环境搭建 - WebVirtMgr</a>》</li><li data-pid="ypaP2HrM">《<a class="internal" target="_blank" rel="external nofollow noopener noreferrer" href="https://zhuanlan.zhihu.com/p/55025102">Nas 系统的虚拟化方案</a>》</li><li data-pid="NqEFz-E5">《<a class="internal" target="_blank" rel="external nofollow noopener noreferrer" href="https://zhuanlan.zhihu.com/p/57477087">内网穿透：在公网访问你家的 NAS</a>》</li></ul><p data-pid="I7qofASd">-</p><p></p><p></p>
+</div>
+
+<div>
+<div class="tag-plugin link dis-select"><a class="link-card plain" title="夏五郎赞同了文章: OpenMediaVault：你的开源 NAS 系统" href="https://zhuanlan.zhihu.com/p/138254689" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="icon"><div class="left"><span class="title">夏五郎赞同了文章: OpenMediaVault：你的开源 NAS 系统</span><span class="cap link fs12">https://zhuanlan.zhihu.com/p/138254689</span></div><div class="right"><div class="lazy img" data-bg="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/link/8f277b4ee0ecd.svg"></div></div></a></div>
+</div>
+
+
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/me-shaon/GLWTPL/blob/master/translations/LICENSE_zh-CN">GLWT（Good Luck With That，祝你好运）公共许可证</a> 许可协议，转载请注明出处。</p>
+</div></section><section id="share"><div class="header"><span>分享文章</span></div><div class="body"><div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://touhou.pub/rss/2565795.html"></div><div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/b32ef3da1162a.svg"></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://touhou.pub/rss/2565795.html&title=夏五郎赞同了文章: OpenMediaVault：你的开源 NAS 系统 - Touhou.Pub&pics=https://pic3.zhimg.com/v2-1eebdc9732e171adeb06314d99bbc2a2_1440w.jpg&summary=
+我在本专栏里介绍过 HomeLab 服务器的虚拟化的方案，推荐过一些看起来不错的硬件，那么接下来将要讨论搭建 Nas 系统的相关话题了。Nas 系统方案有很多：标准 Linux，黑群晖，FreeNas，ClearOS，OpenMed..."><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/80c07e4dbb303.svg"></a><a class="social share-item email" href="mailto:?subject=夏五郎赞同了文章: OpenMediaVault：你的开源 NAS 系统 - Touhou.Pub&amp;body=https://touhou.pub/rss/2565795.html"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/a1b00e20f425d.svg"></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/8411ed322ced6.svg"></a></div><div class="qrcode" id="qrcode-wechat" style="visibility:hidden;height:0"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://touhou.pub/rss/2565795.html"></div></div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/rss/cc920e00.html">夏五郎赞同了回答: 有没有支持全平台同步的markdown笔记软件（需要支持全平台.md文件，具体看描述）？</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/rss/46e062b0.html">【東方MMD】成年蕾米莉亞＆成年芙蘭朵露「誰ガ為ノ世界」</a></div></section></div>
+
+
+<div class="related-wrap reveal" id="related-posts">
+    <section class="header">
+      <div class="title cap theme">您可能感兴趣的文章</div>
+    </section>
+    <section class="body">
+    <div class="related-posts"><a class="item" href="/rss/6a14e30e.html" title="东方拾物谭 一－无冕凤冠"><span class="title">东方拾物谭 一－无冕凤冠</span></a><a class="item" href="/rss/cc920e00.html" title="夏五郎赞同了回答: 有没有支持全平台同步的markdown笔记软件（需要支持全平台.md文件，具体看描述）？"><span class="title">夏五郎赞同了回答: 有没有支持全平台同步的markdown笔记软件（需要支持全平台.md文件，具体看描述）？</span></a><a class="item" href="/rss/28fd1e0a.html" title="夏五郎赞同了回答: 没有在C盘装东西，桌面也没文件，为什么C盘莫名其妙就满了？"><span class="title">夏五郎赞同了回答: 没有在C盘装东西，桌面也没文件，为什么C盘莫名其妙就满了？</span></a><a class="item" href="/rss/28ff54f.html" title="夏五郎赞同了文章: 1974年《人民日报》：苏修为何翻来覆去让人民奋斗？"><span class="title">夏五郎赞同了文章: 1974年《人民日报》：苏修为何翻来覆去让人民奋斗？</span></a><a class="item" href="/rss/45528c1a.html" title="夏五郎赞同了文章: Zerotier - 分分钟组网工具最全食用方案"><span class="title">夏五郎赞同了文章: Zerotier - 分分钟组网工具最全食用方案</span></a></div></section></div>
+
+
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">文章</span><a href="/rss">订阅</a><a href="/categories">分类</a><a href="/tags">标签</a><a href="/archives">归档</a></div><div class="sitemap-group"><span class="fs14">项目</span><a href="/wiki/guides">指南</a><a href="/webs">导航</a></div><div class="sitemap-group"><span class="fs14">更多</span><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Touhou-Public">Github</a><a target="_blank" rel="external nofollow noopener noreferrer" href="https://blog.imc.re/">博客</a><a target="_blank" rel="external nofollow noopener noreferrer" href="https://imc.re/">IMC.RE</a></div></div><div class="text"><p><a href="/">@Touhou.Pub</a> 2023 powered by <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Touhou-Public">Touhou-Public</a>。<br><br>本网站所有内容除特别声明外，均采用 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/me-shaon/GLWTPL/blob/master/translations/LICENSE_zh-CN">GLWT（Good Luck With That，祝你好运）公共许可证</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+
+      <div class="float-panel mobile-only blur" style="display:none">
+  <button type="button" class="sidebar-toggle mobile" onclick="sidebar.toggle()">
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"/><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"/></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class="scripts">
+    <script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = stellar.config.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.19.0';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.19.0';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+    root : '/',
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://gcore.jsdelivr.net/npm/jquery@3.6.2/dist/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"codeblock":true,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.copycode = Object.assign({"enable":true,"js":"/js/plugins/copycode.js","default_text":"Copy","success_text":"Copied"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+  function loadJS() {
+    const els = document.querySelectorAll("#comments #giscus");
+    if (els.length === 0) return;
+    els.forEach((el, i) => {
+      try {
+        el.innerHTML = '';
+      } catch (error) {
+        console.log(error);
+      }
+      var script = document.createElement('script');
+      script.src = 'https://giscus.app/client.js';
+      script.async = true;
+      for (let key of Object.keys(el.attributes)) {
+        let attr = el.attributes[key];
+        if (['class', 'id'].includes(attr.name) === false) {
+          script.setAttribute(attr.name, attr.value);
+        }
+      }
+      el.appendChild(script);
+    });
+  }
+  window.addEventListener('DOMContentLoaded', (event) => {
+    loadJS();
+  });
+</script>
+
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>
