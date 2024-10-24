@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.19.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="https://gcore.jsdelivr.net">
+  <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="//unpkg.com">
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>MCBE 88音平均律 - Touhou.Pub</title>
+
+  
+    <meta name="description" content="前言今天修IMC Geyser的时候看到冲田在烷MC，随便试了试Xbox联机没想到进去了）然后冲田似乎在研究playsound的调音，我才知道原来MCBE的playsound命令还有微分音的用法（红石音乐人狂喜x）通过微分音的调教，理论上突破原版材质包里自带的音符盒音域，实现88音的完整钢琴音域就可能实现了，如果再搭配上midi文件的转化就可以实现在MC游戏里不依靠任何材质包，mod等就能实现音">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MCBE 88音平均律">
+<meta property="og:url" content="https://touhou.pub/rss/824ee0f8.html">
+<meta property="og:site_name" content="Touhou.Pub">
+<meta property="og:description" content="前言今天修IMC Geyser的时候看到冲田在烷MC，随便试了试Xbox联机没想到进去了）然后冲田似乎在研究playsound的调音，我才知道原来MCBE的playsound命令还有微分音的用法（红石音乐人狂喜x）通过微分音的调教，理论上突破原版材质包里自带的音符盒音域，实现88音的完整钢琴音域就可能实现了，如果再搭配上midi文件的转化就可以实现在MC游戏里不依靠任何材质包，mod等就能实现音">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305141550245.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305211306495.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305141736378.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305141803364.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305211308820.png">
+<meta property="article:published_time" content="2023-05-13T23:51:38.000Z">
+<meta property="article:modified_time" content="2023-05-13T23:51:38.000Z">
+<meta property="article:author" content="Touhou-Public">
+<meta property="article:tag" content="Owner">
+<meta property="article:tag" content="SMGoroBlog">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305141550245.png">
+  
+  
+  
+  <meta name="keywords" content="Owner,SMGoroBlog">
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Touhou.Pub" type="application/atom+xml">
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+
+  
+    <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+    <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+    <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+  
+
+
+  
+
+  <link href="https://cdn.jsdelivr.net/npm/font-touhou98/dist/touhou98.css" rel="stylesheet">
+  <link href="/css/fonts.css" rel="stylesheet">
+<!--百度统计-->
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?b427d26cc6155f11e2a036ccfa4e01da";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+  
+<!--Google Adsense-->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4773172018528901" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  
+
+
+
+
+  <div class="l_body" id="start">
+    <aside class="l_left" layout="post">
+    
+
+  
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/rss"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/assets/logo/touhou_lite_color.svg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title"><h1 class="yuyukofont">Touhou.Pub</h1></div><div class="sub normal cap"><p class="touhou98">Touhou-Public</p></div><div class="sub hover cap" style="opacity:0"> 东方Project信息站</div></a></div>
+
+<nav class="menu dis-select"><a class="nav-item" href="/">主页</a><a class="nav-item" href="/wiki">项目</a><a class="nav-item active" href="/rss">RSS</a><a class="nav-item" target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Touhou-Public">Org</a></nav>
+</header>
+
+
+<div class="widgets">
+
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">MCBE 88音平均律</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%9F%A5%E8%AF%86"><span class="toc-text">基本知识</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#MC%E4%B8%AD%E7%9A%84%E5%B9%B3%E5%9D%87%E5%BE%8B"><span class="toc-text">MC中的平均律</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#88%E9%9F%B3%E5%B9%B3%E5%9D%87%E5%BE%8B%E8%B0%B1%E8%A1%A8"><span class="toc-text">88音平均律谱表</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-text">结语</span></a></li></ol></div></div></widget>
+
+
+
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/rss/" placeholder="文章搜索"><svg t="1670596976048" class="icon search-icon" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"/></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+
+
+
+<widget class="widget-wrapper recent"><div class="widget-header cap theme dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg class="icon" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8938"><path d="M800.966 947.251c0-404.522-320.872-732.448-716.69-732.448V62.785c477.972 0 865.44 395.987 865.44 884.466h-148.75z m-162.273 0h-148.74c0-228.98-181.628-414.598-405.678-414.598v-152.01c306.205 0 554.418 253.68 554.418 566.608z m-446.24-221.12c59.748 0 108.189 49.503 108.189 110.557 0 61.063-48.44 110.563-108.188 110.563-59.747 0-108.18-49.5-108.18-110.563 0-61.054 48.433-110.556 108.18-110.556z" p-id="8939"/></svg></a></div><div class="widget-body related-posts fs14"><a class="item title" href="/rss/5b2e37c7.html"><span class="title">TOUHOU GENSOU MAHJONG</span></a><a class="item title" href="/rss/1f972eaf.html"><span class="title">The Touhou Empires</span></a><a class="item title" href="/rss/1e67efb1.html"><span class="title">Touhou Crisis</span></a><a class="item title" href="/rss/bebdd4ea.html"><span class="title">Touhou DollDraft</span></a><a class="item title" href="/rss/dfe5e379.html"><span class="title">Touhou Fantasia / 东方梦想曲</span></a></div></widget>
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/Touhou-Public/" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/social-github.svg"></a><a class="social" href="https://space.bilibili.com/359079394" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/bilibili.svg"></a><a class="social" href="https://l.imc.re/zhihu" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/zhihu.svg"></a><a class="social" href="https://l.imc.re/discord" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/discord.svg"></a><a class="social" href="https://blog.imc.re/contact" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/comments.svg"></a></div></footer>
+
+    </aside>
+    <div class="l_main">
+      
+
+      
+
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/owner/">Owner</a> <span class="sep"></span> <a class="cap breadcrumb-link" href="/categories/owner/smgoroblog/">SMGoroBlog</a></div><div id="post-meta">发布于&nbsp;<time datetime="2023-05-13T23:51:38.000Z">2023-05-14</time></div></div>
+
+<article class="md-text content post">
+<h1 class="article-title"><span>MCBE 88音平均律</span></h1>
+<div>
+<link class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css" rel="stylesheet"><script class="aplayer-secondary-script-marker" src="/assets/js/APlayer.min.js"></script><h1 id="前言"><a class="headerlink" href="#前言" title="前言"></a>前言</h1><p>今天修IMC Geyser的时候看到冲田在烷MC，随便试了试Xbox联机没想到进去了）然后冲田似乎在研究playsound的调音，我才知道原来MCBE的playsound命令还有微分音的用法（红石音乐人狂喜x）通过微分音的调教，理论上突破原版材质包里自带的音符盒音域，实现88音的完整钢琴音域就可能实现了，如果再搭配上midi文件的转化就可以实现在MC游戏里不依靠任何材质包，mod等就能实现音乐的播放！</p><p>虽然已经有相关的项目了，比如 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://opennbs.org/">Open Note Block Studio</a> 就已经实现了nbs音乐相关的编辑，以及midi文件的转换。不过这个工具目前只支持MCJE，并不支持MCBE，扩展音域似乎也是通过扩展音符包来实现的，相对繁琐。本文主要记录一下MCBE的playsound调音对应88键平均律的对应数值以及方法，虽然不一定在MCJE适用，但是基本方法应该是差不多的，可以作为参考留档。</p><h1 id="基本知识"><a class="headerlink" href="#基本知识" title="基本知识"></a>基本知识</h1><p>让我们先来复习一下初中基本物理知识——声音的基本三要素：</p><ul><li>音色：波形决定了声音的音调。由于不同对象材料的特点，声音具有不同的特性，音色本身就是抽象的东西，但波形就是把这种抽象和直观的性能。波形因音调而异，不同的音调可以通过波形来区分。</li><li>音调：声音的高低由频率决定，频率越高音调越高，人耳听觉范围20—20000Hz；20Hz以下称为次声波，20000Hz以上称为超声波。</li><li>响度：指人耳感觉到的声音强弱，即声音响亮的程度，根据它可以把声音排成由轻到响的序列。响度的大小主要依赖于声强和频率，振幅越大响度越大，人和声源的距离越小，响度越大。</li></ul><p>而这三要素在Minecraft的 <code>/playsound</code> 指令里基本算是都齐活了，声音的基本三要素和MC指令的信息对应还是需要说明一下（毕竟wiki没提）：</p><p>MCBE的 /playsound 指令：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/playsound &lt;sound: string&gt; [player: target] [position: x y z] [volume: float] [pitch: float] [minimumVolume: float]</span><br></pre></td></tr></table></figure></p><p>示例指令：音色为 <code>note.pling</code> ，音调为 <code>中央C（C4）</code> ，播放给全局玩家。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/playsound note.pling @a ~~~ 9999 0.7</span><br></pre></td></tr></table></figure><p><img class="lazy" alt="指令预览" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305141550245.png"></p><p>简单说明：</p><ul><li>音色：对应的 <code>&lt;sound: string&gt;</code> ，只能调用 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://minecraft.fandom.com/zh/wiki/Sounds.json#%E5%A3%B0%E9%9F%B3%E4%BA%8B%E4%BB%B6" title="Sounds.json">sounds.json</a> 里的项目，具体的可以去Minecraft Wiki或者自行拆包查看，有预览表，也可以使用自制的材质包实现自定义音色。值得一提的是MC中所有的音效都可以使用。这里列几个常用的Note音色：<ul><li><code>note.harp</code> 音符盒音色，算是MC红石音乐比较标志性的音色。类似音色：  <code>note.pling</code>  ，声音比较洪亮，音长相对较长。</li><li><code>note.guitar</code> 音符盒吉他音色，拨弦乐器声音采样比较短促，类似音色： <code>note.banjo</code>  班卓琴音色</li><li><code>note.bass</code> 音符盒贝斯音色，低音必备。类似音色： <code>note.bassattack</code> </li><li><code>note.hat</code> 音符盒打击音色，可以当鼓点使用。类似音色： <code>note.bd</code> <code>note.snare</code></li><li><code>note.flute</code> 音符盒笛声音色，使用高频播放的话可以达到延音的效果（吹奏类乐器音色的好处，采样出来的音色首尾相接基本不会有违和感，《光遇》里的乐器演奏也能用类似的方法实现延音。）类似音色： <code>note.didgeridoo</code> 有点低音号的感觉，但是高频播放不是很连贯。</li><li><code>note.bit</code> bit音乐采样音色，算是电子音乐比较经典的音色。类似音色： <code>note.bell</code> 八音盒感觉的音色， <code>note.cow_bell</code> 相对低沉的八音盒感觉的音色</li></ul></li><li>音调：对应的 <code>[pitch: float]</code> ，以数值的形式表现，默认是 <code>1</code> ，在 <code>note.pling</code> 中对应十二平均律中的 <code>F#</code> 。这种对应关系也是本文的重点，大概是通过程序将音色移调的参数，通过这种方式即便不把所有音符采样塞进游戏里<strong>理论上也能实现十二平均律，以及对应的钢琴八十八键的复原</strong>。</li><li>响度：响度有些特殊，决定响度的是 <code>[player: target] [position: x y z] [volume: float] [minimumVolume: float]</code> 这三个参数决定，依次是玩家目标，声音发生的位置，能够听到声音的范围，和补偿范围。没有直接影响响度的变量，不过可以通过这些参数间歇性的实现响度的控制，甚至环绕音的混响实现也是有可能的。</li></ul><p>详细参数说明： </p><blockquote><p><code>sound: string</code>：<a target="_blank" rel="external nofollow noopener noreferrer" href="https://minecraft.fandom.com/zh/wiki/%E5%8F%82%E6%95%B0%E7%B1%BB%E5%9E%8B#basic_string" title="参数类型">basic_string</a></p><p>指定要播放的声音。必须为在<a target="_blank" rel="external nofollow noopener noreferrer" href="https://minecraft.fandom.com/zh/wiki/Sounds.json#%E5%A3%B0%E9%9F%B3%E4%BA%8B%E4%BB%B6" title="Sounds.json">sounds.json</a>中被定义的一个声音项目（例如，<code>entity.pig.ambient</code>）。</p><p>一个声音项目可被多个不同的声音关联，而实际产生的声音为从中随机挑选的结果，被选中的概率由其权重决定，与正常游戏中相同。例如，声音项目<code>entity.pig.ambient</code>会随机播放多种猪音效之一，因为有多个声音关联于该项目。</p><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://minecraft.fandom.com/zh/wiki/%E8%B5%84%E6%BA%90%E5%8C%85" title="资源包">资源包</a>可能会向sounds.json中添加额外的声音项目；此命令可以正常播放这些项目。该命令使用的声音名称<strong>不是</strong>文件名；而是严格使用sounds.json内定义的项目（项目名称可能与实际音频文件的文件名和目录相差甚远），因此资源包在添加新声音时必须为这些音频文件定义声音事件项目（但当资源包替换原有的已被定义的音频文件时，不必为其重新定义）。</p><p><code>player: target</code>：<a target="_blank" rel="external nofollow noopener noreferrer" href="https://minecraft.fandom.com/zh/wiki/%E5%8F%82%E6%95%B0%E7%B1%BB%E5%9E%8B#CommandSelector%3CPlayer%3E" title="参数类型">CommandSelector Player</a></p><p>指定播放声音的目标。</p><p>必须为玩家名、目标选择器或<a target="_blank" rel="external nofollow noopener noreferrer" href="https://minecraft.fandom.com/zh/wiki/UUID" title="UUID">UUID</a>。且目标选择器只允许玩家。</p><p><code>position: x y z</code>：<a target="_blank" rel="external nofollow noopener noreferrer" href="https://minecraft.fandom.com/zh/wiki/%E5%8F%82%E6%95%B0%E7%B1%BB%E5%9E%8B#CommandPositionFloat" title="参数类型">CommandPositionFloat</a></p><p>指定声音发出的方位。</p><p>必须为三维坐标，元素为浮点数。允许<a target="_blank" rel="external nofollow noopener noreferrer" href="https://minecraft.fandom.com/zh/wiki/%E5%91%BD%E4%BB%A4#%E7%9B%B8%E5%AF%B9%E5%9D%90%E6%A0%87%E5%92%8C%E5%B1%80%E9%83%A8%E5%9D%90%E6%A0%87" title="命令">波浪号与脱字号标记</a>。</p><p><code>volume: float</code>：<a target="_blank" rel="external nofollow noopener noreferrer" href="https://minecraft.fandom.com/zh/wiki/%E5%8F%82%E6%95%B0%E7%B1%BB%E5%9E%8B#float" title="参数类型">float</a></p><p>指定声音能被听见的距离。必须至少为0.0。对小于1.0的值，声音会相对减轻，球状可闻范围会相对小。对大于1.0的值，声音不会实际上增大，但其可闻范围（1.0时半径为16米）会与<em>音量</em>相乘。声音总会基于与球体中心的距离逐渐衰减至无声。默认为1.0。</p><p>必须为<a target="_blank" rel="external nofollow noopener noreferrer" href="https://en.wikipedia.org/wiki/zh:%E5%96%AE%E7%B2%BE%E5%BA%A6%E6%B5%AE%E9%BB%9E%E6%95%B8" title="wikipedia:zh:单精度浮点数">单精度浮点数</a>。在<a target="_blank" rel="external nofollow noopener noreferrer" href="https://minecraft.fandom.com/zh/wiki/Java%E7%89%88" title="Java版">Java版</a>中，必须大于等于0.0。</p><p><code>pitch: float</code>：<a target="_blank" rel="external nofollow noopener noreferrer" href="https://minecraft.fandom.com/zh/wiki/%E5%8F%82%E6%95%B0%E7%B1%BB%E5%9E%8B#float" title="参数类型">float</a></p><p>指定声音的音调。若未指定，默认为1.0。</p><p>在<a target="_blank" rel="external nofollow noopener noreferrer" href="https://minecraft.fandom.com/zh/wiki/Java%E7%89%88" title="Java版">Java版</a>中，该数值必须在0.0至2.0间（含），而小于0.5的值与0.5等价。小于1.0的值降低音调而提升持续时间；大于1.0的值提升音调而降低持续时间。音调值是乘在声音频率上的一个倍率，因此若将0.5-1.0（含）区间内的音调值乘以2，所得的新音调便会高一个八度。</p><p>在<a target="_blank" rel="external nofollow noopener noreferrer" href="https://minecraft.fandom.com/zh/wiki/%E5%9F%BA%E5%B2%A9%E7%89%88" title="基岩版">基岩版</a>中，该数字没有特别限制，但是必须要在0.0至256.0之间才有对应效果。高于256.0的值与默认值的效果相同。小于等于0.0的值会导致听不到该声音。</p><ul><li>对于<a target="_blank" rel="external nofollow noopener noreferrer" href="https://minecraft.fandom.com/zh/wiki/%E9%9F%B3%E7%AC%A6%E7%9B%92" title="音符盒">音符盒</a>的声音，如果你希望将其他音符转换为音调数值，请参阅<a target="_blank" rel="external nofollow noopener noreferrer" href="https://minecraft.fandom.com/zh/wiki/%E9%9F%B3%E7%AC%A6%E7%9B%92#%E7%94%A8%E9%80%94" title="音符盒">相关内容</a>。但请注意1.0的音调值对于每种声音并不一定都是F♯。</li></ul><p><code>minimumVolume: float</code>：<a target="_blank" rel="external nofollow noopener noreferrer" href="https://minecraft.fandom.com/zh/wiki/%E5%8F%82%E6%95%B0%E7%B1%BB%E5%9E%8B#float" title="参数类型">float</a></p><p>指定在声音可闻范围外的目标能听到的音量。若目标在可闻范围外，作为补偿，声源会被放置在距离目标较近的位置（距离小于4格），而<code>_最小音量_</code>会决定补偿声源的音量。</p><p>如果此数值等于0，则正常可闻范围外的目标听不到声音。如果未指定，则默认为0.0。</p><p>必须为<a target="_blank" rel="external nofollow noopener noreferrer" href="https://en.wikipedia.org/wiki/zh:%E5%96%AE%E7%B2%BE%E5%BA%A6%E6%B5%AE%E9%BB%9E%E6%95%B8" title="wikipedia:zh:单精度浮点数">单精度浮点数</a>。在<a target="_blank" rel="external nofollow noopener noreferrer" href="https://minecraft.fandom.com/zh/wiki/Java%E7%89%88" title="Java版">Java版</a>中，必须在0.0和1.0（含）之间。</p><p>——<a target="_blank" rel="external nofollow noopener noreferrer" href="https://minecraft.fandom.com/zh/wiki/%E5%91%BD%E4%BB%A4/playsound">《命令/playsound - Minecraft Wiki》</a> </p></blockquote><p>有这三要素基本就满足了声音构成的条件，但是把范围缩小到 <code>音乐</code> 当中，光有这基本三要素是不够的，关于 <code>音调</code> 的使用范围至关重要，而在乐理中基本的音调构成范围就不得不提到 <strong>十二平均律</strong> 了：</p><blockquote><p><strong>十二平均律</strong>（12-equal temperament）又称<strong>十二等程律</strong>，是世界上通用的一组音（八度）分成十二个<a target="_blank" rel="external nofollow noopener noreferrer" href="https://baike.baidu.com/item/半音/20378032?fromModule=lemma_inlink">半音</a><a target="_blank" rel="external nofollow noopener noreferrer" href="https://baike.baidu.com/item/音程/18483922?fromModule=lemma_inlink">音程</a>的<a target="_blank" rel="external nofollow noopener noreferrer" href="https://baike.baidu.com/item/律制/6785021?fromModule=lemma_inlink">律制</a>，各相邻两律之间的波长之比完全相等。 十二平均律是由中国明朝皇族世子<a target="_blank" rel="external nofollow noopener noreferrer" href="https://baike.baidu.com/item/朱载堉/1182870?fromModule=lemma_inlink">朱载堉</a>发现。</p><p>十二平均律是指八度的音程按波长比例平均分成十二等份，每一等份称为一个半音（<a target="_blank" rel="external nofollow noopener noreferrer" href="https://baike.baidu.com/item/小二度/3316765?fromModule=lemma_inlink">小二度</a>）。一个<a target="_blank" rel="external nofollow noopener noreferrer" href="https://baike.baidu.com/item/大二度/3269655?fromModule=lemma_inlink">大二度</a>则是两等份，称为<a target="_blank" rel="external nofollow noopener noreferrer" href="https://baike.baidu.com/item/全音/10997917?fromModule=lemma_inlink">全音</a>。将一个八度分成12等份有着惊人的一些巧合。这是因为它的纯<a target="_blank" rel="external nofollow noopener noreferrer" href="https://baike.baidu.com/item/五度/8803536?fromModule=lemma_inlink">五度</a>音程的两个音的波长比（即1/2的7/12次方）约为0.6674，与2/3，约为0.6667，非常接近。</p><p><strong>十二平均律在<a target="_blank" rel="external nofollow noopener noreferrer" href="https://baike.baidu.com/item/交响乐队/10995603?fromModule=lemma_inlink">交响乐队</a>和<a target="_blank" rel="external nofollow noopener noreferrer" href="https://baike.baidu.com/item/键盘乐器/5194554?fromModule=lemma_inlink">键盘乐器</a>中得到广泛使用，钢琴即是根据十二平均律来定音的。</strong></p><p>——<a target="_blank" rel="external nofollow noopener noreferrer" href="https://baike.baidu.com/item/十二平均律/592297?fr=aladdin">十二平均律_百度百科 (baidu.com)</a></p></blockquote><p><img class="lazy" alt="十二平均律图表" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305211306495.png"></p><p>可能有人会问为什么要拘泥于十二平均律？使用微分音创作音乐不是也很新吗？其实这么想也不是不可以，不过截至目前，人类的基本音乐创作理论体系 <del>（俗称乐理）</del> 还“局限”于基于十二平均律中，因此，想要作出“给人听”的音乐十二平均律的存在是不可或缺的。当然科技发展至今，使用微分音创作的电子音乐也不算少数，这个就因人而异咯xd 借用《海上钢琴师》里我印象深刻的经典台词来说：</p><blockquote><p>Take a piano. The keys begin, the keys end. You know there are eightyeight of them, nobody can tell you any different. They are not infinite. You are infinite. And on these keys the music that you can make is infinite. I like that. That I can live by.</p><p>译：拿一架钢琴来说，从琴键开始，又结束。<strong>你知道钢琴只有88个键，随便什么琴都没差。它们不是无限的。你才是无限的，在琴键上制作出的音乐是无限的。</strong>我喜欢这样，我活的惯。</p></blockquote><hr><h1 id="MC中的平均律"><a class="headerlink" href="#MC中的平均律" title="MC中的平均律"></a>MC中的平均律</h1><p>理论成立，实践开始！Minecraft原版中的音符盒的音域只有F#3到F#5的25个键，想要还原钢琴八十八键的音域一般来说只有扩展材质包，mod之类的办法。</p><p><img class="lazy" alt="image-20230514173645051" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305141736378.png"></p><p><strong>但是通过 <code>/playsound</code> 指令中的  <code>[pitch: float]</code> 调音参数就能实现原版MC不使用任何外部资源加持的前提下实现88键钢琴音域的还原！</strong> （甚至超出88键都有可能xd）那么在这其中需要实现各个键位的音调还原，Minecraft中 pitch参数和十二平均律的对应关系是必不可少的。</p><p>本来以为是很简单的正比线性对应关系，但是试了几个数之后感觉有点不对。。比如 p=1 的时候音色 <code>note.pling</code> 对应的是 F#4， p=2 的时候对应的是 F#5，但是到 F#3的时候对应的 p=0.5 ，并不是一般的一次函数线性关系。</p><p>通过冲田分享的文章 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.bilibili.com/read/cv4773559">【我的世界】playsound钢琴全键音调值 - 哔哩哔哩 (bilibili.com)</a> 知道了基本的对应关系式<del>（不知道是怎么来的，不过随机抽样了几个数试了试大概是对的，就按这个公式来看吧x）</del>：</p><script type="math/tex; mode=display">p=2^&#123;\frac&#123;\left(n-12\right)&#125;&#123;12&#125;&#125;</script><p><img class="lazy" alt="image.png" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305141803364.png"></p><p>其中 $p$ 代表的是 <code>[pitch: float]</code> 中的数值，而 $n$ 则是十二平均律中的数值关系， $n$ 的整数之间都是半音关系，比如在音色 <code>note.pling</code> 中， $n=0$ 的时候对应 $p=0.5$ ，对应的 F#3 , $n=12$ 的时候对应 $p=1$ 对应的 F#4，$n=24$ 的时候对应 $p=2$ …… 以此类推，便能得到钢琴八十八键对应的音符音调了。</p><p><img class="lazy" alt="钢琴频谱" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305211308820.png"></p><p>值得一提的是，MC中所有可以使用的音效对应的基准因，也就是 p=1 对应的音，并不一定都是 F# ，但是就目前来看，所有 <code>Note</code> 类型的音色对应的基准音都是 F#，所以以 F# 为基准音的基础上去测试以及记录对应的88音平均律的基本关系，如果有基准因不是 F# 的，也可以通过参考这个基准音对应关系来进行平移得到相对应的平均律谱表。</p><h2 id="88音平均律谱表"><a class="headerlink" href="#88音平均律谱表" title="88音平均律谱表"></a>88音平均律谱表</h2><p>以 <code>note.pling</code> 音色为基准，通过 p=1 F#3 的基本音关系延伸，根据 p=2^((n-12)/12) 的关系式，测试计算出来的平均律谱表如下（p取值为小数点后四位数）：</p><script type="math/tex; mode=display">p=2^&#123;\frac&#123;\left(n-12\right)&#125;&#123;12&#125;&#125;</script><p>测试指令：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/playsound note.harp @a ~~~ 1 p</span><br></pre></td></tr></table></figure><div class="table-container"><table><thead><tr><th style="text-align:center">n</th><th style="text-align:center">p</th><th style="text-align:center">音符</th><th style="text-align:center">音域</th></tr></thead><tbody><tr><td style="text-align:center">-33</td><td style="text-align:center">0.0743</td><td style="text-align:center">A</td><td style="text-align:center">0</td></tr><tr><td style="text-align:center">-32</td><td style="text-align:center">0.0787</td><td style="text-align:center">A#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">-31</td><td style="text-align:center">0.0834</td><td style="text-align:center">B</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">-30</td><td style="text-align:center">0.0884</td><td style="text-align:center">C</td><td style="text-align:center">1</td></tr><tr><td style="text-align:center">-29</td><td style="text-align:center">0.0936</td><td style="text-align:center">C#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">-28</td><td style="text-align:center">0.0992</td><td style="text-align:center">D</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">-27</td><td style="text-align:center">0.1051</td><td style="text-align:center">D#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">-26</td><td style="text-align:center">0.1114</td><td style="text-align:center">E</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">-25</td><td style="text-align:center">0.1180</td><td style="text-align:center">F</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">-24</td><td style="text-align:center">0.1250</td><td style="text-align:center">F#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">-23</td><td style="text-align:center">0.1324</td><td style="text-align:center">G</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">-22</td><td style="text-align:center">0.1403</td><td style="text-align:center">G#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">-21</td><td style="text-align:center">0.1487</td><td style="text-align:center">A</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">-20</td><td style="text-align:center">0.1575</td><td style="text-align:center">A#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">-19</td><td style="text-align:center">0.1669</td><td style="text-align:center">B</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">-18</td><td style="text-align:center">0.1768</td><td style="text-align:center">C</td><td style="text-align:center">2</td></tr><tr><td style="text-align:center">-17</td><td style="text-align:center">0.1873</td><td style="text-align:center">C#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">-16</td><td style="text-align:center">0.1984</td><td style="text-align:center">D</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">-15</td><td style="text-align:center">0.2102</td><td style="text-align:center">D#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">-14</td><td style="text-align:center">0.2227</td><td style="text-align:center">E</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">-13</td><td style="text-align:center">0.2360</td><td style="text-align:center">F</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">-12</td><td style="text-align:center">0.2500</td><td style="text-align:center">F#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">-11</td><td style="text-align:center">0.2649</td><td style="text-align:center">G</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">-10</td><td style="text-align:center">0.2806</td><td style="text-align:center">G#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">-9</td><td style="text-align:center">0.2973</td><td style="text-align:center">A</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">-8</td><td style="text-align:center">0.3150</td><td style="text-align:center">A#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">-7</td><td style="text-align:center">0.3337</td><td style="text-align:center">B</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">-6</td><td style="text-align:center">0.3536</td><td style="text-align:center">C</td><td style="text-align:center">3</td></tr><tr><td style="text-align:center">-5</td><td style="text-align:center">0.3746</td><td style="text-align:center">C#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">-4</td><td style="text-align:center">0.3969</td><td style="text-align:center">D</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">-3</td><td style="text-align:center">0.4204</td><td style="text-align:center">D#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">-2</td><td style="text-align:center">0.4454</td><td style="text-align:center">E</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">-1</td><td style="text-align:center">0.4719</td><td style="text-align:center">F</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">0</td><td style="text-align:center">0.5000</td><td style="text-align:center">F#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">1</td><td style="text-align:center">0.5297</td><td style="text-align:center">G</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">2</td><td style="text-align:center">0.5612</td><td style="text-align:center">G#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">3</td><td style="text-align:center">0.5946</td><td style="text-align:center">A</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">4</td><td style="text-align:center">0.6300</td><td style="text-align:center">A#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">5</td><td style="text-align:center">0.6674</td><td style="text-align:center">B</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">6</td><td style="text-align:center">0.7071</td><td style="text-align:center">C</td><td style="text-align:center">4</td></tr><tr><td style="text-align:center">7</td><td style="text-align:center">0.7492</td><td style="text-align:center">C#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">8</td><td style="text-align:center">0.7937</td><td style="text-align:center">D</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">9</td><td style="text-align:center">0.8409</td><td style="text-align:center">D#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">10</td><td style="text-align:center">0.8909</td><td style="text-align:center">E</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">11</td><td style="text-align:center">0.9439</td><td style="text-align:center">F</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">12</td><td style="text-align:center">1.0000</td><td style="text-align:center">F#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">13</td><td style="text-align:center">1.0595</td><td style="text-align:center">G</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">14</td><td style="text-align:center">1.1225</td><td style="text-align:center">G#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">15</td><td style="text-align:center">1.1892</td><td style="text-align:center">A</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">16</td><td style="text-align:center">1.2599</td><td style="text-align:center">A#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">17</td><td style="text-align:center">1.3348</td><td style="text-align:center">B</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">18</td><td style="text-align:center">1.4142</td><td style="text-align:center">C</td><td style="text-align:center">5</td></tr><tr><td style="text-align:center">19</td><td style="text-align:center">1.4983</td><td style="text-align:center">C#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">20</td><td style="text-align:center">1.5874</td><td style="text-align:center">D</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">21</td><td style="text-align:center">1.6818</td><td style="text-align:center">D#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">22</td><td style="text-align:center">1.7818</td><td style="text-align:center">E</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">23</td><td style="text-align:center">1.8877</td><td style="text-align:center">F</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">24</td><td style="text-align:center">2.0000</td><td style="text-align:center">F#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">25</td><td style="text-align:center">2.1189</td><td style="text-align:center">G</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">26</td><td style="text-align:center">2.2449</td><td style="text-align:center">G#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">27</td><td style="text-align:center">2.3784</td><td style="text-align:center">A</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">28</td><td style="text-align:center">2.5198</td><td style="text-align:center">A#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">29</td><td style="text-align:center">2.6697</td><td style="text-align:center">B</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">30</td><td style="text-align:center">2.8284</td><td style="text-align:center">C</td><td style="text-align:center">6</td></tr><tr><td style="text-align:center">31</td><td style="text-align:center">2.9966</td><td style="text-align:center">C#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">32</td><td style="text-align:center">3.1748</td><td style="text-align:center">D</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">33</td><td style="text-align:center">3.3636</td><td style="text-align:center">D#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">34</td><td style="text-align:center">3.5636</td><td style="text-align:center">E</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">35</td><td style="text-align:center">3.7755</td><td style="text-align:center">F</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">36</td><td style="text-align:center">4.0000</td><td style="text-align:center">F#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">37</td><td style="text-align:center">4.2379</td><td style="text-align:center">G</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">38</td><td style="text-align:center">4.4898</td><td style="text-align:center">G#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">39</td><td style="text-align:center">4.7568</td><td style="text-align:center">A</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">40</td><td style="text-align:center">5.0397</td><td style="text-align:center">A#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">41</td><td style="text-align:center">5.3394</td><td style="text-align:center">B</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">42</td><td style="text-align:center">5.6569</td><td style="text-align:center">C</td><td style="text-align:center">7</td></tr><tr><td style="text-align:center">43</td><td style="text-align:center">5.9932</td><td style="text-align:center">C#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">44</td><td style="text-align:center">6.3496</td><td style="text-align:center">D</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">45</td><td style="text-align:center">6.7272</td><td style="text-align:center">D#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">46</td><td style="text-align:center">7.1272</td><td style="text-align:center">E</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">47</td><td style="text-align:center">7.5510</td><td style="text-align:center">F</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">48</td><td style="text-align:center">8.0000</td><td style="text-align:center">F#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">49</td><td style="text-align:center">8.4757</td><td style="text-align:center">G</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">50</td><td style="text-align:center">8.9797</td><td style="text-align:center">G#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">51</td><td style="text-align:center">9.5137</td><td style="text-align:center">A</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">52</td><td style="text-align:center">10.0794</td><td style="text-align:center">A#</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">53</td><td style="text-align:center">10.6787</td><td style="text-align:center">B</td><td style="text-align:center"></td></tr><tr><td style="text-align:center">54</td><td style="text-align:center">11.3137</td><td style="text-align:center">C</td><td style="text-align:center">8</td></tr></tbody></table></div><p>以上表格使用Excel计算 原文件 <del>（懒人一个xd）</del> ：<a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.qq.com/sheet/DZWlER3ZjcXhFRFZz?tab=BB08J2">【腾讯文档】MC音律表</a></p><hr><h1 id="结语"><a class="headerlink" href="#结语" title="结语"></a>结语</h1><p>从未设想过的道路）如果能加上midi转换的话，那么直接在MC里制作音乐也是完全有可能的了（确信。虽然有了nbs音乐，但是nbs本身并不支持在原版MC中直接播放，虽然可以用NBS Studio进行转换，但是目前NBS Studio也不支持MC基岩版，以及原版适配中目前似乎并没有支持到用命令扩展音域的地步（不过高版本mcfunction似乎可行。？）能在原生的MC里实现88音律表，也方便以后创作红石音乐的人们。</p><p>简单的一次尝试，也学到了不少东西，xd</p>
+</div>
+
+<div>
+<div class="tag-plugin link dis-select"><a class="link-card plain" title="MCBE 88音平均律" href="http://blog.imc.re/archives/7d13.html" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="icon"><div class="left"><span class="title">MCBE 88音平均律</span><span class="cap link fs12">http://blog.imc.re/archives/7d13.html</span></div><div class="right"><div class="lazy img" data-bg="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/link/8f277b4ee0ecd.svg"></div></div></a></div>
+</div>
+
+
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/me-shaon/GLWTPL/blob/master/translations/LICENSE_zh-CN">GLWT（Good Luck With That，祝你好运）公共许可证</a> 许可协议，转载请注明出处。</p>
+</div></section><section id="share"><div class="header"><span>分享文章</span></div><div class="body"><div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://touhou.pub/rss/824ee0f8.html"></div><div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/b32ef3da1162a.svg"></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://touhou.pub/rss/824ee0f8.html&title=MCBE 88音平均律 - Touhou.Pub&pics=https://cdn.jsdelivr.net/gh/SMGCDN/photos/uploads/202305141550245.png&summary=
+前言今天修IMC Geyser的时候看到冲田在烷MC，随便试了试Xbox联机没想到进去了）然后冲田似乎在研究playsound的调音，我才知道原来MCBE的playsound命令还有微分音的用法（红石音乐人狂喜x）通过微分音的调教，..."><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/80c07e4dbb303.svg"></a><a class="social share-item email" href="mailto:?subject=MCBE 88音平均律 - Touhou.Pub&amp;body=https://touhou.pub/rss/824ee0f8.html"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/a1b00e20f425d.svg"></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/8411ed322ced6.svg"></a></div><div class="qrcode" id="qrcode-wechat" style="visibility:hidden;height:0"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://touhou.pub/rss/824ee0f8.html"></div></div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/rss/6910c113.html">Manga-Image-Translator</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/rss/ab2923a2.html">Nostr浅尝记录</a></div></section></div>
+
+
+<div class="related-wrap reveal" id="related-posts">
+    <section class="header">
+      <div class="title cap theme">您可能感兴趣的文章</div>
+    </section>
+    <section class="body">
+    <div class="related-posts"><a class="item" href="/rss/2b561629.html" title="Linux 权限操作"><span class="title">Linux 权限操作</span></a><a class="item" href="/rss/d28565de.html" title="Linux变量使用"><span class="title">Linux变量使用</span></a><a class="item" href="/rss/579d1b0.html" title="Linux查找作业解析"><span class="title">Linux查找作业解析</span></a><a class="item" href="/rss/bcd9ad2.html" title="Linux查询操作"><span class="title">Linux查询操作</span></a><a class="item" href="/rss/a0063800.html" title="Linux环境设置"><span class="title">Linux环境设置</span></a></div></section></div>
+
+
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">文章</span><a href="/rss">订阅</a><a href="/categories">分类</a><a href="/tags">标签</a><a href="/archives">归档</a></div><div class="sitemap-group"><span class="fs14">项目</span><a href="/wiki/guides">指南</a><a href="/webs">导航</a></div><div class="sitemap-group"><span class="fs14">更多</span><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Touhou-Public">Github</a><a target="_blank" rel="external nofollow noopener noreferrer" href="https://blog.imc.re/">博客</a><a target="_blank" rel="external nofollow noopener noreferrer" href="https://imc.re/">IMC.RE</a></div></div><div class="text"><p><a href="/">@Touhou.Pub</a> 2023 powered by <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Touhou-Public">Touhou-Public</a>。<br><br>本网站所有内容除特别声明外，均采用 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/me-shaon/GLWTPL/blob/master/translations/LICENSE_zh-CN">GLWT（Good Luck With That，祝你好运）公共许可证</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+
+      <div class="float-panel mobile-only blur" style="display:none">
+  <button type="button" class="sidebar-toggle mobile" onclick="sidebar.toggle()">
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"/><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"/></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class="scripts">
+    <script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = stellar.config.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.19.0';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.19.0';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+    root : '/',
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://gcore.jsdelivr.net/npm/jquery@3.6.2/dist/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"codeblock":true,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.copycode = Object.assign({"enable":true,"js":"/js/plugins/copycode.js","default_text":"Copy","success_text":"Copied"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+  function loadJS() {
+    const els = document.querySelectorAll("#comments #giscus");
+    if (els.length === 0) return;
+    els.forEach((el, i) => {
+      try {
+        el.innerHTML = '';
+      } catch (error) {
+        console.log(error);
+      }
+      var script = document.createElement('script');
+      script.src = 'https://giscus.app/client.js';
+      script.async = true;
+      for (let key of Object.keys(el.attributes)) {
+        let attr = el.attributes[key];
+        if (['class', 'id'].includes(attr.name) === false) {
+          script.setAttribute(attr.name, attr.value);
+        }
+      }
+      el.appendChild(script);
+    });
+  }
+  window.addEventListener('DOMContentLoaded', (event) => {
+    loadJS();
+  });
+</script>
+
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>

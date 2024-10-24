@@ -1,0 +1,1875 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.19.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="https://gcore.jsdelivr.net">
+  <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="//unpkg.com">
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>THGuides：THMIX Pedia - Touhou.Pub</title>
+
+  
+    <meta name="description" content="★ THMIX Pedia ★◇    3.35.508    ◇阅读指引 若想快速了解游戏设置，请阅读第三部分 如果遇到了一些问题，请先看看第伍部分 推荐使用支持Markdown格式的阅读器进行阅读，例如Markor，使用方法如下: 找到下载下来的THMIX教程，将后缀名从 “.txt” 改为 “.md” 安装Markor，用其打开教程，再点击顶部预览按钮开始阅读   快速指引: 图片版教程:">
+<meta property="og:type" content="website">
+<meta property="og:title" content="THMIX Pedia">
+<meta property="og:url" content="https://touhou.pub/wiki/guides/games/thmix.html">
+<meta property="og:site_name" content="Touhou.Pub">
+<meta property="og:description" content="★ THMIX Pedia ★◇    3.35.508    ◇阅读指引 若想快速了解游戏设置，请阅读第三部分 如果遇到了一些问题，请先看看第伍部分 推荐使用支持Markdown格式的阅读器进行阅读，例如Markor，使用方法如下: 找到下载下来的THMIX教程，将后缀名从 “.txt” 改为 “.md” 安装Markor，用其打开教程，再点击顶部预览按钮开始阅读   快速指引: 图片版教程:">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://touhou.pub/wiki/guides/games/%E3%80%8C%E9%93%BE%E6%8E%A5%E3%80%8D">
+<meta property="og:image" content="https://s2.loli.net/2022/10/15/1KyOzt8l56Wkfbi.jpg">
+<meta property="og:image" content="https://s2.loli.net/2022/10/15/AS6lM8B3Oy1IvLN.png">
+<meta property="og:image" content="https://s2.loli.net/2022/10/15/7ymqU5GiXnMHfbo.jpg">
+<meta property="og:image" content="https://s2.loli.net/2022/10/15/3r2DdUzx4QmI98u.jpg">
+<meta property="og:image" content="https://s2.loli.net/2022/10/15/1ynuqVaHIlAxDLe.jpg">
+<meta property="og:image" content="https://s2.loli.net/2022/10/15/TMlIShzyDVZuLRr.png">
+<meta property="og:image" content="https://s2.loli.net/2022/10/17/Qn8tGkRPZ9YeAjg.jpg">
+<meta property="og:image" content="https://s2.loli.net/2022/10/03/BTgJ8LimfEkhQF6.png">
+<meta property="og:image" content="https://i.loli.net/2021/11/21/Jgo3CUP2VFXnrs8.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/11/21/Uz6LPlINQrfgkAC.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/11/21/FTuZrlwVs1d6ibm.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/10/10/3bptVQWfcPFuZKd.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/10/10/hQ3eSJXG9ro4wBg.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/10/10/XA9RcnKLI68Zv7H.jpg">
+<meta property="og:image" content="https://s2.loli.net/2022/02/09/DCKqNjTo4RFH7B6.jpg">
+<meta property="og:image" content="https://s2.loli.net/2022/10/09/CsWlTAKrz1gaObI.png">
+<meta property="og:image" content="https://s2.loli.net/2022/02/09/xUpO6TYv8AoICnB.jpg">
+<meta property="og:image" content="https://s2.loli.net/2022/02/09/OWLJMacrb7Nh8KV.jpg">
+<meta property="og:image" content="https://s2.loli.net/2022/02/09/Dgl8wmnIsjM9bv4.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/10/10/ktGf3FRbX5uDMe2.jpg">
+<meta property="og:image" content="https://s2.loli.net/2022/02/09/6DHPn79zv1kO8su.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/10/10/T5xbjLo4fqhY81n.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/10/10/V5M3UB2seyCdTr6.jpg">
+<meta property="og:image" content="https://s2.loli.net/2022/02/09/5JlhSLzmDAB4xCF.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/10/10/NWdqaBpmG1n52lE.jpg">
+<meta property="og:image" content="https://i.loli.net/2021/10/13/KAm79txaLUHcpQB.png">
+<meta property="article:published_time" content="2024-10-24T23:26:39.535Z">
+<meta property="article:modified_time" content="2023-05-23T05:12:49.000Z">
+<meta property="article:author" content="Touhou-Public">
+<meta property="article:tag" content="touhou, 东方, 東方, touhou-project, 东方Project, 東方Project, SummerGoro">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://touhou.pub/wiki/guides/games/%E3%80%8C%E9%93%BE%E6%8E%A5%E3%80%8D">
+  
+  
+  
+  <meta name="keywords" content="touhou, 东方, 東方, touhou-project, 东方Project, 東方Project, SummerGoro">
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Touhou.Pub" type="application/atom+xml">
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+
+  
+    <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+    <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+    <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+  
+
+
+  
+
+  <link href="https://cdn.jsdelivr.net/npm/font-touhou98/dist/touhou98.css" rel="stylesheet">
+  <link href="/css/fonts.css" rel="stylesheet">
+<!--百度统计-->
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?b427d26cc6155f11e2a036ccfa4e01da";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+  
+<!--Google Adsense-->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4773172018528901" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  
+
+
+
+
+  <div class="l_body" id="start">
+    <aside class="l_left" layout="wiki">
+    
+
+  
+
+
+
+
+<div class="widgets"><widget class="widget-wrapper logo-wrap wiki"><div class="widget-body"><a style="filter: grayscale(100%)" class="wiki-home cap" href="/"><svg aria-hidden="true" viewbox="0 0 16 16" width="1rem" height="1rem" fill="currentColor"><path fill-rule="evenodd" d="M7.78 12.53a.75.75 0 01-1.06 0L2.47 8.28a.75.75 0 010-1.06l4.25-4.25a.75.75 0 011.06 1.06L4.81 7h7.44a.75.75 0 010 1.5H4.81l2.97 2.97a.75.75 0 010 1.06z"/></svg>所有项目</a><a class="title" href="/wiki/guides/index.html"><div class="main" ff="title">THGuides</div><div class="sub normal cap">Touhou Public Guides</div><div class="sub hover cap" style="opacity:0"> 东方Project新人入坑引导指南</div></a></div></widget>
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/wiki/" placeholder="文档搜索"><svg t="1670596976048" class="icon search-icon" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"/></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+
+
+
+
+<widget class="widget-wrapper toc multi" id="data-toc"><div class="widget-header cap dis-select"><span class="name">主页</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/guides/index.html#start"><span class="toc-text">指南首页</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/guides/awsome.html"><span class="toc-text">Awsome-Touhou</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/guides/rukengbei.html"><span class="toc-text">入门指北</span></a></div></div><div class="widget-header cap dis-select"><span class="name">网站</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/webs/index.html"><span class="toc-text">网站指南</span></a></div></div><div class="widget-header cap dis-select"><span class="name">视频</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/guides/videos/index.html"><span class="toc-text">视频指南</span></a></div></div><div class="widget-header cap dis-select"><span class="name">图片</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/guides/photos/index.html"><span class="toc-text">图片指南</span></a></div></div><div class="widget-header cap dis-select"><span class="name">音乐</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/guides/music/index.html"><span class="toc-text">音乐指南</span></a></div></div><div class="widget-header cap dis-select"><span class="name">开发</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/guides/develop/index.html"><span class="toc-text">开发指南</span></a></div><div class="doc-tree"><a class="doc-tree-link" href="/wiki/guides/develop/github-repo.html"><span class="toc-text">Github-repo</span></a></div></div><div class="widget-header cap dis-select"><span class="name">游戏</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/guides/games/index.html"><span class="toc-text">游戏指南</span></a></div><div class="doc-tree active"><a class="doc-tree-link active" href="/wiki/guides/games/thmix.html"><span class="toc-text">THMIX Pedia</span></a><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E2%98%85-THMIX-Pedia-%E2%98%85"><span class="toc-text">★ THMIX Pedia ★</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E2%97%87-3-35-508-%E2%97%87"><span class="toc-text">◇    3.35.508    ◇</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%85%E8%AF%BB%E6%8C%87%E5%BC%95"><span class="toc-text">阅读指引</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%80%96%E7%89%B9%E6%AE%8A%E5%86%85%E5%AE%B9%E8%AF%B4%E6%98%8E%E3%80%97"><span class="toc-text">〖特殊内容说明〗</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E2%99%A2-%E7%9B%AE%E5%BD%95-%E2%99%A2"><span class="toc-text">♢ 目录 ♢</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86-%E5%AE%98%E7%BD%91"><span class="toc-text">第一部分 官网</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86-%E6%B8%B8%E6%88%8F"><span class="toc-text">第二部分 游戏</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E9%83%A8%E5%88%86-%E8%AE%BE%E7%BD%AE"><span class="toc-text">第三部分 设置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E9%83%A8%E5%88%86-%E6%96%87%E4%BB%B6"><span class="toc-text">第四部分 文件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%AC%E4%BC%8D%E9%83%A8%E5%88%86-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-text">第伍部分 常见问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%99%84%E5%BD%95-%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5-amp-%E8%B5%84%E6%BA%90%E4%B8%8B%E8%BD%BD"><span class="toc-text">附录 友情链接&amp;资源下载</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86-%E5%AE%98%E7%BD%91-1"><span class="toc-text">第一部分 官网</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86-%E6%B8%B8%E6%88%8F-1"><span class="toc-text">第二部分 游戏</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E4%BA%8ETHMIX"><span class="toc-text">-关于THMIX-</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B8%B8%E6%88%8FUI"><span class="toc-text">-游戏UI-</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%B0%83%E8%AF%95%E9%9D%A2%E6%9D%BF"><span class="toc-text">[调试面板]</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%93%E8%BE%91%E7%95%8C%E9%9D%A2"><span class="toc-text">[专辑界面]</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%95%86%E5%BA%97%E7%95%8C%E9%9D%A2"><span class="toc-text">[商店界面]</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Midi%E4%BF%A1%E6%81%AF%E7%95%8C%E9%9D%A2"><span class="toc-text">[Midi信息界面]</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9F%B3%E8%BD%A8%E7%95%8C%E9%9D%A2"><span class="toc-text">[音轨界面]</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%AD%8C%E6%9B%B2%E7%BB%93%E7%AE%97%E7%95%8C%E9%9D%A2"><span class="toc-text">[歌曲结算界面]</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E9%83%A8%E5%88%86-%E8%AE%BE%E7%BD%AE-1"><span class="toc-text">第三部分 设置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%BB%E8%AE%BE%E7%BD%AE"><span class="toc-text">-总设置-</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B8%B8%E6%88%8F%E8%AE%BE%E7%BD%AE"><span class="toc-text">-游戏设置-</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E9%83%A8%E5%88%86-%E6%96%87%E4%BB%B6-1"><span class="toc-text">第四部分   文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Midi%E5%AF%BC%E5%85%A5"><span class="toc-text">-Midi导入-</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9F%B3%E6%BA%90%E5%AF%BC%E5%85%A5"><span class="toc-text">-音源导入-</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9A%AE%E8%82%A4%E5%88%B6%E4%BD%9C"><span class="toc-text">-皮肤制作-</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9A%AE%E8%82%A4%E5%AF%BC%E5%85%A5"><span class="toc-text">-皮肤导入-</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC%E4%BC%8D%E9%83%A8%E5%88%86-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-1"><span class="toc-text">第伍部分 常见问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%99%84%E5%BD%95-%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5-amp-%E8%B5%84%E6%BA%90%E4%B8%8B%E8%BD%BD-1"><span class="toc-text">附录 友情链接&amp;资源下载</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%8B%E6%83%85%E9%93%BE%E6%8E%A5%EF%BC%9A"><span class="toc-text">友情链接：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B5%84%E6%BA%90%E4%B8%8B%E8%BD%BD"><span class="toc-text">资源下载</span></a></li></ol></li></ol></li></ol></li></ol></div></div><div class="widget-header cap dis-select"><span class="name">社团</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/guides/clubs/index.html"><span class="toc-text">社团指南</span></a></div></div><div class="widget-header cap dis-select"><span class="name">文章</span></div><div class="widget-body fs14"><div class="doc-tree"><a class="doc-tree-link" href="/wiki/guides/articles/index.html"><span class="toc-text">文章指南</span></a></div></div></widget>
+
+
+
+
+</div>
+
+
+    </aside>
+    <div class="l_main">
+      
+
+      
+
+  
+  
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" id="home" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" id="menu" href="/wiki">项目</a><span class="sep"></span><a class="cap breadcrumb" id="proj" href="/wiki/guides/index.html">THGuides</a></div><div id="post-meta">更新于&nbsp;<time datetime="2023-05-23T05:12:49.000Z">2023-05-23</time></div></div>
+
+  <article class="md-text content wiki">
+  <h1 class="article-title"><span>THMIX Pedia</span></h1>
+  <h1 id="★-THMIX-Pedia-★"><a href="#★-THMIX-Pedia-★" class="headerlink" title="★ THMIX Pedia ★"></a>★ THMIX Pedia ★</h1><h2 id="◇-3-35-508-◇"><a href="#◇-3-35-508-◇" class="headerlink" title="◇    3.35.508    ◇"></a>◇    3.35.508    ◇</h2><h3 id="阅读指引"><a href="#阅读指引" class="headerlink" title="阅读指引"></a>阅读指引</h3><ul>
+<li>若想快速了解游戏设置，请阅读第三部分</li>
+<li>如果遇到了一些问题，请先看看第伍部分</li>
+<li>推荐使用支持Markdown格式的阅读器进行阅读，例如Markor，使用方法如下:<ol>
+<li>找到下载下来的THMIX教程，将后缀名从 “.txt” 改为 “.md”</li>
+<li>安装Markor，用其打开教程，再点击顶部预览按钮开始阅读</li>
+</ol>
+</li>
+<li>快速指引:<ul>
+<li>图片版教程: 请移步至THMIX测试群群相册</li>
+<li>IOS测试版：官网首页有加入测试版的链接</li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://thmix.org/">THMIX官网</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://wwn.lanzoul.com/b00q6y03a">Markor下载(蓝奏云)(密码：THMIX)</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://zhaoym233.github.io/thmixCourse/">网页版教程</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.bilibili.com/video/av417389550">基础视频教程</a></li>
+<li><a href="#Addendum">THMIX资源下载(附录)</a></li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="〖特殊内容说明〗"><a href="#〖特殊内容说明〗" class="headerlink" title="〖特殊内容说明〗"></a>〖特殊内容说明〗</h3><ul>
+<li>本教程中所有双引号(“”)都只用于分隔说明文本与内容</li>
+<li>若使用txt查看器，请忽略部分符号、结构进行阅读，例如:<ul>
+<li>“ <a href="#a-b">xx</a> “，遇到这种结构请直接阅读xx部分</li>
+<li>“ <div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="「链接」" fancybox="true"></div></div> “ ，这种结构是Markdown中插入图片的格式，请直接忽略</li>
+</ul>
+</li>
+<li>本教程内所有”「」”均表示内容需要自行理解并替换，例如：“「游戏文件目录」”表示游戏文件目录的路径，需将其替换为框内文字所表示的内容进行阅读</li>
+<li>“xx设置-I-第n项”表示xx设置的第n设置项，同时其位于I栏，是什么及其用途请看第二部分</li>
+</ul>
+<hr>
+<h3 id="♢-目录-♢"><a href="#♢-目录-♢" class="headerlink" title="♢ 目录 ♢"></a>♢ 目录 ♢</h3><h4 id="第一部分-官网"><a href="#第一部分-官网" class="headerlink" title="第一部分 官网"></a><a href="#U1">第一部分 官网</a></h4><pre><code>- 官网
+  ◈关于菜单中的按键
+  ◈关于Midi信息页面
+  ◈关于个人资料页面
+- 注册
+- Midi上传
+</code></pre>
+<h4 id="第二部分-游戏"><a href="#第二部分-游戏" class="headerlink" title="第二部分 游戏"></a><a href="#U2">第二部分 游戏</a></h4><pre><code>- 关于THMIX
+  ◈关于版本号
+- 游戏UI
+  [调试面板]
+  [专辑界面]
+  [商店界面]
+   ◈关于搜索栏
+   ◈关于Midi信息界面
+  [Midi信息界面]
+   ◈关于游戏难度
+   ◈关于游戏Mods
+   ◈关于游戏模式
+   ◈关于Midi信息框
+   ◈关于排名与评分
+   ◈关于下落的音符
+   ◈关于简介及评论
+  [音轨界面]
+  [歌曲结算界面]
+   ◈关于立绘
+</code></pre>
+<h4 id="第三部分-设置"><a href="#第三部分-设置" class="headerlink" title="第三部分 设置"></a><a href="#U3">第三部分 设置</a></h4><pre><code>◈关于翻译
+◈关于其它设置  
+- 总设置
+- 游戏设置
+  ◈关于RGB颜色
+</code></pre>
+<h4 id="第四部分-文件"><a href="#第四部分-文件" class="headerlink" title="第四部分 文件"></a><a href="#U4">第四部分 文件</a></h4><pre><code>◈关于游戏文件目录
+- 文件储存
+- Midi导入
+  ◈关于Midi
+- 音源导入
+  ◈关于音源
+- 皮肤制作
+- 皮肤导入
+</code></pre>
+<h4 id="第伍部分-常见问题"><a href="#第伍部分-常见问题" class="headerlink" title="第伍部分 常见问题"></a><a href="#U5">第伍部分 常见问题</a></h4><pre><code>  1.官网无法访问
+  2.收不到验证码或验证码错误
+  3.为什么官网不能下载Midi
+  4.怎么在上传完Midi后再次编辑
+  5.怎么删除自己上传的Midi
+  6.为什么没有登录按钮
+  7.语言选择中文却没有中文
+  8.游戏内无网络连接
+  9.翻译为什么这么渣
+  10.游戏频繁闪退或无响应
+  11.游戏内怎么下载曲子
+  12.怎么导入曲子或音源文件
+  13.为何什么文件都能用THMIX打开
+  14.专辑界面空白或界面重叠
+  15.无法在Midi商店内下载Midi
+  16.播放交响乐的观感很差
+  17.游戏卡顿、掉帧或有杂音
+  18.游戏难度太低了
+  19.设置改完后怎么会被还原
+  20.已下载的Midi如何去删除
+  21.滑键间的连接线能否关闭
+  22.音符间的距离太近或重叠
+  23.按键特效晃眼，能否更换
+  24.皮肤无法显示或进行更换
+  25.歌曲封面为什么是模糊的
+</code></pre>
+<h4 id="附录-友情链接-amp-资源下载"><a href="#附录-友情链接-amp-资源下载" class="headerlink" title="附录 友情链接&amp;资源下载"></a><a href="#Addendum">附录 友情链接&amp;资源下载</a></h4><pre><code>- 友情链接
+- 资源下载
+</code></pre>
+<hr>
+<h3 id="第一部分-官网-1"><a href="#第一部分-官网-1" class="headerlink" title="第一部分 官网"></a>第一部分 官网</h3><p>  -官网-</p>
+<blockquote>
+<ul>
+<li>官网网址: <a target="_blank" rel="external nofollow noopener noreferrer" href="https://thmix.org/">https://thmix.org/</a> 或 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://asia.thmix.org/">https://asia.thmix.org/</a></li>
+<li>使用中国移动的网络大概率访问不了网站，有条件的可以换个网络</li>
+<li>访问官网时网址前面必须是https，使用http会被拒绝访问</li>
+</ul>
+</blockquote>
+<ul>
+<li><p>home</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2022/10/15/1KyOzt8l56Wkfbi.jpg" fancybox="true"></div></div>
+<ul>
+<li>官网的首页，访问官网时一般都是进入这个页面。在这个页面可以看到注册玩家总数和在线人数，页面中间是各个下载渠道的链接加Discord群的链接，背景是一个泡水灵梦</li>
+<li>页面的左上角有个菜单按钮，菜单点开后，可以前往其它页面，部分页面需登录后方可查看</li>
+</ul>
+<p>◈关于菜单中的按键</p>
+</li>
+</ul>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2022/10/15/AS6lM8B3Oy1IvLN.png" fancybox="true"></div></div>
+<pre><code>* 在菜单的中下方，有一个刷新按钮，点击后能够重新加载网页，和浏览器自带的刷新按钮没什么区别
+* 在刷新按钮的下方，有一个语言选择栏（默认语言显示的是English）
+* 在语言选择栏的下方是登录和注册按钮
+* 登录后，在语言选择栏的下方，登录和注册按钮变为一个可点击的列表按钮和当前用户的头像，点击头像可进入个人资料页面；点击形如 +▼ 的图标展开小菜单，在小菜单中，可以进行上传Midi等操作
+</code></pre>
+<ul>
+<li><p>midis</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2022/10/15/7ymqU5GiXnMHfbo.jpg" fancybox="true"></div></div>
+<ul>
+<li>Midi商店。在这个页面，可以看到游戏内所有的可下载的Midi</li>
+<li>使用页面上方的搜索栏可以搜索Midi，但是目前不支持中文关键词搜索，所以搜索名字带中文的Midi时需要把名字完整输入(输入曲名的英文或符号部分也可搜索到带中文名字的曲子，前提是它们与文字间有空格隔开)，也可以通过搜索Midi的作者、简介内容等来寻找Midi</li>
+<li>除直接搜索外，也可以使用搜索框下方的筛选按钮选择特定的状态或特定专辑的Midi</li>
+<li>搜索完成后，还可以使用搜索区域下方的排序按钮，用其提供的方式对搜索结果进行重新排序<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2022/10/15/3r2DdUzx4QmI98u.jpg" fancybox="true"></div></div></li>
+<li>页面下方是商店中的所有可供下载的Midi，Midi窗口中展示了Midi的部分信息</li>
+<li>Midi窗口的背景是该曲专辑封面&#x2F;曲绘</li>
+<li>窗口左下方是Midi的名字</li>
+<li>右上角是曲目的游玩次数，下载数，点赞数和喜欢数</li>
+<li>在封面图下方的信息栏中，自上而下分别显示着上传者，歌曲所属专辑，歌曲原名</li>
+<li>再下面是所有玩家的平均分数，平均连击数和平均准确度</li>
+<li>点击Midi的名字即可跳转到Midi的信息页面</li>
+</ul>
+<p>◈关于Midi信息页面</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2022/10/15/1ynuqVaHIlAxDLe.jpg" fancybox="true"></div></div>
+<ul>
+<li>Midi信息页面最上方四个图标从左到右分别显示的是游玩次数、下载次数、点赞次数和喜欢次数</li>
+<li>在四个图标下方的是Midi的名字和其作者，点击作者名字可以跳转到原出处查看此Midi(仅部分Midi支持该操作)</li>
+<li>再往下的是Midi上传者及上传时间，右边的图标显示的是Midi状态（Midi状态的说明见第二部分关于Midi信息界面的介绍）；Midi状态右边的是编辑按钮，只有在登录状态进入自己有权限编辑的Midi的信息页面时才有此按钮</li>
+<li>Midi状态下方的黑底方框显示的是玩家们的平均分数，平均连击数和平均准确度</li>
+<li>User Rating下显示的是点赞与踩的数量的百分比(即好评度和差评度)</li>
+<li>Description下的是简介内容，Source Artist下是原曲的作者；Source Album下是原曲的专辑；Source Song下是原曲的名字</li>
+<li>简介右侧的白底方框中显示了歌曲的通过状态，如Pass Rate下的数值是歌曲的通过率；Grade Status下是获得各个评分等级的比率</li>
+<li>再往下显示的是该曲排行榜的第一名的各项具体数值和排行榜</li>
+<li>在Midi信息页面的底部是评论区，登陆并通过人机验证后可以在此处发表评论</li>
+</ul>
+</li>
+<li><p>songs</p>
+</li>
+</ul>
+<ul>
+<li>这个页面可以看到整个专辑里都有些什么歌，不过只有显示部分专辑。此页面主要是拿来改Midi翻译的，对于普通玩家没有什么用，只能看看</li>
+</ul>
+<ul>
+<li>translations</li>
+</ul>
+<ul>
+<li>这个页面用于修改游戏内容的翻译，只能看看，修改内容需要有权限</li>
+</ul>
+<ul>
+<li>versions</li>
+</ul>
+<ul>
+<li>这个页面是用于下载不同版本的TouhouMix，同时也能看到各个版本更新内容的介绍（然而官网的版本已经过时了）</li>
+</ul>
+<ul>
+<li><p>users</p>
+<ul>
+<li>这个页面摆放的是游戏的总排行榜。在这个页面中，可以看到各个玩家的排名(第一名的名次是#0)、游戏时间、游玩数量、总得分、平均连击数、平均准确度、演奏点数(即performance point，同时排行榜也是根据这项数值对玩家进行排名的)、取得S、A、B评分的数量。</li>
+<li>在排行榜界面，可以通过点击玩家名字进入对应的玩家信息页面，在其它界面点击玩家名字也可进入(除了游戏内)，你可以看到这个玩家的排名、各个评分的数量、最近游玩的歌曲等信息</li>
+<li>单击在排行榜顶部的”Performance Ranking”下的年份可更换排行榜</li>
+</ul>
+<p>◈关于个人资料页面<br> <div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2022/10/15/TMlIShzyDVZuLRr.png" fancybox="true"></div></div></p>
+<ul>
+<li>在排行榜、菜单等页面中点击玩家头像进入对应的个人资料页面</li>
+<li>当登录自己的账号时，在Player Info的右边有两个按钮，第一个铅笔图标的按钮点击后进入个人信息编辑页面，玩家可以在其中修改名字、头像、个人简介和密码；第二个像笔擦按钮点击后可以清除登录状态，点击后再刷新网页即可退出登录</li>
+<li>在玩家头像右边从上到下四项显示的是玩家的名字、账号注册时间、上一次登录时间(登录官网也算)和总在线时间</li>
+<li>右边四项显示的是玩家的总游玩次数、总得分、平均连击数和平均准确度</li>
+<li>再往下的的几个从左往右显示的分别是总游玩时间、总pp值、S到F评级的数量，右下是该用户在总排行榜中的排名，旁边的图表是排名变化趋势</li>
+<li>“me!”栏显示的是玩家的个人简介</li>
+<li>“Ranks”栏显示的是玩家的最好成绩，但一般显示不准</li>
+<li>“Historical”栏记录着玩家每日的游玩情况，但是是以k线图的方式呈现</li>
+<li>“Most Played Midis”栏显示着该玩家玩得比较多的Midi</li>
+<li>“Recent Plays”栏显示着玩家最近玩的Midi</li>
+</ul>
+</li>
+<li><p>help</p>
+</li>
+</ul>
+<ul>
+<li>这个页面说是帮助页面不如说是反馈页面，此页面只有写着遇到各种问题时的反馈渠道</li>
+</ul>
+<ul>
+<li>cards<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2022/10/17/Qn8tGkRPZ9YeAjg.jpg" fancybox="true"></div></div>
+
+<ul>
+<li>此页面目前已被隐藏。需要登录账号后手动输入网址方可访问该页面。这个页面里有许多曾经计划用于做抽卡系统的卡牌图片，但是因为抽卡系统迟迟没有动工，所以这个页面暂时没有实际用途</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>  -注册-</p>
+<p>   注册流程：<br>    1. 进入<a target="_blank" rel="external nofollow noopener noreferrer" href="https://thmix.org/">官网</a><br>    2. 点击左上角的菜单<br>    3. 点击Register(注册)<br>    4. 按要求输入用户名、邮箱地址和密码<br>    5. 输入邮箱内收到的验证码(输入时请确保网站连接不会中断；若收不到验证码，可尝试换个邮箱)</p>
+<p>  -Midi上传-</p>
+<p>   上传流程：<br>    1. 进入THMIX官网并登录上自己的账号<br>    2. 点击网页左上角的菜单按钮<br>    3. 点击位于头像上的 +▼ 图标，选择上传Midi<br>    4. 点击选择文件，选择要上传的Midi(选择完文件后稍等一会，上传完毕后会自动进入编辑页面)<br>    5. 编辑完毕后点击上传(upload)</p>
+<pre><code>* 如果想在Midi上传完后编辑Midi信息，仅需在账号登录后进入Midi信息页，点击midi状态(一般显示为“pending”)旁的编辑按钮即可；若无编辑按钮请在当前网址的末尾加上 &quot;/edit&quot; 并直接访问
+* 若上传Midi时其自动跳转至已存在的Midi的信息页面，则说明要上传的Midi与其重复
+* Midi的ID同时也是显示在网址里的， 网址中Midis/后的一大串字符串就是Midi的ID，例如: &quot;https://asia.thmix.org/Midis/123456/edit&quot; 的123456即为Midi的ID(同时也是Midi文件的Md5值)，当想要删除已上传的Midi或者上传一个已有Midi的新版本时，就会需要用上它了  
+
+ 编辑页面内容：
+ - Cover：在该词的下方有一个选择上传文件的按钮，点击此按钮上传作为Midi的封面的图片，图片大小不可超过1MB，图片上传后会被裁剪成长条形
+
+ - Meta：
+    + derived from Midi id：如果上传的Midi是已有的Midi的新版本时，需要在此栏输入要替换的旧Midi的ID，同时下一项也需要填写旧Midi的ID，正常情况下无需填写
+    + supersede Midi id (will kill old Midi)：在此项输入Midi的ID，即可删除对应的Midi，也可以输入当前Midi的ID来删除它自己，正常情况下无需填写；当Midi因为文件有问题等原因不能玩或不适合玩时，需要填写此项，填写并确定后无法撤销该删除操作
+    + Midi name：Midi的名字
+    + Midi description：Midi的简介
+    + Midi artist name：Midi的作者。如果不清楚作者，推荐填Unknow
+    + Midi artist url：输入Midi的原出处的链接，没有链接或是自己做的可不填
+
+ - Source：
+    + source album name：歌曲专辑名，如果是东方正作及小数点作的曲子，请在列表中选择(没有的话请自己准确输入或放着等管理来改)，如果不是请按实际情况填写
+    + source song name：原歌曲名，请准确地输入此项，此项最好要填，不填会导致Midi下载后会和其它的没有所属歌曲的Midi扔一起
+    + source artist name：原歌曲作者，请输入歌曲的歌手的名字，若不清楚原唱是哪位，可不填
+</code></pre>
+<details><summary>图片流程</summary>
+
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2022/10/03/BTgJ8LimfEkhQF6.png" fancybox="true"></div></div>  
+</details>
+
+<hr>
+<h3 id="第二部分-游戏-1"><a href="#第二部分-游戏-1" class="headerlink" title="第二部分 游戏"></a>第二部分 游戏</h3><h4 id="关于THMIX"><a href="#关于THMIX" class="headerlink" title="-关于THMIX-"></a>-关于THMIX-</h4><p>  ◈关于版本号  </p>
+<ul>
+<li>版本号对于判断游戏的新旧程度具有重要作用，可通过以下方式快速查看游戏的版本号:  <ol>
+<li>打开游戏，当游戏显示出游戏标题时，标题下方的数字即为版本号  <div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.loli.net/2021/11/21/Jgo3CUP2VFXnrs8.jpg" fancybox="true"></div></div>  </li>
+<li>在手机中的应用管理中找到THMIX即可看见版本号  <div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.loli.net/2021/11/21/Uz6LPlINQrfgkAC.jpg" fancybox="true"></div></div>  </li>
+<li>点击游戏内顶栏从左往右显示的第三个东西，点开后第一项就是当前的版本号  <div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.loli.net/2021/11/21/FTuZrlwVs1d6ibm.jpg" fancybox="true"></div></div></li>
+</ol>
+</li>
+<li>THMIX的版本号最后一个点后的数字是游戏的版本编号，如 “3.0.2.441” 中的“441”，该数值表示其是有记录以来的第几个修改版</li>
+</ul>
+<h4 id="游戏UI"><a href="#游戏UI" class="headerlink" title="-游戏UI-"></a>-游戏UI-</h4><h5 id="调试面板"><a href="#调试面板" class="headerlink" title="[调试面板]"></a>[调试面板]</h5><ul>
+<li>在游戏中的大部分界面双指下滑可进入LunarConsole调试面板，在游戏遇到错误时，可进入调试面板查看具体的错误日志，调试面板内也有例如复制或发送错误信息、设置显示位置等功能，当遇到游戏Bug时，可以复制日志并发给开发者</li>
+</ul>
+<h5 id="专辑界面"><a href="#专辑界面" class="headerlink" title="[专辑界面]"></a>[专辑界面]</h5><ul>
+<li>进入THMIX后，展示在画面上的是专辑界面，专辑是按建立的时间顺序排列的，即最新添加的专辑会置于最下面(但专辑有时候并不能正常地排序)。已存在的专辑位置一般不再改变</li>
+<li>专辑的图片正常是经过模糊处理的，当账号的总pp值高于1000时，图片会正常显示，若仍为模糊图片则需手动清除图片缓存</li>
+<li>屏幕左上角有一个搜索栏，可用于搜索已下载的所有本地midi，支持模糊搜索，即搜索曲子时无需把名字打全，可以被搜索的内容包括：专辑名字和歌曲名字（即使是搜加载过翻译的）、Midi名字</li>
+<li>搜索有时候会搜到完全无关的内容<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.loli.net/2021/10/10/3bptVQWfcPFuZKd.jpg" fancybox="true"></div></div></li>
+<li>在游戏窗口顶栏显示有许多内容，从左往右分别为:<ol>
+<li>网络延迟显示，这个由于刷新频率和机制的问题，显示得并不准确和及时，一般可用于判断游戏与服务器之间的连接状态，即有数值则代表能够正常连接服务器</li>
+<li>一个点开后可以查看官网网址、QQ群号和加Discord群的链接的按钮</li>
+<li>一个点开后可以查看当前游戏的版本号和其它平台的THMIX的版本号的按钮</li>
+<li>总设置按钮，点击进入总设置</li>
+<li>登录窗口，登录后显示内容变为头像，点击可查看用户名，用户名左边显示的是当前账号的总pp值、等级和升级进度，等级的计算方式为总pp的算术平方根</li>
+</ol>
+</li>
+</ul>
+<h5 id="商店界面"><a href="#商店界面" class="headerlink" title="[商店界面]"></a>[商店界面]</h5><ul>
+<li><p>在专辑界面点击屏幕右下角(人物立绘下方)的按钮进入商店界面。在商店界面可以下载到所有官网已收录的Midi，包括内置的与玩家上传的任意状态的Midi，还可以通过搜索来寻找Midi  </p>
+ <div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.loli.net/2021/10/10/hQ3eSJXG9ro4wBg.jpg" fancybox="true"></div></div>
+
+<p> ◈关于搜索栏  </p>
+<ul>
+<li>Midi商店中的搜索栏可用于搜索曲目，但搜索时关键词必需局部完整，(例如搜”东方”不能只输入”东”，但是若要搜索的内容为”东,方”，即两关键词间被标点或空格分隔，则可通过搜索”东”来寻找)；同时搜索多个关键词时，关键词间需用标点符号(例如”.”)或空格隔开；若同时搜索多个关键词，则会搜索出带其中任意一个或多个关键词的内容所以不建议同时搜索多个关键词</li>
+<li>可被搜索的内容包括：简介内容、上传者、Midi作者、Midi名字、原曲名、原曲歌手、专辑名</li>
+</ul>
+<p> ◈关于Midi信息</p>
+</li>
+</ul>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.loli.net/2021/10/10/XA9RcnKLI68Zv7H.jpg" fancybox="true"></div></div>
+<pre><code>* 出于某些莫名其妙的原因，歌曲的封面都进行了模糊处理，但是若账号的总pp高于1000，则封面能够正常显示
+* 在Midi信息框中，文字内容从上到下显示的分别为:曲名，曲目作者、上传者、原曲所属专辑、歌曲名字
+* Midi信息框右下角显示的是当前Midi的下载状态，若显示个带向下箭头的云则表示可以点击下载，下载时会显示下载进度百分比
+* 下载完成的Midi会在原本显示下载按钮的地方显示一个“▶”按钮(稍微老一些的版本显示的是“✔”，且不能点击跳转)，再次点击可跳转至对应的Midi信息界面
+</code></pre>
+<h5 id="Midi信息界面"><a href="#Midi信息界面" class="headerlink" title="[Midi信息界面]"></a>[Midi信息界面]</h5><ul>
+<li><p>点击专辑后再选择歌曲，进入的是Midi详细界面，即显示有排行榜且屏幕左上角可调难度与模式，右下角可设置音轨和删除Midi的那个界面  </p>
+ <div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2022/02/09/DCKqNjTo4RFH7B6.jpg" fancybox="true"></div></div>
+</li>
+<li><p>左下角返回按钮右边的音符按钮，点击后进入音轨界面，可以对选择的midi的音轨进行设置</p>
+</li>
+<li><p>音符按钮右边的垃圾桶按钮，单次点击后，右侧列表的所有midi的框的左上角会显示一个“x”按钮，点击“x”按钮即可删除对应midi，再次点击垃圾桶图标隐藏“x”按钮</p>
+<p> ◈关于游戏难度</p>
+</li>
+</ul>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2022/10/09/CsWlTAKrz1gaObI.png" fancybox="true"></div></div>
+<ul>
+<li>游戏难度选择框位于屏幕左上角，默认状态下会显示个“Beginner”，点开后可选择难度，难度从上到下依次递增(除了Custom)，而Custom为自定义难度，调成此难度后设置内影响难度的部分设置(游戏设置中第28~32项)才允许被更改，自身没有默认难度，不过还是不建议新人选择Custom</li>
+<li>beginner到lunatic分别会把 <a href="#S-7">游戏设置-VII-第28~32项</a> 的数值分别改为(Max为custom下最高难度的调法):</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">Beginner</th>
+<th align="center">Easy</th>
+<th align="center">Normal</th>
+<th align="center">Hard</th>
+<th align="center">Lunatic</th>
+<th align="center">Max</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">28</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">10</td>
+</tr>
+<tr>
+<td align="center">29</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center">0.2</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">30</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">2</td>
+<td align="center">1.5</td>
+<td align="center">0</td>
+</tr>
+<tr>
+<td align="center">31</td>
+<td align="center">200</td>
+<td align="center">200</td>
+<td align="center">300</td>
+<td align="center">300</td>
+<td align="center">400</td>
+<td align="center">4000</td>
+</tr>
+<tr>
+<td align="center">32</td>
+<td align="center">2</td>
+<td align="center">1</td>
+<td align="center">0.25</td>
+<td align="center">0.05</td>
+<td align="center">0.05</td>
+<td align="center">0</td>
+</tr>
+</tbody></table>
+<p>◈关于游戏Mods  </p>
+<ul>
+<li>游戏Mods选择框位于难度选框的右边(显示着Mods的按钮)</li>
+<li>目前有四个可选Mod：<ul>
+<li>Auto: 自动模式，在该模式下，游戏会自动尽量给你打All Perfect，过程中可以捣乱</li>
+<li>All Perfect: 完美模式，在该模式下，打出非perfect的判定，游戏就会直接重头开始</li>
+<li>Full Combo: 全连模式，在该模式下，连击中断会导致游戏直接重头开始</li>
+<li>Infinity: 无尽模式，若选择此模式，Full Combo也会一并强制开启。在该模式下，游戏会在歌曲结束后重头开始循环放，同时继续计分并使播放速度变为上一循环的1.1倍，断连会导致游戏结束，若在第一轮就断连，本局会重新开始</li>
+</ul>
+</li>
+<li>点击模式前的“ AP、FC、∞ ”图标即可启用对应模式，再次点击取消，可以同时选择多个模式</li>
+</ul>
+<p>◈关于游戏模式  </p>
+<ul>
+<li>游戏模式选框位于Mods选框右边(默认显示着OneOnly的按钮)</li>
+<li>目前共有七个选项，其中后面打了括号写着NO的表示不可用，所以目前仅有两个可选模式：<ul>
+<li>OneOnly:</li>
+</ul>
+<ul>
+<li>默认模式，标准的平面下落式，等音符落到判定线上点击即可</li>
+<li>长条在按住的同时可以左右拖动，且有尾判，尾判处未松手仅加一分；接滑块时，除了用手一下一下点，否则只加一分</li>
+</ul>
+<ul>
+<li>ScanningLine:</li>
+</ul>
+<ul>
+<li>扫描线模式，判定线上下来回扫动，扫动范围由 <a href="#S-5">游戏设置-V-第19项</a> 【判定线高度】的数值大小决定</li>
+<li>音符会在屏幕上螺旋并放大进入，当音符旋转至水平时点击，判定线从上方下来时会经过的音符与判定线从下往上会经过的音符颜色不同，可借此分辨音符顺序</li>
+<li>扫描线模式暂时无法设置音符颜色</li>
+<li>扫描线模式中只有点键和滑键，没有长条</li>
+<li>该模式曾经在229版出现过，后又移除，目前的扫描线模式与以前的略有不同</li>
+</ul>
+</li>
+</ul>
+<p>◈关于Midi信息框</p>
+<ul>
+<li><div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2022/02/09/xUpO6TYv8AoICnB.jpg" fancybox="true"></div></div></li>
+<li>屏幕左上部分的框是Midi的基本信息框，框内从上到下，从左往右显示了:<ul>
+<li>Midi的游玩、下载、点赞和收藏次数</li>
+<li>Midi的状态:</li>
+</ul>
+<ul>
+<li>PENDING:  待定状态。新上传的Midi都是这个状态</li>
+<li>APPROVED:通过审核状态。需要审核人员或有权限的人设置</li>
+<li>INCLUDED: 包含状态。该状态的Midi基本为游戏内置曲目</li>
+<li>DEAD:      死亡状态。该状态的Midi通常含有bug或者与已有曲子重复，亦或是质量存在问题，一般不推荐下载该状态的Midi）</li>
+</ul>
+<ul>
+<li>歌曲专辑、歌曲名称</li>
+<li>Midi名字</li>
+<li>Midi作者  </li>
+<li>底部显示着Midi的音轨数、总物量、理论上的总pp值与Midi文件的文件名(或者说是Midi的ID或Midi文件的Md5值)</li>
+</ul>
+</li>
+</ul>
+<p>◈关于排名与评分  </p>
+<ul>
+<li><div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2022/02/09/OWLJMacrb7Nh8KV.jpg" fancybox="true"></div></div></li>
+<li>Midi基本信息框的下方是此Midi的排行榜，排行榜根据玩家的pp值来进行排序，第一位排名是#0</li>
+<li>查看排行榜需要登录账号且账号总pp值达到1000及以上，否则排行榜上的玩家会被匿名处理，即无法看见玩家的昵称及头像</li>
+<li>在玩家名字下方显示的彩色数字是该玩家最高pp值的一次成绩的perfect、great、good、bad、miss数量</li>
+<li>右侧显示的内容从上到下，从左往右分别为:<ul>
+<li>pp值</li>
+</ul>
+<ul>
+<li>pp值(performance point)的计算公式为:<br>  ㏑(1+「总分数」) ×「准确度」^2</li>
+</ul>
+<ul>
+<li>完成度</li>
+</ul>
+<ul>
+<li>完成度为 实际pp值&#x2F;理论最大pp值。个位数字若为0则不显示个位上的数字</li>
+</ul>
+<ul>
+<li>评分等级</li>
+</ul>
+<ul>
+<li>评分等级有Ω、S、A、B、C、D、E、F等，除Ω和F外，其他等级均可再分出三档，如A+和A-，但S是另外分为SSS和SS，评分等级仅根据准确度给出，与得分或pp值无关，不同评分等级对应的结算界面左侧显示的立绘角色及表情不同，同时该人物立绘会在返回专辑界面时显示在右侧(即原本显示琪露诺的位置)</li>
+</ul>
+<ul>
+<li>小太阳图标后的数字为得分</li>
+<li>锁链图标后的为最大连击数</li>
+<li>准星图标后的为准确度</li>
+</ul>
+</li>
+</ul>
+<p>◈关于下落的音符</p>
+<ul>
+<li>“Note”(或称为”音符”等)一般同时指点键、滑键和长条三种音符</li>
+<li>“点键”(或者称为”点块”等)指的是下落到判定线时需要单次点击的音符</li>
+<li>“滑键”(或者称为”滑块”等)指的是在落到判定线时需要手指点击或者提前放在判定线上才能消除的音符，若滑键下落至判定线前手指就已放在判定线上，则只加1分</li>
+<li>“长条”指的是落到判定线上需要玩家长按并在其结束时准时松手的音符，在按住长条时可以左右移动手指来移动长条，若长条结束时没有准时松手，则尾判处只得一分</li>
+<li>教程中出现的所有”音符”均指的是下落的点键、滑键与长条</li>
+<li>单次点击(所有类型的音符)的分数的计算公式为:<br>  单击分数     &#x3D;100 ×「连击加成」×「准确度权重」<br>  ╰连击加成   &#x3D; 0.0809 + 0.199 ㏑(「连击数」)<br>  ╰准确度权重 &#x3D; 1.06 e^(-7.17 ×「Note偏移时间」)  </li>
+<li>单个Perfect判定的准确度为1；Great判定为2&#x2F;3；Good为1&#x2F;3；Bad与Miss为0</li>
+</ul>
+<p>◈关于简介及评论  </p>
+<ul>
+<li><div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2022/02/09/Dgl8wmnIsjM9bv4.jpg" fancybox="true"></div></div></li>
+<li>排行榜上方的四个按钮分别为:<ul>
+<li>普通模式排行榜</li>
+<li>无尽模式排行榜</li>
+<li>简介</li>
+<li>评论区</li>
+</ul>
+</li>
+<li>无尽模式排行榜和普通模式排行榜类似，不过只有启用无尽模式后打出来的成绩才会被记录到该排行榜下</li>
+<li>在简介页中，简介下面的按钮点击后可前往Midi原出处(原出处有的话可能也有写在简介里)或它在游戏官网上的详细界面(会打开浏览器)</li>
+</ul>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.loli.net/2021/10/10/ktGf3FRbX5uDMe2.jpg" fancybox="true"></div></div>  
+
+<ul>
+<li>在评论区发表评论需要游戏评分达到A及以上，但在官网上只需登录并通过人机验证。评论区中的评论的字体大小会随评论字数自动调整。若 <a href="#G-S">总设置-第3项</a> 【全局内容翻译】已开启，评论内容也会被翻译至所选语言</li>
+</ul>
+<h5 id="音轨界面"><a href="#音轨界面" class="headerlink" title="[音轨界面]"></a>[音轨界面]</h5><ul>
+<li>当处于Midi信息界面时，屏幕左下角的返回键的右边的音符图标是进入Midi音轨界面的按钮  <div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2022/02/09/6DHPn79zv1kO8su.jpg" fancybox="true"></div></div>  
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.loli.net/2021/10/10/T5xbjLo4fqhY81n.jpg" fancybox="true"></div></div>  </li>
+<li>在音轨界面内，点击音轨上的选框可以更改音轨音色，共有128种可选音色，更改音色的操作一般会在短时间内生效，有时可能需要退出音轨界面并重进才能生效</li>
+<li>正常情况下，游戏会自动选择有较高音块数量的非打击乐器的音轨的一半</li>
+<li>点击选框旁的小喇叭按钮可以静音此音轨，通过小喇叭按钮静音的音轨在游戏过程中不会发声，除非所静音的音轨同时也已启用</li>
+<li>点击选框旁的小麦克风按钮可暂时让其它音轨静音，仅让该音轨播放，再次点击可恢复</li>
+<li>点击喇叭和麦克风图标左边的那个(在语言为英文时显示着”(not) using in game”)的按钮可以选择是否启用此音轨，选择后该音轨的音符在游戏过程中将会生成(即增大物量)</li>
+<li>在每条音轨的左边有三行显示该音轨信息的内容:<ol>
+<li>轨道编号，后方括号内为其缩写</li>
+<li>通道编号，后方括号内为其缩写</li>
+<li>该音轨音色，此内容不会随音色的更改而变化，同时后面显示着该音色的编号(应该)</li>
+</ol>
+</li>
+<li>在音轨界面的背景显示着部分设置参数及手机信息，从上到下分别是:<br> 1.音频采样率 ; 2.DSP缓冲程度 ; 3.DSP理论延迟 ; 4.声道数(例如双声道)<br> 5.设备 ; 6.设备名称 ; 7.系统 ; 8.CPU ; 9.GPU</li>
+</ul>
+<h5 id="歌曲结算界面"><a href="#歌曲结算界面" class="headerlink" title="[歌曲结算界面]"></a>[歌曲结算界面]</h5><ul>
+<li>歌曲播放结束后进入的界面为歌曲结算界面</li>
+<li>屏幕右端三个按钮从上往下分别为：收藏、点赞和踩，在三个按钮的上方还有一个网络延迟显示</li>
+<li>屏幕右下角的按钮从左往右分别为重新上传成绩(当成绩上传失败时会出现该按钮，点击一次后消失，无论成功与否)、随机播放下一首、顺序播放下一首(点此按钮会播放当前歌曲在列表中的下一首歌曲)、重新播放当前曲子和返回歌曲信息界面  <div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.loli.net/2021/10/10/V5M3UB2seyCdTr6.jpg" fancybox="true"></div></div></li>
+<li>屏幕左上角显示的是当前成绩的上传状态，若上传失败，可单击重新上传成绩按钮重试一次，一般没用</li>
+<li>屏幕左下角显示的是歌曲名及其所属专辑<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2022/02/09/5JlhSLzmDAB4xCF.jpg" fancybox="true"></div></div></li>
+<li>立绘右边的得分区域从上往下、从左往右显示的分别是:<ul>
+<li>选择的难度、Midi名</li>
+<li>完成度、pp值</li>
+<li>评分等级、平均准确度、最大连击数</li>
+<li>perfect、great、good、bad、miss数量</li>
+<li>perfect中的early与late10&#x2F;20&#x2F;30&#x2F;40&#x2F;50ms的数量</li>
+<li>great中的early和late数量和ATE和STE</li>
+<li>Earliest和Latest的时间<blockquote>
+<p>   ☆ATE应该为Average Time Early的缩写，表示的是玩家的Great中离点中perfect的平均提前值<br>   ☆STE应该为Standard Time Early，反映的是玩家的Great中离点中perfect的平均提前值的波动情况，即标准差</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<p> ◈关于立绘  </p>
+<ul>
+<li>角色立绘显示在专辑界面右端及结算界面左端，无法自行更换，只会通过最新一局游戏的评分等级自动切换，打开游戏时默认是琪露诺</li>
+<li>Ω评分对应八云紫；S，SS和SSS对应幽幽子；A对应灵梦；B对应魔理沙；C对应蕾米莉亚；D对应古明地恋；F对应琪露诺，表示你和她一样强大</li>
+</ul>
+<hr>
+<h3 id="第三部分-设置-1"><a href="#第三部分-设置-1" class="headerlink" title="第三部分 设置"></a>第三部分 设置</h3><p> ◈关于翻译</p>
+<ul>
+<li>简体中文由β群管理 “重度卑微拇指党” (γ群昵称为”一般卑微拇指党”)负责。简体中文翻译较为直白，且缺失较为严重，因为目前他好像一直在潜水，所以简中翻译转为由”Yang_”负责</li>
+<li>繁体中文由β群管理 “Yang_” 负责。繁体中文翻译较为注重整体美观，但可能不易于理解，当然翻译中有错误或者不合适的地方可以反馈</li>
+</ul>
+<hr>
+<p> ◈关于其它设置</p>
+<ul>
+<li><a href="#A-2">难度设置</a></li>
+<li><a href="#A-6">模式设置</a></li>
+<li><a href="#A-7">音轨设置</a><br>☆使用MarkDown阅读器即可点击跳转</li>
+</ul>
+<hr>
+<h4 id="总设置"><a href="#总设置" class="headerlink" title="-总设置-"></a>-总设置-</h4><p> 总设置位于游戏内，在专辑界面和歌曲信息界面点击屏幕右上角的”⚙”️(齿轮图标)即可进入，将其称为总设置主要是与游戏设置做区分，同时也是因为它位于外部。以下各项后的中括号内的内容分别是该项的中文翻译</p>
+<ol>
+<li>Online Mode [线上模式] :</li>
+</ol>
+<ul>
+<li>若关闭此项，则游戏内需要联网的内容都会隐藏，包括：Midi信息界面的排行榜和评论区、商店按钮以及游戏顶栏右部的账号登录功能</li>
+<li>打开后需要重启游戏才能连上服务器</li>
+</ul>
+<ol start="2">
+<li>Display Language [语言选择] :</li>
+</ol>
+<ul>
+<li>更改游戏语言</li>
+</ul>
+<ol start="3">
+<li>Translate User Generated Content [全局內容翻译] :</li>
+</ol>
+<ul>
+<li>设置是否翻译歌曲名字、专辑名字及玩家评论等内容，如果嫌弃歌曲、专辑名称被大量翻译错误的话可关闭此项，设置翻译不受影响</li>
+</ul>
+<ol start="4">
+<li>Network Endpoint [服务器网络节点] :</li>
+</ol>
+<ul>
+<li>选择游戏连接的服务器，如发现无法连接至游戏服务器时，可尝试更改此设置后重启游戏</li>
+</ul>
+<ol start="5">
+<li>Custom Server Domain Name [服务器域名设定] :</li>
+</ol>
+<ul>
+<li>设定游戏连接的服务器的域名，当官网没了或者换网址了或者官网连不上时可能用得上，正常不需要改</li>
+</ul>
+<ol start="6">
+<li>Gameplay Result Format [成绩展示重点] :</li>
+</ol>
+<ul>
+<li>设定游戏在显示成绩时着重展示的内容(即字号最大的那个东西)，设定为Scores时，显示分数，设定为Completion时，展示完成度(实际pp值除以理论最大pp值)</li>
+</ul>
+<ol start="7">
+<li>Audio Reverb Preset [音频混响设定] :</li>
+</ol>
+<ul>
+<li>更改混响的音效，应该类似手机自带的均衡器吧，具体效果还请自己试</li>
+</ul>
+<ol start="8">
+<li>Synthesizer Sf2 File Path [音源文件路径] :</li>
+</ol>
+<ul>
+<li>将.sf2文件移动至<a href="#U4">「游戏文件目录」</a>中的Sf2文件夹后打开游戏即可选择导入的音源文件，且无需重启游戏即可生效；导入音源文件也可以直接选择用THMIX打开音源文件，游戏会自行导入</li>
+</ul>
+<ol start="9">
+<li>Synthesizer Volume [合成器音量] :</li>
+</ol>
+<ul>
+<li>更改游戏音量，单位为分贝，数值越大音量越高，但是音质会变差，所以不建议调过高，适当即可</li>
+</ul>
+<ol start="10">
+<li>Synthesizer Max Voice Count [最大声音數量] :</li>
+</ol>
+<ul>
+<li>设置同时发声的最大音符数量，将此项数值调小可能能减轻游戏在播放较为复杂的Midi时的压力，一般无需修改</li>
+</ul>
+<ol start="11">
+<li>DSP Sample Rate Down Scale [DSP采样率缩减] :</li>
+</ol>
+<ul>
+<li>如果游戏玩着会卡顿、掉帧或出现音质方面的问题，可以把该项调小，但音频延迟也会有所增大。如果手机好建议还是用较高的采样率以获得更好的音质</li>
+</ul>
+<ol start="12">
+<li>DSP Audio Buffer Up Scale [DSP音频缓冲放大] :</li>
+</ol>
+<ul>
+<li>如果游戏玩着会卡顿或掉帧可以把此项的数值调大，能够减轻卡顿等症状，但会增加音频延迟</li>
+</ul>
+<p> 13.Lane Count Theoretical Audio Delay [理论音频延迟] :</p>
+<ul>
+<li>这里显示的数值就是理论上点击音符到发出声音的延迟，一般建议调整第10项和第11项来获得一个最低的音频延迟，因为音频延迟只能在这里调整</li>
+</ul>
+<ol start="14">
+<li>Reload Resource Bundle  [重载内置资源] :</li>
+</ol>
+<ul>
+<li>让游戏重新加载内置的资源包，包括翻译文件、封面图、Midi及相关文件，当误删文件导致进入游戏一片空白时可用此项来重载内置资源，该操作不会删除已下载的Midi。用该功能重载翻译文件时需要先清除翻译文件</li>
+</ul>
+<ol start="15">
+<li>Reload Translation Cache [清除翻译文件] :</li>
+</ol>
+<ul>
+<li>删除翻译文件，让游戏重新加载翻译</li>
+</ul>
+<hr>
+<h4 id="游戏设置"><a href="#游戏设置" class="headerlink" title="-游戏设置-"></a>-游戏设置-</h4><div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.loli.net/2021/10/10/NWdqaBpmG1n52lE.jpg" fancybox="true"></div></div>  
+<ul>
+<li>点击位于歌曲开始播放时屏幕正中间的齿轮图标的按钮进入游戏设置</li>
+<li>在打歌过程中点击暂停，再点击三个按钮下方的设置按钮也可进入游戏设置</li>
+<li>称之为游戏设置主要是与总设置做区分，同时方便介绍</li>
+</ul>
+<p> <strong>第I栏    播放设置</strong></p>
+<ol>
+<li>Touch Judging Criteria [判定方式] :</li>
+</ol>
+<ul>
+<li>设置游戏的判定方式，目前有三个可选项：<ul>
+<li>Nearest [最临近]<br>使音符的判定范围变为半径为 <a href="#S-4">游戏设置-IV-第16项</a>【音符判定宽度】所设定的数值的圆，手指在以外区域的点击不会生效</li>
+<li>Best Timing [最佳时机]<br>使游戏优先判定时机最佳的音符，判定范围为垂直方向的全屏判定，判定范围的宽度为 <a href="#S-4">游戏设置-IV-第16项</a>【音符判定宽度】所设定的数值</li>
+<li>Nearest from Judge Line [距判定线最近]<br>使游戏优先判定离判定线最近的音符，判定范围为垂直方向的全屏判定，判定范围的宽度为 <a href="#S-4">游戏设置-IV-第16项</a>【音符判定宽度】所设定的数值</li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li>Performing Mode [弹奏模式] :</li>
+</ol>
+<ul>
+<li>选择no后，即使不去点击下落的音符，选择了的音轨也会正常发声</li>
+<li>一般建议打开，能够增强体验，关了之后相当于没有Key音了，玩着可能没那么爽</li>
+<li>若是经常miss，导致不能好好听歌还是建议选择关闭此项</li>
+</ul>
+<ol start="3">
+<li>Use System Stopwatch [使用系统时钟] :</li>
+</ol>
+<ul>
+<li>通过使用系统时钟(硬件时钟)来提高精度，如果游戏内音频时而提前时而延后可以启用</li>
+</ul>
+<ol start="4">
+<li>Play Ready Animation [播放准备动画] :</li>
+</ol>
+<ul>
+<li>关闭后，音乐开始前不会有准备动画，不建议关闭</li>
+</ul>
+<ol start="5">
+<li>Vibrate on Touch [触摸震动反馈] :</li>
+</ol>
+<ul>
+<li>选择是否在点击音符时使设备震动</li>
+</ul>
+<ol start="6">
+<li>Vibration Duration [震动持续时间] :</li>
+</ol>
+<ul>
+<li>设置震动的持续时间，单位：毫秒</li>
+</ul>
+<p> <strong>第II栏    颜色设置</strong></p>
+<ol start="7">
+<li>Randomize Block Color [随机音符顏色] :</li>
+</ol>
+<ul>
+<li>随机设置下落音符的颜色。由于光柱特效的颜色与音符的颜色相同，所以当玩家使用自定义皮肤时该设置项相当于随机设置光柱特效的颜色</li>
+</ul>
+<ol start="8">
+<li>Sync Color Across Block Type [统一音符颜色] :</li>
+</ol>
+<ul>
+<li>使点块、滑块和长条的颜色统一，同时也会统一光柱特效的颜色，但打开此项后音符颜色无法随机</li>
+</ul>
+<ol start="9">
+<li>Instant Block Color [更改滑块颜色] :</li>
+</ol>
+<ul>
+<li>通过输入RGB颜色编码来改变滑块及其光柱特效颜色，仅支持部分内置皮肤</li>
+</ul>
+<ol start="10">
+<li>Short Block Color [更改点块颜色] :</li>
+</ol>
+<ul>
+<li>通过输入RGB颜色编码来改变点块及其光柱特效颜色，仅支持部分内置皮肤</li>
+</ul>
+<ol start="11">
+<li>Long Block Color [更改长条颜色] :</li>
+</ol>
+<ul>
+<li>通过输入RGB颜色编码来改变长条及其光柱特效颜色，仅支持部分内置皮肤</li>
+</ul>
+<p> ◈关于RGB颜色</p>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://baike.baidu.com/item/RGB/342517">什么是RGB</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.sojson.com/rgb.html">RGB颜色编码在线查询网站</a></li>
+</ul>
+<p> <strong>第III栏    皮肤设置</strong></p>
+<ol start="12">
+<li>Custom Block Skin Texture Filter Mode [皮肤纹理过滤模式] :</li>
+</ol>
+<ul>
+<li>更改对音符皮肤的渲染方式：<ul>
+<li>选择Nearest会使音符皮肤的各个像素之间的分界很鲜明(不同颜色之间)，使音符皮肤看着棱角分明，一股像素风</li>
+<li>选择Bilinear会使不同颜色的像素点间有一个模糊过渡，使音符皮肤看着更圆滑，或者说模糊</li>
+</ul>
+</li>
+</ul>
+<ol start="13">
+<li>Block Skin Preset [音符外观设定] :</li>
+</ol>
+<ul>
+<li>直接选择已导入的或内置的音符皮肤的名称即可更换皮肤</li>
+<li>若正在使用的音符皮肤被删除，会导致此项无法更改，解决措施请见 <a href="#U5">第伍部分</a></li>
+</ul>
+<p> <strong>第IV栏    显示与判定</strong></p>
+<ol start="14">
+<li>Lane Count [下落轨道数量] :</li>
+</ol>
+<ul>
+<li>设置音符的下落轨道数，数值过高可能会提升出现重叠的音符的概率</li>
+<li>轨道数更改后，生成的铺面可能会和之前的看起来完全不同，所以此设置项在某些时候能够影响读谱难度</li>
+</ul>
+<ol start="15">
+<li>Block Size [音符尺寸大小] :</li>
+</ol>
+<ul>
+<li>调整音符的显示宽度，音符判定区域大小不受其影响</li>
+</ul>
+<ol start="16">
+<li>Block Judging Width [音符判定宽度] :</li>
+</ol>
+<ul>
+<li>调整音符的判定范围的宽度，不影响判定范围的高度</li>
+<li>但在扫描线模式中，该项影响的是音符判定范围的半径</li>
+<li>不建议调太大，容易误触</li>
+</ul>
+<ol start="17">
+<li>Min Block Spacing [最小横向音符间距] :</li>
+</ol>
+<ul>
+<li>控制音符间的水平最小距离，数值太大会导致没有音符下落，太小可能会有部分音符过于接近屏幕边缘，所以在一定程度上影响了游戏难度</li>
+</ul>
+<ol start="18">
+<li>Canvas Horizontal Padding [安全区域宽度设定] :</li>
+</ol>
+<ul>
+<li>控制生成的音符与屏幕左右其中一边的最小距离，会影响音符生成位置，变相影响难度</li>
+</ul>
+<p> <strong>第V栏    判定线设置</strong></p>
+<ol start="19">
+<li>Judge Line Position   [判定线高度] :</li>
+</ol>
+<ul>
+<li>调整判定线距离屏幕底部的距离</li>
+<li>在扫描线模式中，该项设置的是扫描线上下运动时距离上下屏幕边界的最近距离</li>
+</ul>
+<ol start="20">
+<li>Judge Line Thickness [判定线粗细] :</li>
+</ol>
+<ul>
+<li>调整判定线厚度，不影响判定，只影响外观</li>
+</ul>
+<p> <strong>第VI栏    下落设置</strong></p>
+<ol start="21">
+<li>Playback Speed Scaling [播放速度设定] :</li>
+</ol>
+<ul>
+<li>调整音乐的播放倍率，数值越大速度越快，速度低于1时，游戏分数将不会上传</li>
+</ul>
+<ol start="22">
+<li>Cache Time [音符下落速度] :</li>
+</ol>
+<ul>
+<li>调整音符在判定线以上范围的下落速度，数值越小速度越快，默认为2(推荐调整范围:0.7~2.5)</li>
+<li>在扫描线模式中，该项为设置扫描线的运动速度（推荐调整范围:3或更高）</li>
+</ul>
+<ol start="23">
+<li>Cache Easing Type [音符下落模式] :</li>
+</ol>
+<ul>
+<li><p>设置音符在判定线以上范围的下落方式：</p>
+<table>
+<thead>
+<tr>
+<th align="center">左选框</th>
+<th align="center">介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">None</td>
+<td align="center">无任何下落效果(匀速下落)</td>
+</tr>
+<tr>
+<td align="center">Linear</td>
+<td align="center">匀速下落(和None效果相同)</td>
+</tr>
+<tr>
+<td align="center">Quad</td>
+<td align="center">正常的加速下落(先以较慢的速度移动，然后加速下落)</td>
+</tr>
+<tr>
+<td align="center">Cubic</td>
+<td align="center">稍快的加速下落</td>
+</tr>
+<tr>
+<td align="center">Quart</td>
+<td align="center">较快的加速下落</td>
+</tr>
+<tr>
+<td align="center">Quint</td>
+<td align="center">极快的加速下落</td>
+</tr>
+<tr>
+<td align="center">Sine</td>
+<td align="center">减速下落(先加速下落，然后减速)</td>
+</tr>
+<tr>
+<td align="center">Expo</td>
+<td align="center">极快的减速下落</td>
+</tr>
+<tr>
+<td align="center">Circ</td>
+<td align="center">较快的减速下落</td>
+</tr>
+<tr>
+<td align="center">Back</td>
+<td align="center">音符落到判定线时会折返一段距离</td>
+</tr>
+<tr>
+<td align="center">Elastic</td>
+<td align="center">极快的速度+达到判定线折返</td>
+</tr>
+<tr>
+<td align="center">Bounce</td>
+<td align="center">音符会在判定线上弹跳数次后下落</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center">右选框</th>
+<th align="center">介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">None</td>
+<td align="center">不改变左边选择下落方式所产生的下落效果</td>
+</tr>
+<tr>
+<td align="center">In</td>
+<td align="center">默认设置，会使左边选择的下落方式与其描述相同(同None)</td>
+</tr>
+<tr>
+<td align="center">Out</td>
+<td align="center">使左边选择的下落方式表现效果发生的位置相反</td>
+</tr>
+<tr>
+<td align="center">InOut</td>
+<td align="center">使左边选择的下落方式同时产生In和Out的效果</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>各种设置方式的运动图像:</p>
+<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://i.loli.net/2021/10/13/KAm79txaLUHcpQB.png" fancybox="true"></div></div></li>
+</ul>
+<ol start="24">
+<li>Grace Time [音符过判定线后的下落速度] :</li>
+</ol>
+<ul>
+<li>同第19项，但调整的是音符过判定线后的下落速度</li>
+</ul>
+<ol start="25">
+<li>Grace Easing Type [音符过判定线后的下落模式] :</li>
+</ol>
+<ul>
+<li>同第20项，但影响的是音符过判定线后的下落方式</li>
+</ul>
+<p> <strong>第VII栏    生成设置</strong></p>
+<ol start="26">
+<li>Instant Block Max Time [生成滑块最大时间] :</li>
+</ol>
+<ul>
+<li>控制滑块的生成时间，使长度低于此时间的Note变成滑块，调为0则不会生成滑块，但受其他设置影响仍可能会有滑块生成</li>
+</ul>
+<ol start="27">
+<li>Short Block Max Time [生成短块最大时间] :</li>
+</ol>
+<ul>
+<li>使低于此时间，高于滑块生成时间的音符变为点块，高于此时间的将变为长条</li>
+</ul>
+<ol start="28">
+<li>Max Simultaneous Blocks [最大并排下落音符] :</li>
+</ol>
+<ul>
+<li>控制同时下落的音符的最大数量，使并排下落的音符的数量不会超过此值，但仍可能遇见多个音符同时下落，原因不明</li>
+</ul>
+<ol start="29">
+<li>Min Tap Interval [连点最小时间间隔] :</li>
+</ol>
+<ul>
+<li>使一个点块后跟着的与其间隔时间低于此时间的所有点块变成滑块，对变成滑块的点块不适用，且它们需在同一下落轨道</li>
+</ul>
+<ol start="30">
+<li>Min Touch Cooldown Time [最小点击冷却时间] :</li>
+</ol>
+<ul>
+<li>最小点击冷却时间，在一段纵连之中，如果上下相邻的音符之间的间隔时间超过最小点击冷却时间，则后面的音符变为滑块</li>
+</ul>
+<ol start="31">
+<li>Max Touch Move Speed [手指最大移动速度] :</li>
+</ol>
+<ul>
+<li>使各个相邻的音符(无需同一轨道)之间的水平距离在设置的数值所推算出来的距离之间。例如设置成100，然后两个离得近的音符之间的时间差是0.1s，那么它们的水平距离不会超过10像素(0.1s × 100pixels&#x2F;s)(有待证实)</li>
+<li>该项只对一连串的下落音符有效，但在某些情况下可能不会生效</li>
+</ul>
+<ol start="32">
+<li>Max Block Coalesce Time [每个批次最大时间] :</li>
+</ol>
+<ul>
+<li>控制每组下落的音符的时间间隔，因为每组下落的音符数量是固定的(应该)，所以当每个批次之间的时间间隔越大，音符就会越稀疏，导致难度降低，建议调整范围为0~1</li>
+</ul>
+<p> <strong>第VIII栏    连线设置</strong></p>
+<ol start="33">
+<li>Generate Short Connect [是否连接所有并排的点块] :</li>
+</ol>
+<ul>
+<li>选择是否生成连接线，连接并排下落的点块、滑块和长条</li>
+</ul>
+<ol start="34">
+<li>Generate Instant Connect [是否连接上下相邻的滑块] :</li>
+</ol>
+<ul>
+<li>选择是否生成连接线，连接同一下落轨道内的时间差在设定范围内的数的音符</li>
+</ul>
+<ol start="35">
+<li>Instant Connect Max Time [被连接音符的最大时间差] :</li>
+</ol>
+<ul>
+<li>设置同一轨道内的音符连接线连接的音符之间的时间间隔，低于此数值的同轨音符就会被连接，前提是有打开 <a href="#S-8">游戏设置-VIII-第34项</a> 【是否连接上下相邻的滑块】</li>
+</ul>
+<p> <strong>第IX栏    判定与延迟</strong></p>
+<ol start="36">
+<li>Judge Time Offset [按键判定延迟偏移] :</li>
+</ol>
+<ul>
+<li>调整判定提前或延后的时间，不会使音符提前或延后生成，所以解决不了音频延迟的问题</li>
+</ul>
+<ol start="37">
+<li>Perfect Time [Perfect判定范围] :</li>
+</ol>
+<ul>
+<li>控制perfect评分的判定时间范围，此数值无法更改</li>
+</ul>
+<ol start="38">
+<li>Great Time   [Great判定范围] :</li>
+</ol>
+<ul>
+<li>控制great评分的判定时间范围，此数值无法更改</li>
+</ul>
+<ol start="39">
+<li>Good Time   [Good判定范围] :</li>
+</ol>
+<ul>
+<li>控制good评分的判定时间范围，此数值无法更改</li>
+</ul>
+<ol start="40">
+<li>Bad Time    [Bad判定范围] :</li>
+</ol>
+<ul>
+<li>控制bad评分的判定时间范围，此数值无法更改</li>
+</ul>
+<p> <strong>第X栏    光效设置</strong></p>
+<ol start="41">
+<li>Flash Alpha [光柱不透明度] :</li>
+</ol>
+<ul>
+<li>修改光柱的不透明度，有效数值为0~1，修改为0即可完全隐藏光柱特效</li>
+</ul>
+<ol start="42">
+<li>Perfect Spark Preset [Perfect特效设定] :</li>
+</ol>
+<ul>
+<li>点击选框或左右两旁的按钮更改按键特效的样式，更改时屏幕中间会出现一个特效的预览，其大小由下一个设置项决定，目前有一百多个可选的特效，其中120个来自 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://assetstore.unity.com/packages/vfx/particles/unique-projectiles-vol-2-156067">外部链接</a> 此特效包</li>
+</ul>
+<ol start="43">
+<li>Perfect Spark Scaling [Perfect特效大小] :</li>
+</ol>
+<ul>
+<li>调整按键特效的半径，调成0即可隐藏特效</li>
+</ul>
+<ol start="44">
+<li>Great Spark Preset [Great特效设定] :</li>
+</ol>
+<ul>
+<li>略</li>
+</ul>
+<ol start="45">
+<li>Great Spark Scaling [Great特效大小] :</li>
+</ol>
+<ul>
+<li>调整按键特效的半径，调成0即可隐藏特效</li>
+</ul>
+<ol start="46">
+<li>Good Spark Preset [Good特效设定] :</li>
+</ol>
+<ul>
+<li>略</li>
+</ul>
+<ol start="47">
+<li>Good Spark Scaling [Good特效大小] :</li>
+</ol>
+<ul>
+<li>调整按键特效的半径，调成0即可隐藏特效</li>
+</ul>
+<ol start="48">
+<li>Bad Spark Preset [Bad特效设定] :</li>
+</ol>
+<ul>
+<li>略</li>
+</ul>
+<ol start="49">
+<li>Bad Spark Scaling [Bad特效大小] :</li>
+</ol>
+<ul>
+<li>调整按键特效的半径，调成0即可隐藏特效</li>
+</ul>
+<p> <strong>第XI栏    键盘设置</strong></p>
+<ol start="50">
+<li>Keyboard Mode [鍵盤模式] :</li>
+</ol>
+<ul>
+<li>用键盘来玩THMIX，打开后仍可触屏操作，且判定线上会显示所设置的键位名称</li>
+</ul>
+<ol start="51">
+<li>Keyboard Mode Keys [键盘键位设置] :</li>
+</ol>
+<ul>
+<li>设置用于点击的键盘按键，不同内容间的英文逗号分隔，除字母键以外的键都需要输入其对应的按键代码，可直接看下方的映射表<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://docs.unity3d.com/ScriptReference/KeyCode.html">按键代码查询</a>网页打开后翻到下面的Properties栏，左边的是按键代码，右边是按键代码所代表的按键，如果只用键鼠可看下面的按键映射表（有删减）</li>
+</ul>
+</li>
+<li>下落轨道数会跟随设置的键位数量而改变</li>
+</ul>
+<details><summary>按键映射表</summary>
+
+<table>
+<thead>
+<tr>
+<th align="center">按键代码</th>
+<th align="center">按键名称</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Tab</td>
+<td align="center">Tab键</td>
+</tr>
+<tr>
+<td align="center">Space</td>
+<td align="center">空格键</td>
+</tr>
+<tr>
+<td align="center">Key.pad0</td>
+<td align="center">小键盘的数字键0，其它数字键同理</td>
+</tr>
+<tr>
+<td align="center">KeypadPeriod</td>
+<td align="center">小键盘的”.”键</td>
+</tr>
+<tr>
+<td align="center">KeypadDivide</td>
+<td align="center">小键盘的”&#x2F;“键</td>
+</tr>
+<tr>
+<td align="center">KeypadMultiply</td>
+<td align="center">小键盘的”*”键</td>
+</tr>
+<tr>
+<td align="center">KeypadMinus</td>
+<td align="center">小键盘的”-“键</td>
+</tr>
+<tr>
+<td align="center">KeypadPlus</td>
+<td align="center">小键盘的”+”键</td>
+</tr>
+<tr>
+<td align="center">KeypadEnter</td>
+<td align="center">小键盘的Enter键</td>
+</tr>
+<tr>
+<td align="center">KeypadEquals</td>
+<td align="center">小键盘的”&#x3D;”键</td>
+</tr>
+<tr>
+<td align="center">UpArrow</td>
+<td align="center">上键</td>
+</tr>
+<tr>
+<td align="center">DownArrow</td>
+<td align="center">下键</td>
+</tr>
+<tr>
+<td align="center">RightArrow</td>
+<td align="center">右键</td>
+</tr>
+<tr>
+<td align="center">LeftArrow</td>
+<td align="center">左键</td>
+</tr>
+<tr>
+<td align="center">F1</td>
+<td align="center">F1键，F2~F12类似</td>
+</tr>
+<tr>
+<td align="center">Alpha0</td>
+<td align="center">字母键盘上的数字0键，1~9键同理</td>
+</tr>
+<tr>
+<td align="center">Quote</td>
+<td align="center">单引号键</td>
+</tr>
+<tr>
+<td align="center">Comma</td>
+<td align="center">“,”键</td>
+</tr>
+<tr>
+<td align="center">Minus</td>
+<td align="center">“-“键</td>
+</tr>
+<tr>
+<td align="center">Period</td>
+<td align="center">“.”键</td>
+</tr>
+<tr>
+<td align="center">Slash</td>
+<td align="center">“&#x2F;“键</td>
+</tr>
+<tr>
+<td align="center">Semicolon</td>
+<td align="center">“;”键</td>
+</tr>
+<tr>
+<td align="center">Equals</td>
+<td align="center">“&#x3D;”键</td>
+</tr>
+<tr>
+<td align="center">LeftBracket</td>
+<td align="center">左方括号键 “[“键</td>
+</tr>
+<tr>
+<td align="center">RightBracket</td>
+<td align="center">右方括号键 “]”键</td>
+</tr>
+<tr>
+<td align="center">RightShift</td>
+<td align="center">右Shift键</td>
+</tr>
+<tr>
+<td align="center">LeftShif</td>
+<td align="center">左Shift键</td>
+</tr>
+<tr>
+<td align="center">Mouse0</td>
+<td align="center">鼠标左键</td>
+</tr>
+<tr>
+<td align="center">Mouse1</td>
+<td align="center">鼠标右键</td>
+</tr>
+<tr>
+<td align="center">Mouse2</td>
+<td align="center">鼠标中键</td>
+</tr>
+</tbody></table>
+</details>
+
+<hr>
+<h3 id="第四部分-文件-1"><a href="#第四部分-文件-1" class="headerlink" title="第四部分   文件"></a>第四部分   文件</h3><p> ◈关于游戏文件目录</p>
+<ul>
+<li>在Android系统下，游戏文件目录路径为：”「内部储存」&#x2F;Android&#x2F;data&#x2F;kailang.touhoumix&#x2F;files”</li>
+<li>在Windows系统下，游戏文件目录路径为：”「系统盘符」\Users\「计算机用户名」\AppData\LocalLow\Touhou Mix Production Committee\Touhou Mix”</li>
+<li>在MacOS X、GNU&#x2F;Linux、BSD等类Unix系统上使用Wine兼容层游玩Windows版的THMIX，游戏文件相对目录为：”~&#x2F;.wine&#x2F;drive_「系统盘符」&#x2F;users&#x2F;「用户名」&#x2F;AppData&#x2F;LocaleLow&#x2F;Kailang\ Fu&#x2F;Touhou\ Mix&#x2F;“</li>
+</ul>
+<blockquote>
+<p>〖温馨提醒〗<br>   ☆Windows系统需在文件管理器中勾选显示隐藏的文件才能找到文件夹<br>   ☆若Windows系统安装在C盘，则 “「系统盘符」” 为 “C:”<br>   ☆”「内部储存」”在不同软件或是不同的Android系统中显示的内容可能相同，实际路径应为”&#x2F;storage&#x2F;emulated&#x2F;0”，在手机自带的文件管理器中，可能显示为”内部储存设备”、”手机储存”或”sdcard”等</p>
+</blockquote>
+<p>THMIX的大部分游戏数据都是储存「游戏文件目录」之中，所以这一小节对该目录下的Db、Webcache和skin文件夹以及JsonStorage和Translations.json文件进行简单介绍</p>
+<ul>
+<li><p>&#x2F;Db:<br> Db，即数据库的英文缩写，该文件夹下有另外四个名字分别为albums、Midis、persons、songs的文件夹。分别用于储存游戏的专辑文件、Midi信息文件、已收录的作者信息文件和内置曲目信息文件，但实际上Midis文件夹下的文件就已经拥有另外几个文件夹所具有的功能了。文件内容的书写格式目测是json</p>
+</li>
+<li><p>&#x2F;Db&#x2F;midis:<br> 该文件夹下存放着游戏内所有曲目的信息文件(除了导入的曲子)，它们记录着曲目的绝大部分信息，游戏显示和调用Midi也依赖这些文件<br> 通过修改或者重新写一个midi信息文件，可以实现创建自定义曲包，让导入的Midi也能和其他的Midi一样有一个自己的专辑<br> 若要创建一个自定义的Midi信息文件，可按照以下步骤进行：</p>
+<ol>
+<li>创建一个无后缀名或后缀名为txt的文件，复制下面的模板(复制时上下的两个花括号也需要一起复制，更改内容时请勿删除双引号)，自行按描述修改后再放入Midi信息文件的文件夹中</li>
+<li>将命名为Midi信息文件中hash一项的内容指定的名字后(若midi文件有保留.mid后缀，则Midi信息文件中hash后面内容也必须带上.mid后缀），再将Midi文件放入WebCache文件夹中即可</li>
+</ol>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">&quot;_id&quot;:&quot;Midi信息文件的名字，也可以不是，但是必需有此项，否则游戏会出bug&quot;,</span><br><span class="line">&quot;name&quot;:&quot;Midi显示在游戏中的名字&quot;,</span><br><span class="line">&quot;desc&quot;:&quot;Midi的简介&quot;,</span><br><span class="line">&quot;hash&quot;:&quot;Midi文件在WebCache文件夹下的名字&quot;,</span><br><span class="line">&quot;coverUrl&quot;:&quot;封面图的链接&quot;,</span><br><span class="line">&quot;coverBlurUrl&quot;:&quot;模糊的封面图（用作背景）&quot;,</span><br><span class="line">&quot;artistName&quot;:&quot;Midi作者的名字&quot;,</span><br><span class="line">&quot;artistUrl&quot;:&quot;Midi作者或Midi的原地址链接&quot;,</span><br><span class="line">&quot;status&quot;:&quot;Midi的状态，如PENDING&quot;,</span><br><span class="line">&quot;sourceArtistName&quot;:&quot;Midi所属的原曲的作者&quot;,</span><br><span class="line">&quot;sourceAlbumName&quot;:&quot;Midi所属的原曲的名字&quot;,</span><br><span class="line">&quot;sourceSongName&quot;:&quot;Midi所属的专辑&quot;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>&#x2F;Webcache:<br> 该文件夹用于存放游戏中所有内置的和已下载的Midi文件，以及游戏缓存下来的所有图片，歌曲信息文件在调用文件的时候都是调用此文件夹下的内容<br> 其中没有后缀名的文件均为Midi文件，文件的名字是Midi文件的Md5值，同时也是其ID，其它的图片格式的文件为游戏中使用的歌曲封面图、背景图或玩家头像图等</p>
+</li>
+<li><p>&#x2F;skins:<br> 该文件夹下储存的是音符皮肤的文件夹，音符皮肤文件就处于这些文件夹之中，且文件夹的名称就是音符皮肤的名字</p>
+</li>
+<li><p>&#x2F;Sf2:<br> 该文件夹用于存放的Soundfont文件以供游戏调用</p>
+</li>
+<li><p>JsonStorage:<br> 此文件保存着上次游戏最后所处的位置、各个歌曲的音轨与音色设置、总设置与游戏设置的数值与游戏账号及密码等内容。删除该文件可用来解决由设置或文件缺失导致的游戏界面重叠、可更改的设置项无法更改等bug，同时游戏设置会被重置</p>
+</li>
+<li><p>Translations.json:<br> 该文件存储着已加载出来的所有翻译内容</p>
+</li>
+</ul>
+<h4 id="Midi导入"><a href="#Midi导入" class="headerlink" title="-Midi导入-"></a>-Midi导入-</h4><ul>
+<li>方法1：找到要导入的Midi，长按后选择打开方式，选择用THMIX打开</li>
+<li>方法2：找到要导入的Midi，将Midi复制或者剪切到<a href="#U4">「游戏文件目录」</a>内，Midi会被放在名字为”Local Midis”(若有开启 <a href="#G-S">总设置-第3项</a> 【全局内容翻译】，则专辑名字为”本地Midis”)的专辑内</li>
+</ul>
+<p> ◈关于Midi</p>
+<ul>
+<li>Midi在THMIX中的作用相当于一个铺面文件加上音乐，因为THMIX是通过Midi来生成铺面的。也正因如此，如果游戏中没有心仪的曲子，可以很方便地通过在其他网站寻找Midi并导入到THMIX中来游玩或者是上传到THMIX官网来和大家一起玩</li>
+<li>游戏内置的Midi基本来自 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.easypianoscore.jp/">東方ピアノEasyモード</a> ，作者为DMBN</li>
+<li>截止至2022年11月1日，THMIX官网已收录了超过1539个Midi，内置Midi约占36%</li>
+<li>从441版开始，THMIX官网内所有INCLUDED状态的Midi都将会被打包进游戏作为内置Midi</li>
+<li>若希望自己的Midi能够成为游戏的内置Midi，请确保Midi文件为原创或已经其作者允许，并告知开发者或Midi管理人员</li>
+</ul>
+<h4 id="音源导入"><a href="#音源导入" class="headerlink" title="-音源导入-"></a>-音源导入-</h4><ul>
+<li>在文件管理器中找到音源文件，然后选择用TouHouMix打开即可成功导入</li>
+<li>找到需要导入的音源文件并将其移动至<a href="#U4">「游戏文件目录」</a>下的Sf2文件夹中下即可</li>
+<li>若要使用音源文件请在游戏中使用 <a href="#G-S">总设置-第8项</a> 【音源文件路径】选择该音源文件</li>
+</ul>
+<p> ◈关于音源</p>
+<ul>
+<li>游戏中使用的默认音源是<a target="_blank" rel="external nofollow noopener noreferrer" href="http://www.schristiancollins.com/generaluser.php">GS SoundFont</a></li>
+<li>需要注意的是，由于音源文件可能使用着不同的标准，若导入的音源只含有单种音色，则会出现导入后所有乐器音色都相同的情况</li>
+</ul>
+<h4 id="皮肤制作"><a href="#皮肤制作" class="headerlink" title="-皮肤制作-"></a>-皮肤制作-</h4><ol>
+<li>准备以下图片文件:</li>
+</ol>
+<ul>
+<li>点块贴图 (short.png)</li>
+<li>滑块贴图 (instant.png)</li>
+<li>长条头部贴图 (long-b.png)</li>
+<li>长条中部贴图 (long-f.png)</li>
+<li>长条尾部贴图 (long-t.png)</li>
+<li>滑块连接线贴图 (instant-c.png)</li>
+<li>点块连接线贴图 (short-c.png)</li>
+<li>被连接线穿过的滑块贴图 (instant-c.png)<br>以上图片均需为png格式(也可能不用)，如果图片缺失，游戏只会显示不出缺失的内容或用其它贴图替代，所以所有贴图文件都不是必需的</li>
+</ul>
+<ol start="2">
+<li>将贴图文件依次命名为步骤一中括号内的内容</li>
+<li>将贴图文件放于同一文件夹下，文件夹的名称就是该皮肤的名称</li>
+</ol>
+<h4 id="皮肤导入"><a href="#皮肤导入" class="headerlink" title="-皮肤导入-"></a>-皮肤导入-</h4><ul>
+<li>将要导入的皮肤文件连同其文件夹一起复制或剪切到<a href="#U4">「游戏文件目录」</a>下的Skins文件夹中即可</li>
+<li>若是要导入别人制作的皮肤包，则一般需先解压文件，解压完后，将内部只含有数个png文件的文件夹整个移动到<a href="#U4">「游戏文件目录」</a>下的Skins文件夹下即可</li>
+<li>在 <a href="#S-3">游戏设置-III-第13项</a> 【音符外观设定】即可更换已导入的皮肤，皮肤名为皮肤文件所在文件夹的名称</li>
+</ul>
+<hr>
+<h3 id="第伍部分-常见问题-1"><a href="#第伍部分-常见问题-1" class="headerlink" title="第伍部分 常见问题"></a>第伍部分 常见问题</h3><blockquote>
+<p>〖观前提醒〗<br>   ☆各个问题的解决措施均按推荐顺序排列，请放心尝试<br>   ☆部分苹果手机做不到的操作请iOS用户自行跳过  </p>
+</blockquote>
+<p>1.官网无法访问</p>
+<ul>
+<li>请确保访问的是(<a target="_blank" rel="external nofollow noopener noreferrer" href="https://thmix.org),若是使用http则连接会被官网主动切断;同时,因为asia服务器暂时没了,所以(https//asia.thmix.org)%E7%90%86%E8%AE%BA%E4%B8%8A%E8%AE%BF%E9%97%AE%E4%B8%8D%E4%BA%86">https://thmix.org)，若是使用http则连接会被官网主动切断；同时，因为asia服务器暂时没了，所以(https://asia.thmix.org)理论上访问不了</a></li>
+<li>检查自己的网络，使用移动的网络或宽带有很大可能会无法访问官网，所以访问不了的时候可以试试换个网络</li>
+<li>可以尝试使用科学上网</li>
+<li>放弃治疗</li>
+</ul>
+<p>2.收不到验证码或验证码错误</p>
+<ul>
+<li>若收不到验证码，可多尝试几次或者换个邮箱注册</li>
+<li>若输入验证码的时候提示验证码错误，请先确保输入无误；其次，注册时设备与官网的连接不能中断，请确保查看验证码的过程中，浏览器与官网的连接不会断开</li>
+<li>若自己的邮箱都收不到验证码，可以试试用网上的临时邮箱</li>
+<li>若问题还是无法解决，可以托别人代为注册</li>
+</ul>
+<p>3.为什么官网不能下载Midi</p>
+<ul>
+<li>因为涉及版权等问题，所以官网不提供下载Midi的服务</li>
+</ul>
+<p>4.怎么在上传完Midi后再次编辑</p>
+<ul>
+<li>请见关于 <a href="#Midi_Upload">Midi上传</a> 的介绍</li>
+</ul>
+<p>5.怎么删除自己上传的Midi</p>
+<ul>
+<li>请见关于 <a href="#Midi_Upload">Midi上传</a> 的介绍</li>
+</ul>
+<p>6.为什么没有登录按钮</p>
+<ul>
+<li>点开屏幕右上角设置按钮，将第一项Online Mode 【线上模式】改为Yes，然后重启游戏即可</li>
+</ul>
+<p>7.语言选择中文却没有中文</p>
+<ul>
+<li>重启一次游戏或返回上一界面再回来</li>
+<li>请先确认是否能连接上服务器，屏幕顶部的延迟要是显示出来了一般就代表已经成功连接上服务器，如果连接不上服务器，请看问题一</li>
+<li>如果不是网络问题的话呢，可以多等等或者暂时放弃治疗</li>
+</ul>
+<p>8.游戏内无网络连接</p>
+<ul>
+<li>使用浏览器看看能否访问官网，若不能请看问题1，若问题解决后能访问官网，则说明不是当前网络的问题，无需使用科学上网工具</li>
+<li>看看进入游戏时延迟是否有数值，如果有说明可以连接至服务器，可以多等等</li>
+<li>更改 <a href="#G-S">总设置-第4项</a> 【服务器网络节点】并重启游戏</li>
+<li>尝试使用数据流量或者梯子</li>
+<li>放弃治疗</li>
+</ul>
+<p>9.翻译为什么这么渣</p>
+<ul>
+<li>如果指歌曲及专辑名字翻译太渣，可以先选择更换语言为繁体中文</li>
+<li>如果翻译错误还是很多，可以选择关闭<a href="#G-S">总设置-第3项</a> 【全局内容翻译】，眼不见为净</li>
+<li>如果是设置项的翻译错误，例如与此教程内的翻译不同，则是因为游戏调用了内置的离线翻译文件而不是在线获取新的翻译。可以在确保游戏能够连接上服务器的情况下，点击<a href="#G-S">总设置-第15项</a> 【清除翻译文件】并稍等片刻或重启游戏等待翻译重新加载</li>
+</ul>
+<p>10.游戏频繁闪退或无响应</p>
+<ul>
+<li>如果反复尝试后均提示THMIX无响应，请尝试清除应用数据或更换旧版本后重试</li>
+<li>如果THMIX会因为一些特殊原因在启动时关闭(如因为没有开启网络而自动关闭)，请确认自己的安装渠道是否安全，可尝试去官网下载正版或更换旧版游玩的呢</li>
+<li>如果是iOS系统，可尝试关闭网络再进入游戏</li>
+</ul>
+<p>11.游戏内怎么下载曲子</p>
+<ul>
+<li>首先需要确保<a href="#G-S">总设置-第1项</a>【线上模式】处于打开的状态</li>
+<li>其次需要确保游戏能够连上服务器，若无法连接至服务器，请参考问题8</li>
+<li>最后点击屏幕右下角的商店按钮即可进入Midi商店下载Midi</li>
+</ul>
+<p>12.怎么导入曲子或音源文件</p>
+<ul>
+<li>请见 <a href="#U4">第四部分</a> 关于导入Midi和导入音源文件的介绍</li>
+</ul>
+<p>13.为何什么文件都能用THMIX打开</p>
+<ul>
+<li>因为kai想让音源文件也能像Midi一样通过选择用THMIX打开的方式来导入，但又受限于某些Android系统的缺陷，所以退而求其次地做成了打开什么文件时都能用THMIX</li>
+<li>说实话，挺烦的，有ROOT的可以把THMIX扔隐蔽空间里，就不会在打开文件的时候看到THMIX了</li>
+</ul>
+<p>14.专辑界面空白或界面重叠</p>
+<ul>
+<li>重启游戏</li>
+<li>点击右上角设置内的清除资源包</li>
+<li>删除<a href="#U4">「游戏文件目录」</a>下的JsonStorage文件，并重启游戏。该操作会导致<a href="#A-3">游戏设置内容丢失</a>，不会删除已下载的Midi</li>
+<li>在手机设置的应用管理中找到THMIX并删除应用数据，该操作会丢失所有游戏数据</li>
+<li>重装游戏，不过不如删除应用数据快和简单</li>
+</ul>
+<p>15.无法在Midi商店内下载Midi</p>
+<ul>
+<li>若是点击后一直卡在0%，则可能是网络问题，可试试问题8的解决方案</li>
+<li>若是显示已下载，而专辑列表中没有，则需在<a href="#U4">「游戏文件目录」</a>中的DB文件夹中的midis文件夹下删除对应文件</li>
+<li>如果都不行的话，可以试试在玩家交流群中下载Midi整合包</li>
+</ul>
+<p>16.播放交响乐的观感很差</p>
+<ul>
+<li>交响乐观感差，极大概率是因为各个乐器的音量不够平衡而导致的，但游戏目前还无法针对特定的音色调节音量，所以目前只能采取以下两种替代方案：<ol>
+<li>更换一个音源文件。不同的音源文件，各个音色的音量也有所不同，要是有合适的音源的话，能很大程度上提升交响乐的观感</li>
+<li>调整部分音轨的音色。可以将那些声音很大的音轨的音色换为声音较小的音色，但是用这种方法，想要把Midi调校到一个很好听的地步十分困难，一般可以直接把所有音轨都统一成一种音色，不过那样听的就不是交响乐了</li>
+</ol>
+</li>
+</ul>
+<p>17.游戏卡顿、掉帧或有杂音</p>
+<ul>
+<li>重启游戏</li>
+<li>尝试调小 <a href="#G-S">总设置-第11项</a> 【DSP采样率缩减】和调大 <a href="#G-S">总设置-第12项</a> 【DSP音频缓冲放大】</li>
+<li>调小 <a href="#G-S">总设置-第9项</a> 【合成器音量】</li>
+<li>调小 <a href="#G-S">总设置-第10项</a> 【最大声音数量】的数值，可能没用</li>
+</ul>
+<p>18.游戏难度太低了</p>
+<ul>
+<li>进入歌曲信息界面后，直接在屏幕左上角的难度选框中选择除custom以外的难度，或选择custom并手动调整 <a href="#G-VII">游戏设置-VII-第28~32项</a> 的参数</li>
+<li>在 <a href="#U2">音轨界面</a> 中多启用几条音轨</li>
+<li>适当调小 <a href="#G-IV">游戏设置-IV-第17~18项</a> 【最小横向音符间距 &amp; 安全区域宽度设定】的数值。这两项数值太大会顶掉音符</li>
+<li>将<a href="#G-VII">游戏设置-VII-第27项</a> 【生成短块最大时间】调为1，使长条正常生成，增加长条尾判的那个音符量</li>
+<li>适当调大 <a href="#G-IV">游戏设置-IV-第14项</a> 【下落轨道数量】的数值。轨道数太小会吞掉少量音符</li>
+<li>若音符总量还是不够，我也没办法</li>
+</ul>
+<p>19.设置改完后怎么会被还原</p>
+<ul>
+<li>游戏内的<a href="#A-2">部分设置项</a>会直接影响游戏难度，所以需要在custom难度下才能更改，请先将难度改为Custom</li>
+<li>可能是点到屏幕左上角的重置按钮了，返回按钮在左下角（</li>
+<li>如果仍无法更改则说明该项不支持更改</li>
+</ul>
+<p>20.已下载的Midi如何去删除</p>
+<ul>
+<li>在游戏中的歌曲信息界面，点击左下角音轨按钮右边的垃圾桶图标，然后点右边想要删除的midi小框左上角的叉叉按钮即可，再次点击垃圾桶图标隐藏叉叉按钮</li>
+</ul>
+<p>21.滑键间的连接线能否关闭</p>
+<ul>
+<li>连接线纯属摆设，如果觉得碍眼，可以关掉 <a href="#S-8">游戏设置-VIII-第34项</a> 【是否连接上下相邻的滑块】</li>
+</ul>
+<p>22.音符间的距离太近或重叠</p>
+<ul>
+<li>将 <a href="#S-4">游戏设置-IV-第17项</a> 【最小横向音符间距】的数值稍微调大</li>
+<li>查看是否为轨道数量的问题，若轨道数量太大，相邻音符之间的间距会很小甚至重叠；可尝试调小轨道数量(例如调成12)</li>
+<li>如果不是轨道数量问题的话，可能是 <a href="#S-7">游戏设置-VII-第31项</a> 【手指最大移动速度】的设置问题，此设置项数值太小会使音符之间距离被拉近，可以尝试调大(例如10000)</li>
+<li>通过小幅降低游戏难度来使自己更容易应对:<br>  +将 <a href="#S-7">游戏设置-VII-第29项</a> 【连点最小时间间隔】数值略微调大，比如0.1，使两个重叠的点键变为一个点键与一个滑键<ul>
+<li>将 <a href="#S-7">游戏设置-VII-第28项</a> 【最大并排下落音符】数值调小，例如2，使重叠的并排点键更容易对付</li>
+<li>将 <a href="#S-7">游戏设置-VII-第27项</a> 【生成短块最大时间】的数值调大，例如1000，使长条不生成</li>
+<li>适当调大 <a href="#S-7">游戏设置-VII-第31项</a> 【手指最大移动速度】的数值</li>
+</ul>
+</li>
+</ul>
+<p>23.按键特效晃眼，能否更换</p>
+<ul>
+<li>如果说的是那个爆炸特效的话，请移步 <a href="#S-10">游戏设置-X-第42、44、46、48项</a> 【Perfect&#x2F;Great&#x2F;Good&#x2F;Bad特效设定】然后通过选框或其两旁的左右小箭头按钮更换按键特效</li>
+<li>如果没有心仪的特效并想关闭特效的话，请移步 <a href="#S-10">游戏设置-X-第43、45、47、49项</a> 【Perfect&#x2F;Great&#x2F;Good&#x2F;Bad特效大小】然后将其后面的数字改为0就能隐藏爆炸特效了</li>
+<li>如果说的是那个光柱特效，那么可将 <a href="#S-10">游戏设置-X-第41项</a> 【光柱不透明度】调为0</li>
+</ul>
+<p>24.皮肤无法显示或进行更换</p>
+<ul>
+<li>请确认皮肤是否本身就存在问题，例如缺少必要的贴图</li>
+<li>若将 <a href="#S-3">游戏设置-III-第13项</a> 【音符外观设定】更改后退出再回到设置后显示的内容发生变动，则可能是因为上一个选择的皮肤被删除而触发了bug。可以在<a href="#U4">「游戏文件目录」</a>中的Skins文件夹下创建一个名字和之前被删除的皮肤名字一样的文件夹(或将皮肤文件移回来)，然后再回到游戏设置中，就能正常更改皮肤了</li>
+<li>点击游戏设置左上角的重置按钮</li>
+</ul>
+<p>25.歌曲封面为什么是模糊的</p>
+<ul>
+<li>因为开发者比较怂，怕涉及版权问题</li>
+<li>当登录的账号的总pp值达到1000时就能够正常显示这些图片了。所以，努力打歌吧</li>
+<li>若总pp超过1000却仍显示模糊图片，则需手动清理 <a href="#U4">「游戏文件目录」</a> 中的WebCache文件夹下的模糊图片。注意，请勿直接删除WebCache文件夹，这会导致歌曲文件丢失</li>
+</ul>
+<hr>
+<h3 id="附录-友情链接-amp-资源下载-1"><a href="#附录-友情链接-amp-资源下载-1" class="headerlink" title="附录 友情链接&amp;资源下载"></a>附录 友情链接&amp;资源下载</h3><h4 id="友情链接："><a href="#友情链接：" class="headerlink" title="友情链接："></a>友情链接：</h4><ul>
+<li>友情链接：<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://thmix.org/">THMIX官网</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://zhaoym233.github.io/thmixCourse/">网页版教程</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.bilibili.com/video/av417389550">基础视频教程</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://thwiki.cc/%E4%B8%9C%E6%96%B9%E6%B7%B7%E9%9F%B3%E4%BC%A0_~_Note_Phantasm_of_Reality">THBwiki上的THMIX</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://discord.com/invite/m2BeMbj">Discord交流群</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://jq.qq.com/?_wv=1027&k=DglOSmvP">THMIX测试群 β群</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://jq.qq.com/?_wv=1027&k=fedoDAwF">THMIX测试群 γ群</a></li>
+<li>特别鸣谢</li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://smms.app/">SM.MS(图床)</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://squoosh.app/">Squoosh(图片压缩)</a></li>
+</ul>
+</li>
+</ul>
+<h4 id="资源下载"><a href="#资源下载" class="headerlink" title="资源下载"></a>资源下载</h4><ul>
+<li><p>THMIX各版本资源(蓝奏云)(目前已停更)：</p>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://wwn.lanzoul.com/b00q7q2pc">THMIX-PC版(密码：THMIX)</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://wwn.lanzoul.com/b00q7q2uh">THMIX-Android版(密码：THMIX)</a></li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://wwn.lanzoul.com/b00q7q2xa">THMIX-IOS版(密码：THMIX)</a></li>
+</ul>
+</li>
+<li><p>部分Soundfont资源(Onedrive)：</p>
+<ul>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://me3654-my.sharepoint.com/:f:/g/personal/yang_kira_me3654_onmicrosoft_com/EpqtF74xrUxNoEP-qwQ4coABd5vEvRe1M7f66sT9bzB1MQ?e=76QkjL">Soundfont资源</a>  </li>
+<li>Soundfont文件来自网络及THMIX测试群的群文件，请勿指望这里有什么特别完美的sf2文件</li>
+<li>推荐内容：<ul>
+<li>FluidR3 GM.sf2 (141MB)<br>Musescore的默认音源，播放部分来自Musescore的Midi效果会比游戏自带的音源好</li>
+<li>TouHou.sf2 (249MB)<br> 效果不错，适合用于播放东方曲</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>共享资源库(Onedrive)：</p>
+<ul>
+<li>QQ群群文件的替代品，可以随便传东西，虽然下载不是特别快，而且指不定哪天就没了，但是空间大，THMIX的新版和教程也会同步在上面更新，想给别人分享游戏的也可以用这个链接（目前可用空间：4.9T&#x2F;5T）</li>
+<li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://me3654-my.sharepoint.com/:f:/g/personal/yang_kira_me3654_onmicrosoft_com/EnS2NjtEMwtEjfa57EXkvZIBtpDUYUpBHeWmf5KsBteisg?e=nMe876">共享资源库</a></li>
+<li>在该资源库上传内容需遵守以下规定：<ol>
+<li>不得上传敏感内容</li>
+<li>不得未经他人同意删除他人上传的内容</li>
+<li>请勿将其当做私人网盘，因为无法保证一直可用</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<blockquote>
+<p>最后编辑于：2022&#x2F;11&#x2F;9</p>
+</blockquote>
+<blockquote>
+<p>更新内容:错误纠正</p>
+</blockquote>
+<blockquote>
+<p>本教程由 Yang_ 制作，同时感谢对教程制作提供帮助的各位群友</p>
+</blockquote>
+<blockquote>
+<p>本教程仅发布在 THMIX 测试群 (群号:140497416 与 1020610194)</p>
+</blockquote>
+<blockquote>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://creativecommons.org/licenses/by-nc-sa/3.0">本文采用(CC BY-NC-SA 3.0)协议进行授权，转载请标明出处</a></p>
+</blockquote>
+<blockquote>
+<p>联系方式：<br>QQ: 2151822990<br>邮箱: <a href="mailto:&#121;&#x61;&#110;&#103;&#49;&#x32;&#53;&#x38;&#57;&#48;&#x40;&#x6f;&#x75;&#116;&#x6c;&#111;&#x6f;&#x6b;&#x2e;&#x63;&#111;&#109;">&#121;&#x61;&#110;&#103;&#49;&#x32;&#53;&#x38;&#57;&#48;&#x40;&#x6f;&#x75;&#116;&#x6c;&#111;&#x6f;&#x6b;&#x2e;&#x63;&#111;&#109;</a></p>
+</blockquote>
+
+  
+  
+
+
+  </article>
+  
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">回顾上一篇</div><a href="/wiki/guides/games/index.html">游戏指南</a></div><div class="item" id="next"><div class="note">接下来阅读</div><a href="/wiki/guides/clubs/index.html">社团指南</a></div></section></div>
+
+  
+
+  <div class="related-wrap md-text reveal" id="comments">
+    <section class="header cmt-title cap theme">
+      快来参与讨论吧
+    </section>
+    <section class="body cmt-body giscus">
+      
+
+<svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"/></svg>
+
+<div id="giscus" data-repo="SMGoro/contact-data" data-repo-id="R_kgDOJchtuA" data-category="General" data-category-id="DIC_kwDOJchtuM4CWIK_" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous"></div>
+
+    </section>
+  </div>
+
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">文章</span><a href="/rss">订阅</a><a href="/categories">分类</a><a href="/tags">标签</a><a href="/archives">归档</a></div><div class="sitemap-group"><span class="fs14">项目</span><a href="/wiki/guides">指南</a><a href="/webs">导航</a></div><div class="sitemap-group"><span class="fs14">更多</span><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Touhou-Public">Github</a><a target="_blank" rel="external nofollow noopener noreferrer" href="https://blog.imc.re/">博客</a><a target="_blank" rel="external nofollow noopener noreferrer" href="https://imc.re/">IMC.RE</a></div></div><div class="text"><p><a href="/">@Touhou.Pub</a> 2023 powered by <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Touhou-Public">Touhou-Public</a>。<br><br>本网站所有内容除特别声明外，均采用 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/me-shaon/GLWTPL/blob/master/translations/LICENSE_zh-CN">GLWT（Good Luck With That，祝你好运）公共许可证</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+
+      <div class="float-panel mobile-only blur" style="display:none">
+  <button type="button" class="sidebar-toggle mobile" onclick="sidebar.toggle()">
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"/><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"/></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class="scripts">
+    <script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = stellar.config.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.19.0';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.19.0';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+    root : '/',
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://gcore.jsdelivr.net/npm/jquery@3.6.2/dist/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"codeblock":true,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.copycode = Object.assign({"enable":true,"js":"/js/plugins/copycode.js","default_text":"Copy","success_text":"Copied"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+  function loadJS() {
+    const els = document.querySelectorAll("#comments #giscus");
+    if (els.length === 0) return;
+    els.forEach((el, i) => {
+      try {
+        el.innerHTML = '';
+      } catch (error) {
+        console.log(error);
+      }
+      var script = document.createElement('script');
+      script.src = 'https://giscus.app/client.js';
+      script.async = true;
+      for (let key of Object.keys(el.attributes)) {
+        let attr = el.attributes[key];
+        if (['class', 'id'].includes(attr.name) === false) {
+          script.setAttribute(attr.name, attr.value);
+        }
+      }
+      el.appendChild(script);
+    });
+  }
+  window.addEventListener('DOMContentLoaded', (event) => {
+    loadJS();
+  });
+</script>
+
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.19.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="https://gcore.jsdelivr.net">
+  <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="//unpkg.com">
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>Linux变量使用 - Touhou.Pub</title>
+
+  
+    <meta name="description" content="Linux变量使用变量的定义与引用，用&#x3D;进行定义，用$进行引用12345[root@master ~]# name&#x3D;zhangsan[root@master ~]# echo $namezhangsan[root@master ~]# echo namename$在单引号中不能被识别，在双引号中可识别1234[root@master ~]# echo &quot;I am $name&quot;I am zhang">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux变量使用">
+<meta property="og:url" content="https://touhou.pub/rss/d28565de.html">
+<meta property="og:site_name" content="Touhou.Pub">
+<meta property="og:description" content="Linux变量使用变量的定义与引用，用&#x3D;进行定义，用$进行引用12345[root@master ~]# name&#x3D;zhangsan[root@master ~]# echo $namezhangsan[root@master ~]# echo namename$在单引号中不能被识别，在双引号中可识别1234[root@master ~]# echo &quot;I am $name&quot;I am zhang">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-12-04T06:13:54.000Z">
+<meta property="article:modified_time" content="2023-12-04T06:13:54.000Z">
+<meta property="article:author" content="Touhou-Public">
+<meta property="article:tag" content="Owner">
+<meta property="article:tag" content="SMGoroBlog">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <meta name="keywords" content="Owner,SMGoroBlog">
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Touhou.Pub" type="application/atom+xml">
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+
+  
+    <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+    <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+    <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+  
+
+
+  
+
+  <link href="https://cdn.jsdelivr.net/npm/font-touhou98/dist/touhou98.css" rel="stylesheet">
+  <link href="/css/fonts.css" rel="stylesheet">
+<!--百度统计-->
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?b427d26cc6155f11e2a036ccfa4e01da";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+  
+<!--Google Adsense-->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4773172018528901" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  
+
+
+
+
+  <div class="l_body" id="start">
+    <aside class="l_left" layout="post">
+    
+
+  
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/rss"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/assets/logo/touhou_lite_color.svg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title"><h1 class="yuyukofont">Touhou.Pub</h1></div><div class="sub normal cap"><p class="touhou98">Touhou-Public</p></div><div class="sub hover cap" style="opacity:0"> 东方Project信息站</div></a></div>
+
+<nav class="menu dis-select"><a class="nav-item" href="/">主页</a><a class="nav-item" href="/wiki">项目</a><a class="nav-item active" href="/rss">RSS</a><a class="nav-item" target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Touhou-Public">Org</a></nav>
+</header>
+
+
+<div class="widgets">
+
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">Linux变量使用</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux%E5%8F%98%E9%87%8F%E4%BD%BF%E7%94%A8"><span class="toc-text">Linux变量使用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BE%E5%A0%82%E7%BB%83%E4%B9%A0"><span class="toc-text">课堂练习</span></a></li></ol></li></ol></div></div></widget>
+
+
+
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/rss/" placeholder="文章搜索"><svg t="1670596976048" class="icon search-icon" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"/></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+
+
+
+<widget class="widget-wrapper recent"><div class="widget-header cap theme dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg class="icon" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8938"><path d="M800.966 947.251c0-404.522-320.872-732.448-716.69-732.448V62.785c477.972 0 865.44 395.987 865.44 884.466h-148.75z m-162.273 0h-148.74c0-228.98-181.628-414.598-405.678-414.598v-152.01c306.205 0 554.418 253.68 554.418 566.608z m-446.24-221.12c59.748 0 108.189 49.503 108.189 110.557 0 61.063-48.44 110.563-108.188 110.563-59.747 0-108.18-49.5-108.18-110.563 0-61.054 48.433-110.556 108.18-110.556z" p-id="8939"/></svg></a></div><div class="widget-body related-posts fs14"><a class="item title" href="/rss/5b2e37c7.html"><span class="title">TOUHOU GENSOU MAHJONG</span></a><a class="item title" href="/rss/1f972eaf.html"><span class="title">The Touhou Empires</span></a><a class="item title" href="/rss/1e67efb1.html"><span class="title">Touhou Crisis</span></a><a class="item title" href="/rss/bebdd4ea.html"><span class="title">Touhou DollDraft</span></a><a class="item title" href="/rss/dfe5e379.html"><span class="title">Touhou Fantasia / 东方梦想曲</span></a></div></widget>
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/Touhou-Public/" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/social-github.svg"></a><a class="social" href="https://space.bilibili.com/359079394" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/bilibili.svg"></a><a class="social" href="https://l.imc.re/zhihu" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/zhihu.svg"></a><a class="social" href="https://l.imc.re/discord" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/discord.svg"></a><a class="social" href="https://blog.imc.re/contact" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/comments.svg"></a></div></footer>
+
+    </aside>
+    <div class="l_main">
+      
+
+      
+
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/owner/">Owner</a> <span class="sep"></span> <a class="cap breadcrumb-link" href="/categories/owner/smgoroblog/">SMGoroBlog</a></div><div id="post-meta">发布于&nbsp;<time datetime="2023-12-04T06:13:54.000Z">2023-12-04</time></div></div>
+
+<article class="md-text content post">
+<h1 class="article-title"><span>Linux变量使用</span></h1>
+<div>
+<link class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css" rel="stylesheet"><script class="aplayer-secondary-script-marker" src="/assets/js/APlayer.min.js"></script><h1 id="Linux变量使用"><a class="headerlink" href="#Linux变量使用" title="Linux变量使用"></a>Linux变量使用</h1><ol><li>变量的定义与引用，用=进行定义，用$进行引用</li></ol><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]<span class="comment"># name=zhangsan</span></span><br><span class="line">[root@master ~]<span class="comment"># echo $name</span></span><br><span class="line">zhangsan</span><br><span class="line">[root@master ~]<span class="comment"># echo name</span></span><br><span class="line">name</span><br></pre></td></tr></table></figure><p>$在单引号中不能被识别，在双引号中可识别</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]<span class="comment"># echo "I am $name"</span></span><br><span class="line">I am zhangsan</span><br><span class="line">[root@master ~]<span class="comment"># echo 'I am $name'</span></span><br><span class="line">I am <span class="variable">$name</span></span><br></pre></td></tr></table></figure><ol><li>环境变量</li></ol><p>PATH环境变量：寻找可执行文件的搜索路径</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]<span class="comment"># echo $PATH</span></span><br><span class="line">/root/perl5/bin:/root/perl5/bin:/opt/kafka_2.11-2.0.0/bin:/opt/zookeeper-3.4.12/bin:/opt/flink-1.10.2/bin:/opt/spark-2.1.1-bin-hadoop2.7//bin:/opt/apache-hive-2.3.4-bin/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/opt/hadoop-2.7.7/bin:/opt/hadoop-2.7.7/sbin:/usr/java/jdk1.8.0_162/bin:/usr/java/jdk1.8.0_162/jre/bin:/opt/scala-2.11.0/bin:/opt/apache-flume-1.7.0-bin/bin:/root/bin</span><br></pre></td></tr></table></figure><p>PWD：当前工作目录</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]<span class="comment"># echo $PWD</span></span><br><span class="line">/root</span><br></pre></td></tr></table></figure><p>PS1和PS2：命令行的一级提示符和二级提示符</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]<span class="comment"># echo $PS1</span></span><br><span class="line">[\u@\h \W]\$</span><br><span class="line">[root@master ~]<span class="comment"># echo $PS2</span></span><br><span class="line">&gt;</span><br><span class="line"></span><br><span class="line">[root@master ~]<span class="comment"># echo $PS1</span></span><br><span class="line">[\u@\h \W]\$</span><br><span class="line">[root@master ~]<span class="comment"># echo $PS2</span></span><br><span class="line">&gt;</span><br><span class="line">[root@master ~]<span class="comment"># mysql -u root -p</span></span><br><span class="line">Enter password: <span class="comment"># （输入Passwd123！）</span></span><br><span class="line">Welcome to the MySQL monitor.  Commands end with ; or \g.</span><br><span class="line">Your MySQL connection <span class="built_in">id</span> is 3</span><br><span class="line">Server version: 5.7.18 MySQL Community Server (GPL)</span><br><span class="line"></span><br><span class="line">Copyright (c) 2000, 2017, Oracle and/or its affiliates. All rights reserved.</span><br><span class="line"></span><br><span class="line">Oracle is a registered trademark of Oracle Corporation and/or its</span><br><span class="line">affiliates. Other names may be trademarks of their respective</span><br><span class="line">owners.</span><br><span class="line"></span><br><span class="line">Type <span class="string">'help;'</span> or <span class="string">'\h'</span> <span class="keyword">for</span> <span class="built_in">help</span>. Type <span class="string">'\c'</span> to clear the current input statement.</span><br><span class="line"></span><br><span class="line">mysql&gt; show databases;</span><br><span class="line">+--------------------+</span><br><span class="line">| Database           |</span><br><span class="line">+--------------------+</span><br><span class="line">| information_schema |</span><br><span class="line">| bak                |</span><br><span class="line">| hive               |</span><br><span class="line">| mysql              |</span><br><span class="line">| performance_schema |</span><br><span class="line">| shtd_result        |</span><br><span class="line">| shtd_store         |</span><br><span class="line">| shtd_store01       |</span><br><span class="line">| sys                |</span><br><span class="line">+--------------------+</span><br><span class="line">9 rows <span class="keyword">in</span> <span class="built_in">set</span> (0.02 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; <span class="built_in">exit</span></span><br><span class="line">Bye</span><br><span class="line">[root@master ~]<span class="comment">#</span></span><br></pre></td></tr></table></figure><p>OLDPWD：前一个工作目录</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]<span class="comment"># ll</span></span><br><span class="line">总用量 68</span><br><span class="line">drwxr-xr-x. 4 root root    36 11月 16 2022 aaa</span><br><span class="line">-rw-------. 1 root root  1257 11月 18 2021 anaconda-ks.cfg</span><br><span class="line">drwxr-xr-x. 5 root root    39 11月 18 2021 localperl</span><br><span class="line">-rw-------. 1 root root  1623 7月  11 21:08 nohup.out</span><br><span class="line">drwxr-xr-x. 5 root root    39 11月 18 2021 perl5</span><br><span class="line">-rw-r--r--. 1 root root 50112 7月  11 21:31 ShiSai2022-1.0-SNAPSHOT.jar</span><br><span class="line">-rw-r--r--. 1 root root     0 11月 15 2022 spark-yarn-logs</span><br><span class="line">-rw-r--r--. 1 root root  4175 11月 16 2022 zookeeper.out</span><br><span class="line">[root@master ~]<span class="comment"># cd aaa</span></span><br><span class="line">[root@master aaa]<span class="comment"># echo $PWD</span></span><br><span class="line">/root/aaa</span><br><span class="line">[root@master aaa]<span class="comment"># echo $OLDPWD</span></span><br><span class="line">/root</span><br></pre></td></tr></table></figure><p>HISTFILE：储存历史命令</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@master aaa]<span class="comment"># echo $HISTFILE</span></span><br><span class="line">/root/.bash_history</span><br><span class="line">[root@master aaa]<span class="comment"># vi /root/.bash_history  （退出----按：，按q，按回车键）</span></span><br><span class="line">[root@master aaa]<span class="comment">#</span></span><br></pre></td></tr></table></figure><p>HOME:    当前用户的用户目录</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]<span class="comment"># echo $HOME</span></span><br><span class="line">/root</span><br></pre></td></tr></table></figure><p>3.PATH环境变量的综合运用</p><p>在PATH环境变量之前加入新的路径，/tmp</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]<span class="comment"># export PATH=/tmp:$PATH</span></span><br><span class="line">[root@master ~]<span class="comment"># echo $PATH</span></span><br><span class="line">/tmp:/root/perl5/bin:/root/perl5/bin:/opt/kafka_2.11-2.0.0/bin:/opt/zookeeper-3.4.12/bin:/opt/flink-1.10.2/bin:/opt/spark-2.1.1-bin-hadoop2.7//bin:/opt/apache-hive-2.3.4-bin/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/opt/hadoop-2.7.7/bin:/opt/hadoop-2.7.7/sbin:/usr/java/jdk1.8.0_162/bin:/usr/java/jdk1.8.0_162/jre/bin:/opt/scala-2.11.0/bin:/opt/apache-flume-1.7.0-bin/bin:/root/bin</span><br></pre></td></tr></table></figure><p>转到新的路径/tmp下面制造了一个可执行文件hello</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]<span class="comment"># cd /tmp</span></span><br><span class="line">[root@master tmp]<span class="comment"># ll</span></span><br><span class="line">总用量 0</span><br><span class="line">drwx------. 3 root root 17 12月  4 08:08 systemd-private-29aad2a4b89b4c6b8901f17655036ac6-chronyd.service-IX3I1a</span><br><span class="line">drwx------. 2 root root  6 12月  4 08:08 vmware-root_8736-2857568991</span><br><span class="line">[root@master tmp]<span class="comment"># vi hello</span></span><br><span class="line"><span class="comment"># （按i键，看到屏幕底下有insert字样，此时输入）</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"hello hadoop!"</span> </span><br><span class="line"><span class="comment"># (按Esc键，屏幕底下的insert字样消失，再按：，按wq，按回车键，此时就保存退出了vi编辑器)</span></span><br></pre></td></tr></table></figure><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">[root@master tmp]<span class="comment"># ll hello</span></span><br><span class="line">-rw-r--r--. 1 root root 21 12月  4 09:00 hello</span><br><span class="line">[root@master tmp]<span class="comment"># chmod 777 hello </span></span><br><span class="line">[root@master tmp]<span class="comment"># ll hello</span></span><br><span class="line">-rwxrwxrwx. 1 root root 21 12月  4 09:00 hello</span><br><span class="line">[root@master tmp]<span class="comment"># cd /root</span></span><br><span class="line">[root@master ~]<span class="comment"># echo $PATH</span></span><br><span class="line">/tmp:/root/perl5/bin:/root/perl5/bin:/opt/kafka_2.11-2.0.0/bin:/opt/zookeeper-3.4.12/bin:/opt/flink-1.10.2/bin:/opt/spark-2.1.1-bin-hadoop2.7//bin:/opt/apache-hive-2.3.4-bin/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/opt/hadoop-2.7.7/bin:/opt/hadoop-2.7.7/sbin:/usr/java/jdk1.8.0_162/bin:/usr/java/jdk1.8.0_162/jre/bin:/opt/scala-2.11.0/bin:/opt/apache-flume-1.7.0-bin/bin:/root/bin</span><br><span class="line">[root@master ~]<span class="comment"># hello</span></span><br><span class="line">hello hadoop!</span><br><span class="line">[root@master ~]<span class="comment"># cd /tmp</span></span><br><span class="line">[root@master tmp]<span class="comment"># ll</span></span><br><span class="line">总用量 4</span><br><span class="line">-rwxrwxrwx. 1 root root 21 12月  4 09:00 hello</span><br><span class="line">drwx------. 3 root root 17 12月  4 08:08 systemd-private-29aad2a4b89b4c6b8901f17655036ac6-chronyd.service-IX3I1a</span><br><span class="line">drwx------. 2 root root  6 12月  4 08:08 vmware-root_8736-2857568991</span><br><span class="line">[root@master tmp]<span class="comment"># rm hello</span></span><br><span class="line"><span class="built_in">rm</span>：是否删除普通文件 <span class="string">"hello"</span>？y</span><br><span class="line">[root@master tmp]<span class="comment"># ll</span></span><br><span class="line">总用量 0</span><br><span class="line">drwx------. 3 root root 17 12月  4 08:08 systemd-private-29aad2a4b89b4c6b8901f17655036ac6-chronyd.service-IX3I1a</span><br><span class="line">drwx------. 2 root root  6 12月  4 08:08 vmware-root_8736-2857568991</span><br><span class="line">[root@master tmp]<span class="comment"># cd /root</span></span><br><span class="line">[root@master ~]<span class="comment"># hello</span></span><br><span class="line">-bash: /tmp/hello: 没有那个文件或目录</span><br></pre></td></tr></table></figure><h2 id="课堂练习"><a class="headerlink" href="#课堂练习" title="课堂练习"></a>课堂练习</h2><p>（要求所有的命令均使用全局路径，将结果截图粘贴到桌面Release下面的word文件“模块A提交的结果”）：</p><ol><li>在根目录下面建立文件夹/bbb</li></ol><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> /bbb</span><br></pre></td></tr></table></figure><ol><li>在文件夹/bbb中建立文件hi.sh</li></ol><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">touch</span> /bbb/hi.sh</span><br></pre></td></tr></table></figure><ol><li>在文件/bbb/hi.sh中，用vi编辑器输入10秒倒计时程序如下：</li></ol><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">vi /bbb/hi.sh</span><br><span class="line"><span class="comment"># 点击 i 键 进入 insert 编辑模式</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"----start----"</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"----10----"</span>;<span class="built_in">sleep</span> 1;</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"----9----"</span>;<span class="built_in">sleep</span> 1;</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"----8----"</span>;<span class="built_in">sleep</span> 1;</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"----7----"</span>;<span class="built_in">sleep</span> 1;</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"----6----"</span>;<span class="built_in">sleep</span> 1;</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"----5----"</span>;<span class="built_in">sleep</span> 1;</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"----4----"</span>;<span class="built_in">sleep</span> 1;</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"----3----"</span>;<span class="built_in">sleep</span> 1;</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"----2----"</span>;<span class="built_in">sleep</span> 1;</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"----1----"</span>;<span class="built_in">sleep</span> 1;</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"----launch!----"</span></span><br></pre></td></tr></table></figure><pre><code>保存并退出。(点击Esc退出insert编辑模式后输入 `:wq` )</code></pre><ol><li>设置hi.sh文件为可执行文件</li></ol><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> +x /bbb/hi.sh</span><br></pre></td></tr></table></figure><ol><li>把/bbb路径添加在PATH环境变量中，并生效</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">echo "PATH=\$PATH:/bbb" &gt;&gt; /etc/profile</span><br><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure><ol><li>在系统任意位置，执行hi.sh命令，将结果粘贴。</li></ol><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">[root@MySQL01 ~]<span class="comment"># sh hi.sh</span></span><br><span class="line">----start----</span><br><span class="line">----10----</span><br><span class="line">----9----</span><br><span class="line">----8----</span><br><span class="line">----7----</span><br><span class="line">----6----</span><br><span class="line">----5----</span><br><span class="line">----4----</span><br><span class="line">----3----</span><br><span class="line">----2----</span><br><span class="line">----1----</span><br><span class="line">----launch!----</span><br><span class="line">[root@MySQL01 ~]<span class="comment"># </span></span><br></pre></td></tr></table></figure>
+</div>
+
+<div>
+<div class="tag-plugin link dis-select"><a class="link-card plain" title="Linux变量使用" href="http://blog.imc.re/archives/43a5.html" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="icon"><div class="left"><span class="title">Linux变量使用</span><span class="cap link fs12">http://blog.imc.re/archives/43a5.html</span></div><div class="right"><div class="lazy img" data-bg="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/link/8f277b4ee0ecd.svg"></div></div></a></div>
+</div>
+
+
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/me-shaon/GLWTPL/blob/master/translations/LICENSE_zh-CN">GLWT（Good Luck With That，祝你好运）公共许可证</a> 许可协议，转载请注明出处。</p>
+</div></section><section id="share"><div class="header"><span>分享文章</span></div><div class="body"><div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://touhou.pub/rss/d28565de.html"></div><div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/b32ef3da1162a.svg"></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://touhou.pub/rss/d28565de.html&title=Linux变量使用 - Touhou.Pub&pics=https://picsum.photos/400/300?random=9062&summary=
+Linux变量使用变量的定义与引用，用=进行定义，用$进行引用12345[root@master ~]# name=zhangsan[root@master ~]# echo $namezhangsan[root@master ~]..."><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/80c07e4dbb303.svg"></a><a class="social share-item email" href="mailto:?subject=Linux变量使用 - Touhou.Pub&amp;body=https://touhou.pub/rss/d28565de.html"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/a1b00e20f425d.svg"></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/8411ed322ced6.svg"></a></div><div class="qrcode" id="qrcode-wechat" style="visibility:hidden;height:0"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://touhou.pub/rss/d28565de.html"></div></div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/rss/26f4ff64.html">【东方PV】例のBad Apple!!PV 完成版【描绘】</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/rss/2ac8394e.html">Linux综合练习</a></div></section></div>
+
+
+<div class="related-wrap reveal" id="related-posts">
+    <section class="header">
+      <div class="title cap theme">您可能感兴趣的文章</div>
+    </section>
+    <section class="body">
+    <div class="related-posts"><a class="item" href="/rss/2b561629.html" title="Linux 权限操作"><span class="title">Linux 权限操作</span></a><a class="item" href="/rss/579d1b0.html" title="Linux查找作业解析"><span class="title">Linux查找作业解析</span></a><a class="item" href="/rss/bcd9ad2.html" title="Linux查询操作"><span class="title">Linux查询操作</span></a><a class="item" href="/rss/a0063800.html" title="Linux环境设置"><span class="title">Linux环境设置</span></a><a class="item" href="/rss/f7d3eead.html" title="Linux管道命令"><span class="title">Linux管道命令</span></a></div></section></div>
+
+
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">文章</span><a href="/rss">订阅</a><a href="/categories">分类</a><a href="/tags">标签</a><a href="/archives">归档</a></div><div class="sitemap-group"><span class="fs14">项目</span><a href="/wiki/guides">指南</a><a href="/webs">导航</a></div><div class="sitemap-group"><span class="fs14">更多</span><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Touhou-Public">Github</a><a target="_blank" rel="external nofollow noopener noreferrer" href="https://blog.imc.re/">博客</a><a target="_blank" rel="external nofollow noopener noreferrer" href="https://imc.re/">IMC.RE</a></div></div><div class="text"><p><a href="/">@Touhou.Pub</a> 2023 powered by <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Touhou-Public">Touhou-Public</a>。<br><br>本网站所有内容除特别声明外，均采用 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/me-shaon/GLWTPL/blob/master/translations/LICENSE_zh-CN">GLWT（Good Luck With That，祝你好运）公共许可证</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+
+      <div class="float-panel mobile-only blur" style="display:none">
+  <button type="button" class="sidebar-toggle mobile" onclick="sidebar.toggle()">
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"/><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"/></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class="scripts">
+    <script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = stellar.config.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.19.0';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.19.0';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+    root : '/',
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://gcore.jsdelivr.net/npm/jquery@3.6.2/dist/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"codeblock":true,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.copycode = Object.assign({"enable":true,"js":"/js/plugins/copycode.js","default_text":"Copy","success_text":"Copied"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+  function loadJS() {
+    const els = document.querySelectorAll("#comments #giscus");
+    if (els.length === 0) return;
+    els.forEach((el, i) => {
+      try {
+        el.innerHTML = '';
+      } catch (error) {
+        console.log(error);
+      }
+      var script = document.createElement('script');
+      script.src = 'https://giscus.app/client.js';
+      script.async = true;
+      for (let key of Object.keys(el.attributes)) {
+        let attr = el.attributes[key];
+        if (['class', 'id'].includes(attr.name) === false) {
+          script.setAttribute(attr.name, attr.value);
+        }
+      }
+      el.appendChild(script);
+    });
+  }
+  window.addEventListener('DOMContentLoaded', (event) => {
+    loadJS();
+  });
+</script>
+
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>

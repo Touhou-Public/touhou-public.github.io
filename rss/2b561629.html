@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.19.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="https://gcore.jsdelivr.net">
+  <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="//unpkg.com">
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>Linux 权限操作 - Touhou.Pub</title>
+
+  
+    <meta name="description" content="Linux 权限操作1.用字母的方式改变权限用u表示文件所有者，g表示同组用户，o表示其他用户用r表示可读，用w表示可写，用x表示可执行，文件的权限就可以表示为字母等式的组合1[root@master ~]# touch a01.txt使文件所有者具有可读可写可执行：1[root@master ~]# chmod u&#x3D;rwx a01.txt使同组用户和其他用户可读不可写可执行：1[root@ma">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux 权限操作">
+<meta property="og:url" content="https://touhou.pub/rss/2b561629.html">
+<meta property="og:site_name" content="Touhou.Pub">
+<meta property="og:description" content="Linux 权限操作1.用字母的方式改变权限用u表示文件所有者，g表示同组用户，o表示其他用户用r表示可读，用w表示可写，用x表示可执行，文件的权限就可以表示为字母等式的组合1[root@master ~]# touch a01.txt使文件所有者具有可读可写可执行：1[root@master ~]# chmod u&#x3D;rwx a01.txt使同组用户和其他用户可读不可写可执行：1[root@ma">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-11-27T06:11:32.000Z">
+<meta property="article:modified_time" content="2023-11-27T06:11:32.000Z">
+<meta property="article:author" content="Touhou-Public">
+<meta property="article:tag" content="Owner">
+<meta property="article:tag" content="SMGoroBlog">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <meta name="keywords" content="Owner,SMGoroBlog">
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Touhou.Pub" type="application/atom+xml">
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+
+  
+    <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+    <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+    <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+  
+
+
+  
+
+  <link href="https://cdn.jsdelivr.net/npm/font-touhou98/dist/touhou98.css" rel="stylesheet">
+  <link href="/css/fonts.css" rel="stylesheet">
+<!--百度统计-->
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?b427d26cc6155f11e2a036ccfa4e01da";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+  
+<!--Google Adsense-->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4773172018528901" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  
+
+
+
+
+  <div class="l_body" id="start">
+    <aside class="l_left" layout="post">
+    
+
+  
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/rss"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/assets/logo/touhou_lite_color.svg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title"><h1 class="yuyukofont">Touhou.Pub</h1></div><div class="sub normal cap"><p class="touhou98">Touhou-Public</p></div><div class="sub hover cap" style="opacity:0"> 东方Project信息站</div></a></div>
+
+<nav class="menu dis-select"><a class="nav-item" href="/">主页</a><a class="nav-item" href="/wiki">项目</a><a class="nav-item active" href="/rss">RSS</a><a class="nav-item" target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Touhou-Public">Org</a></nav>
+</header>
+
+
+<div class="widgets">
+
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">Linux 权限操作</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linux-%E6%9D%83%E9%99%90%E6%93%8D%E4%BD%9C"><span class="toc-text">Linux 权限操作</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux%E6%9D%83%E9%99%90%E6%95%B0%E5%AD%97%E8%A1%A8%E8%BE%BE"><span class="toc-text">Linux权限数字表达</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BE%E5%A0%82%E7%BB%83%E4%B9%A0%EF%BC%9A"><span class="toc-text">课堂练习：</span></a></li></ol></li></ol></div></div></widget>
+
+
+
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/rss/" placeholder="文章搜索"><svg t="1670596976048" class="icon search-icon" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"/></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+
+
+
+<widget class="widget-wrapper recent"><div class="widget-header cap theme dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg class="icon" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8938"><path d="M800.966 947.251c0-404.522-320.872-732.448-716.69-732.448V62.785c477.972 0 865.44 395.987 865.44 884.466h-148.75z m-162.273 0h-148.74c0-228.98-181.628-414.598-405.678-414.598v-152.01c306.205 0 554.418 253.68 554.418 566.608z m-446.24-221.12c59.748 0 108.189 49.503 108.189 110.557 0 61.063-48.44 110.563-108.188 110.563-59.747 0-108.18-49.5-108.18-110.563 0-61.054 48.433-110.556 108.18-110.556z" p-id="8939"/></svg></a></div><div class="widget-body related-posts fs14"><a class="item title" href="/rss/5b2e37c7.html"><span class="title">TOUHOU GENSOU MAHJONG</span></a><a class="item title" href="/rss/1f972eaf.html"><span class="title">The Touhou Empires</span></a><a class="item title" href="/rss/1e67efb1.html"><span class="title">Touhou Crisis</span></a><a class="item title" href="/rss/bebdd4ea.html"><span class="title">Touhou DollDraft</span></a><a class="item title" href="/rss/dfe5e379.html"><span class="title">Touhou Fantasia / 东方梦想曲</span></a></div></widget>
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/Touhou-Public/" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/social-github.svg"></a><a class="social" href="https://space.bilibili.com/359079394" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/bilibili.svg"></a><a class="social" href="https://l.imc.re/zhihu" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/zhihu.svg"></a><a class="social" href="https://l.imc.re/discord" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/discord.svg"></a><a class="social" href="https://blog.imc.re/contact" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/comments.svg"></a></div></footer>
+
+    </aside>
+    <div class="l_main">
+      
+
+      
+
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/owner/">Owner</a> <span class="sep"></span> <a class="cap breadcrumb-link" href="/categories/owner/smgoroblog/">SMGoroBlog</a></div><div id="post-meta">发布于&nbsp;<time datetime="2023-11-27T06:11:32.000Z">2023-11-27</time></div></div>
+
+<article class="md-text content post">
+<h1 class="article-title"><span>Linux 权限操作</span></h1>
+<div>
+<link class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css" rel="stylesheet"><script class="aplayer-secondary-script-marker" src="/assets/js/APlayer.min.js"></script><h1 id="Linux-权限操作"><a class="headerlink" href="#Linux-权限操作" title="Linux 权限操作"></a>Linux 权限操作</h1><p>1.用字母的方式改变权限<br>用u表示文件所有者，g表示同组用户，o表示其他用户<br>用r表示可读，用w表示可写，用x表示可执行，文件的权限就可以表示为字母等式的组合</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]<span class="comment"># touch a01.txt</span></span><br></pre></td></tr></table></figure><p>使文件所有者具有可读可写可执行：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]<span class="comment"># chmod u=rwx a01.txt</span></span><br></pre></td></tr></table></figure><p>使同组用户和其他用户可读不可写可执行：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]<span class="comment"># chmod go=rx a01.txt</span></span><br></pre></td></tr></table></figure><p>在原来的基础上，为同组用户增加可写属性：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]<span class="comment"># chmod g+w a01.txt</span></span><br></pre></td></tr></table></figure><p>在原来的基础上，收回其他用户可执行的属性：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]<span class="comment"># chmod o-x a01.txt</span></span><br></pre></td></tr></table></figure><p>文件所有者可读不可写可执行，同组用户收回可写属性，其他用户增加可写属性：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]<span class="comment"># chmod u=rx,g-w,o+w a01.txt</span></span><br></pre></td></tr></table></figure><p>2.修改文件的所有者与所属组chown</p><p>增加用户aaa：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]<span class="comment"># useradd aaa</span></span><br></pre></td></tr></table></figure><p>将文件a01.txt的所有者改为aaa：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@master ~]<span class="comment"># chown aaa a01.txt </span></span><br><span class="line">[root@master ~]<span class="comment"># ll a01.txt</span></span><br><span class="line">-r-xr-xrw-. 1 aaa root 0 11月 27 08:15 a01.txt</span><br></pre></td></tr></table></figure><h2 id="Linux权限数字表达"><a class="headerlink" href="#Linux权限数字表达" title="Linux权限数字表达"></a>Linux权限数字表达</h2><blockquote><p>由 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://chatglm.cn">智谱清言</a> 生成回答, 可能含有不正确的内容, 如有错误欢迎指正.</p></blockquote><p>在Linux中，文件和目录的权限可以用数字来表示，这些数字对应于权限的读（r）、写（w）和执行（x）。以下是各个权限对应的数字：</p><ul><li>读（r）：4</li><li>写（w）：2</li><li>执行（x）：1</li></ul><p>无权限（-）对应的数字是0。权限的设置是通过组合这些数字来实现的。例如，读和执行权限的组合（r-x）对应的数字是5（4+1），读和写权限的组合（rw-）对应的数字是6（4+2）。</p><p>在Linux中，权限的设置通常遵循以下模式：</p><ul><li>第一位数字：文件所有者的权限</li><li>第二位数字：文件所属组的权限</li><li>第三位数字：其他用户的权限</li></ul><p>例如，权限模式755表示：</p><ul><li>所有者（owner）：7（读、写、执行权限）</li><li>组（group）：5（读、执行权限，无写权限）</li><li>其他用户（others）：5（读、执行权限，无写权限）</li></ul><p>在Linux中，还有一些特殊的权限设置：</p><ul><li>600（rw———-）：所有者有读写权限，组和其他用户无权限。</li><li>644（rw-r—r—）：所有者有读写权限，组和其他用户只有读权限。</li><li>666（rw-rw-rw-）：所有者有读写权限，组和其他用户也有读写权限（但通常不会同时给予）。</li><li>700（rwx———）：所有者有读写执行权限，组和其他用户无权限。</li><li>744（rwxr—r—）：所有者有读写执行权限，组和其他用户只有读权限。</li><li>755（rwxr-xr-x）：所有者有读写执行权限，组和其他用户有读和执行权限，但无写权限。</li><li>777（rwxrwxrwx）：所有者有读写执行权限，组和其他用户也有读写执行权限（但通常不会同时给予）。<br>在实际操作中，可以使用<code>chmod</code>命令来设置或修改文件和目录的权限。例如：</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 755 file.txt</span><br></pre></td></tr></table></figure><p>这个命令会将文件<code>file.txt</code>的权限设置为所有者可读写执行，组和其他用户可读执行。</p><h2 id="课堂练习："><a class="headerlink" href="#课堂练习：" title="课堂练习："></a>课堂练习：</h2><p>将命令和结果粘贴在桌面的release目录下，模块A提交的结果文件中。要求命令参数文件路径使用绝对路径。</p><ol><li>建立文件夹/aaa/a01</li></ol><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p /aaa/a01</span><br></pre></td></tr></table></figure><ol><li>转移到/aaa/a01目录下，并显示当前路径</li></ol><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /aaa/a01 &amp;&amp; <span class="built_in">pwd</span></span><br></pre></td></tr></table></figure><ol><li>在文件夹/aaa/a01下新建文件myHadoop01.txt，内容为：<br> Hello Hadoop<br> Hello HDFS<br> Hello spark</li></ol><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> &gt;&gt; /aaa/a01/myHadoop01.txt &lt;&lt; <span class="string">EOF</span></span><br><span class="line"><span class="string">Hello Hadoop</span></span><br><span class="line"><span class="string">Hello HDFS</span></span><br><span class="line"><span class="string">Hello spark</span></span><br><span class="line"><span class="string">EOF</span></span><br></pre></td></tr></table></figure><ol><li>新建文件夹/bbb/b01</li></ol><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p /bbb/b01</span><br></pre></td></tr></table></figure><ol><li>将文件/aaa/a01/myHadoop01.txt，复制到/bbb/b01目录下，并改名为myHadoop02.txt。</li></ol><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cp</span> /aaa/a01/myHadoop01.txt /bbb/b01/myHadoop02.txt</span><br></pre></td></tr></table></figure><ol><li>在/bbb/b01/myHadoop02.txt末尾，新增加一行内容：<br> Hello Yarn</li></ol><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"Hello Yarn"</span> &gt;&gt; /bbb/b01/myHadoop02.txt</span><br></pre></td></tr></table></figure><ol><li>比较/aaa/a01/myHadoop01.txt和/bbb/b01/myHadoop02.txt的不同之处。</li></ol><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">diff /aaa/a01/myHadoop01.txt /bbb/b01/myHadoop02.txt</span><br></pre></td></tr></table></figure><ol><li>打印/aaa/a01/myHadoop01.txt的前两行内容。</li></ol><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">head</span> -n 2 /aaa/a01/myHadoop01.txt</span><br></pre></td></tr></table></figure><ol><li>打印/bbb/b01/myHadoop02.txt的最后1行内容。</li></ol><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">tail</span> -n 1 /bbb/b01/myHadoop02.txt</span><br></pre></td></tr></table></figure><ol><li>将文件夹/aaa，拷贝为/ccc</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp -r /aaa /ccc</span><br></pre></td></tr></table></figure><ol><li>删除/ccc/a01/myHadoop01.txt文件。</li></ol><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rm</span> -rf /ccc/a01/myHadoop01.txt</span><br></pre></td></tr></table></figure><ol><li>分别删除文件夹/ccc/a01，/ccc</li></ol><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rmdir</span> /ccc/a01</span><br><span class="line"><span class="built_in">rmdir</span> /ccc</span><br></pre></td></tr></table></figure><ol><li>为文件/aaa/a01/myHadoop01.txt，建立软连接/aaa/a01/myHadoop</li></ol><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ln</span> -s /aaa/a01/myHadoop01.txt /aaa/a01/myHadoop</span><br></pre></td></tr></table></figure><ol><li>用tar命令将/bbb/b01/myHadoop02.txt压缩为/bbb/b01/myHadoop02.tar.tz</li></ol><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -C /bbb/b01/ -czvf /bbb/b01/myHadoop02.tar.tz myHadoop02.txt</span><br></pre></td></tr></table></figure><ol><li>查找电脑中所有以myHadoop字符开头的文件。</li></ol><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find / -name myHadoop*</span><br></pre></td></tr></table></figure><ol><li>查找/aaa/a01/myHadoop01.txt中所有包含Hadoop的行。</li></ol><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep <span class="string">"Hadoop"</span> /aaa/a01/myHadoop01.txt</span><br></pre></td></tr></table></figure><ol><li>显示/aaa/a01/myHadoop01.txt的属性，并用文字说明该文件的文件所有者、同组用户、其他用户分别具有什么权限。</li></ol><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@MySQL01 aaa]<span class="comment"># ll /aaa/a01/myHadoop01.txt</span></span><br><span class="line">-rw-r--r--. 1 root root 36 1月   1 12:48 /aaa/a01/myHadoop01.txt</span><br></pre></td></tr></table></figure><ul><li>文件所有者: 读写权限</li><li>同组用户,其他用户: 读权限</li></ul><ol><li>用数字的方式，将myHadoop01.txt的权限设置为文件所有者可读不可写可执行，同组用户只可读，其他用户只可执行。</li></ol><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 541 /aaa/a01/myHadoop01.txt</span><br></pre></td></tr></table></figure><ol><li>用字母的方式，将myHadoop01.txt的权限设置为一切用户均可读可写可执行。</li></ol><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> a=rwx /aaa/a01/myHadoop01.txt</span><br></pre></td></tr></table></figure><ol><li>新建用户aaa</li></ol><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">useradd aaa</span><br></pre></td></tr></table></figure><ol><li>将文件夹/aaa的所有者设置为aaa用户，并显示/aaa的属性</li></ol><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chown</span> aaa /aaa &amp;&amp; <span class="built_in">stat</span> /aaa</span><br></pre></td></tr></table></figure>
+</div>
+
+<div>
+<div class="tag-plugin link dis-select"><a class="link-card plain" title="Linux 权限操作" href="http://blog.imc.re/archives/e5ff.html" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="icon"><div class="left"><span class="title">Linux 权限操作</span><span class="cap link fs12">http://blog.imc.re/archives/e5ff.html</span></div><div class="right"><div class="lazy img" data-bg="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/link/8f277b4ee0ecd.svg"></div></div></a></div>
+</div>
+
+
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/me-shaon/GLWTPL/blob/master/translations/LICENSE_zh-CN">GLWT（Good Luck With That，祝你好运）公共许可证</a> 许可协议，转载请注明出处。</p>
+</div></section><section id="share"><div class="header"><span>分享文章</span></div><div class="body"><div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://touhou.pub/rss/2b561629.html"></div><div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/b32ef3da1162a.svg"></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://touhou.pub/rss/2b561629.html&title=Linux 权限操作 - Touhou.Pub&pics=https://picsum.photos/400/300?random=6490&summary=
+Linux 权限操作1.用字母的方式改变权限用u表示文件所有者，g表示同组用户，o表示其他用户用r表示可读，用w表示可写，用x表示可执行，文件的权限就可以表示为字母等式的组合1[root@master ~]# touch a01.t..."><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/80c07e4dbb303.svg"></a><a class="social share-item email" href="mailto:?subject=Linux 权限操作 - Touhou.Pub&amp;body=https://touhou.pub/rss/2b561629.html"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/a1b00e20f425d.svg"></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/8411ed322ced6.svg"></a></div><div class="qrcode" id="qrcode-wechat" style="visibility:hidden;height:0"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://touhou.pub/rss/2b561629.html"></div></div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/rss/2ac8394e.html">Linux综合练习</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/rss/579d1b0.html">Linux查找作业解析</a></div></section></div>
+
+
+<div class="related-wrap reveal" id="related-posts">
+    <section class="header">
+      <div class="title cap theme">您可能感兴趣的文章</div>
+    </section>
+    <section class="body">
+    <div class="related-posts"><a class="item" href="/rss/d28565de.html" title="Linux变量使用"><span class="title">Linux变量使用</span></a><a class="item" href="/rss/579d1b0.html" title="Linux查找作业解析"><span class="title">Linux查找作业解析</span></a><a class="item" href="/rss/bcd9ad2.html" title="Linux查询操作"><span class="title">Linux查询操作</span></a><a class="item" href="/rss/a0063800.html" title="Linux环境设置"><span class="title">Linux环境设置</span></a><a class="item" href="/rss/f7d3eead.html" title="Linux管道命令"><span class="title">Linux管道命令</span></a></div></section></div>
+
+
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">文章</span><a href="/rss">订阅</a><a href="/categories">分类</a><a href="/tags">标签</a><a href="/archives">归档</a></div><div class="sitemap-group"><span class="fs14">项目</span><a href="/wiki/guides">指南</a><a href="/webs">导航</a></div><div class="sitemap-group"><span class="fs14">更多</span><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Touhou-Public">Github</a><a target="_blank" rel="external nofollow noopener noreferrer" href="https://blog.imc.re/">博客</a><a target="_blank" rel="external nofollow noopener noreferrer" href="https://imc.re/">IMC.RE</a></div></div><div class="text"><p><a href="/">@Touhou.Pub</a> 2023 powered by <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Touhou-Public">Touhou-Public</a>。<br><br>本网站所有内容除特别声明外，均采用 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/me-shaon/GLWTPL/blob/master/translations/LICENSE_zh-CN">GLWT（Good Luck With That，祝你好运）公共许可证</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+
+      <div class="float-panel mobile-only blur" style="display:none">
+  <button type="button" class="sidebar-toggle mobile" onclick="sidebar.toggle()">
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"/><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"/></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class="scripts">
+    <script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = stellar.config.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.19.0';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.19.0';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+    root : '/',
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://gcore.jsdelivr.net/npm/jquery@3.6.2/dist/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"codeblock":true,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.copycode = Object.assign({"enable":true,"js":"/js/plugins/copycode.js","default_text":"Copy","success_text":"Copied"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+  function loadJS() {
+    const els = document.querySelectorAll("#comments #giscus");
+    if (els.length === 0) return;
+    els.forEach((el, i) => {
+      try {
+        el.innerHTML = '';
+      } catch (error) {
+        console.log(error);
+      }
+      var script = document.createElement('script');
+      script.src = 'https://giscus.app/client.js';
+      script.async = true;
+      for (let key of Object.keys(el.attributes)) {
+        let attr = el.attributes[key];
+        if (['class', 'id'].includes(attr.name) === false) {
+          script.setAttribute(attr.name, attr.value);
+        }
+      }
+      el.appendChild(script);
+    });
+  }
+  window.addEventListener('DOMContentLoaded', (event) => {
+    loadJS();
+  });
+</script>
+
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>

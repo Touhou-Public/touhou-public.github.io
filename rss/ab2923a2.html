@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.19.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="dns-prefetch" href="https://gcore.jsdelivr.net">
+  <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
+  <link rel="dns-prefetch" href="//unpkg.com">
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>Nostr浅尝记录 - Touhou.Pub</title>
+
+  
+    <meta name="description" content="前言Nostr是什么？一句话总结nostr：基本成型的去中心化的社交网络。 其实相关的概念已经见到过不少了，“去中心化”也是最近网上的热点 (嘛，多半都是被比特币炒上去的热度就是了，实际上关注技术和应用本身的人并不算很多x) 而Nostr就是“去中心化社交网络”的具体体现之一（似乎有别的，不过我没接触过x）我本身对“去中心化”其实也有一定的兴趣和倾向，不过个人技术力属实有限，能做到的事情太少，充">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nostr浅尝记录">
+<meta property="og:url" content="https://touhou.pub/rss/ab2923a2.html">
+<meta property="og:site_name" content="Touhou.Pub">
+<meta property="og:description" content="前言Nostr是什么？一句话总结nostr：基本成型的去中心化的社交网络。 其实相关的概念已经见到过不少了，“去中心化”也是最近网上的热点 (嘛，多半都是被比特币炒上去的热度就是了，实际上关注技术和应用本身的人并不算很多x) 而Nostr就是“去中心化社交网络”的具体体现之一（似乎有别的，不过我没接触过x）我本身对“去中心化”其实也有一定的兴趣和倾向，不过个人技术力属实有限，能做到的事情太少，充">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-05-12T01:59:13.000Z">
+<meta property="article:modified_time" content="2023-05-12T01:59:13.000Z">
+<meta property="article:author" content="Touhou-Public">
+<meta property="article:tag" content="Owner">
+<meta property="article:tag" content="SMGoroBlog">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <meta name="keywords" content="Owner,SMGoroBlog">
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Touhou.Pub" type="application/atom+xml">
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+
+  
+
+  
+    <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css" integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+    <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js" integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+    <script defer src="https://gcore.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+  
+
+
+  
+
+  <link href="https://cdn.jsdelivr.net/npm/font-touhou98/dist/touhou98.css" rel="stylesheet">
+  <link href="/css/fonts.css" rel="stylesheet">
+<!--百度统计-->
+<script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?b427d26cc6155f11e2a036ccfa4e01da";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+  
+<!--Google Adsense-->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4773172018528901" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  
+
+
+
+
+  <div class="l_body" id="start">
+    <aside class="l_left" layout="post">
+    
+
+  
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/rss"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/assets/logo/touhou_lite_color.svg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title"><h1 class="yuyukofont">Touhou.Pub</h1></div><div class="sub normal cap"><p class="touhou98">Touhou-Public</p></div><div class="sub hover cap" style="opacity:0"> 东方Project信息站</div></a></div>
+
+<nav class="menu dis-select"><a class="nav-item" href="/">主页</a><a class="nav-item" href="/wiki">项目</a><a class="nav-item active" href="/rss">RSS</a><a class="nav-item" target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Touhou-Public">Org</a></nav>
+</header>
+
+
+<div class="widgets">
+
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">Nostr浅尝记录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#nostr%E7%9B%B8%E5%85%B3%E9%93%BE%E6%8E%A5"><span class="toc-text">nostr相关链接</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C-amp-%E5%8C%BA%E5%88%AB"><span class="toc-text">使用体验&amp;区别</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E8%B4%A6%E6%88%B7%E4%BD%93%E9%AA%8C%EF%BC%9A"><span class="toc-text">1. 账户体验：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%BD%93%E9%AA%8C%EF%BC%9A"><span class="toc-text">2. 客户端体验：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BD%93%E9%AA%8C%EF%BC%9A"><span class="toc-text">3. 服务器体验：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E6%95%B0%E6%8D%AE%E4%BD%93%E9%AA%8C%EF%BC%9A"><span class="toc-text">4. 数据体验：</span></a></li></ol></li></ol></div></div></widget>
+
+
+
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/rss/" placeholder="文章搜索"><svg t="1670596976048" class="icon search-icon" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"/></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+
+
+
+<widget class="widget-wrapper recent"><div class="widget-header cap theme dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg class="icon" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8938"><path d="M800.966 947.251c0-404.522-320.872-732.448-716.69-732.448V62.785c477.972 0 865.44 395.987 865.44 884.466h-148.75z m-162.273 0h-148.74c0-228.98-181.628-414.598-405.678-414.598v-152.01c306.205 0 554.418 253.68 554.418 566.608z m-446.24-221.12c59.748 0 108.189 49.503 108.189 110.557 0 61.063-48.44 110.563-108.188 110.563-59.747 0-108.18-49.5-108.18-110.563 0-61.054 48.433-110.556 108.18-110.556z" p-id="8939"/></svg></a></div><div class="widget-body related-posts fs14"><a class="item title" href="/rss/5b2e37c7.html"><span class="title">TOUHOU GENSOU MAHJONG</span></a><a class="item title" href="/rss/1f972eaf.html"><span class="title">The Touhou Empires</span></a><a class="item title" href="/rss/1e67efb1.html"><span class="title">Touhou Crisis</span></a><a class="item title" href="/rss/bebdd4ea.html"><span class="title">Touhou DollDraft</span></a><a class="item title" href="/rss/dfe5e379.html"><span class="title">Touhou Fantasia / 东方梦想曲</span></a></div></widget>
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/Touhou-Public/" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/social-github.svg"></a><a class="social" href="https://space.bilibili.com/359079394" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/bilibili.svg"></a><a class="social" href="https://l.imc.re/zhihu" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/zhihu.svg"></a><a class="social" href="https://l.imc.re/discord" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/discord.svg"></a><a class="social" href="https://blog.imc.re/contact" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://cdn.jsdelivr.net/gh/SMGCDN/photos/icon/iconfont/comments.svg"></a></div></footer>
+
+    </aside>
+    <div class="l_main">
+      
+
+      
+
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/owner/">Owner</a> <span class="sep"></span> <a class="cap breadcrumb-link" href="/categories/owner/smgoroblog/">SMGoroBlog</a></div><div id="post-meta">发布于&nbsp;<time datetime="2023-05-12T01:59:13.000Z">2023-05-12</time></div></div>
+
+<article class="md-text content post">
+<h1 class="article-title"><span>Nostr浅尝记录</span></h1>
+<div>
+<link class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css" rel="stylesheet"><script class="aplayer-secondary-script-marker" src="/assets/js/APlayer.min.js"></script><h1 id="前言"><a class="headerlink" href="#前言" title="前言"></a>前言</h1><p>Nostr是什么？一句话总结nostr：<strong>基本成型的去中心化的社交网络。</strong> </p><p>其实相关的概念已经见到过不少了，“去中心化”也是最近网上的热点 <del>(嘛，多半都是被比特币炒上去的热度就是了，实际上关注技术和应用本身的人并不算很多x)</del> 而Nostr就是“去中心化社交网络”的具体体现之一（似乎有别的，不过我没接触过x）</p><span id="more"></span><p>我本身对“去中心化”其实也有一定的兴趣和倾向，不过个人技术力属实有限，能做到的事情太少，充其量也就是看看别人做的现成品x。不过经过大半天的琢磨体验下来，稍稍总结了一些心得。尽管在自己的nostr账户上也发布了，不过由于无法修改/删除，故不公开，只写在博客上作为记录（毕竟博客的数据是自己的x）</p><h2 id="nostr相关链接"><a class="headerlink" href="#nostr相关链接" title="nostr相关链接"></a>nostr相关链接</h2><blockquote><p>为了研究nostr专门把edge开了个分类，感觉浏览器快被我用成图书馆了x</p></blockquote><ul><li>Nostr Client项目：<ul><li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/vitorpamplona/amethyst">vitorpamplona/amethyst: Nostr client for Android (github.com)</a> Android开源客户端，功能还是比较齐全的，自动翻译，画廊功能算是特色吧，对于node节点的检测也比较人性化，以及具有群组聊天功能，如果有个国内能直连的node节点的话体验还是很不错的。</li><li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/damus-io/damus">damus-io/damus: iOS nostr client (github.com)</a> IOS开源客户端，因为没有苹果设备所以没体验过，不过挺出名的倒是x</li><li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://iris.to/">iris</a> 网页客户端，同时具有iOS/Android的客户端。基本操作还是比较友好的，也有多语言实现，就是一开始从哪看其他信息有点摸不着头脑x，另外功能比较简单，只实现了基本的功能，没太多特色亮点，值得一提的是有类似Twitter那样的自定义ID的功能，比如 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://iris.to/smgoro">https://iris.to/smgoro</a> 这样的。似乎还会注册NIP-05 Address，不过这是什么我不太清楚，有待研究。<ul><li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/irislib/iris-messenger">irislib/iris-messenger: Decentralized messenger (github.com)</a> 开源客户端仓库。</li></ul></li><li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/lovvtide/satellite-web">lovvtide/satellite-web: Satellite nostr client (github.com)</a> 在线体验网址 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://satellite.earth/">https://satellite.earth/</a> 一个非常风格化的网页客户端，似乎有不少奇奇怪怪的功能（待开发），没有i18n支持，也没有中文，不过还是值得一看的。</li><li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/digi-monkey/flycat-web">digi-monkey/flycat-web：马上在Nostr上写博客 (github.com)</a> 国人开发的网页客户端，理念是在Nostr上写博客，总的来说还是挺不错的，不过目前来说写博客还是自己的博客更方便些x，而且美中不足的就是UI方面还差了点火候）要是能完善一下就更好了。在线体验网址： <a target="_blank" rel="external nofollow noopener noreferrer" href="http://flycat.club/">flycat.club</a> </li><li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/styppo/hamstr">styppo/hamstr: A twitter-style Nostr web client (github.com)</a> 模仿Twitter风格的网页客户端，UI很好看<del>（不如说大多数Nostr客户端UI都是模仿Twitter做的就是了）</del>，但是功能上似乎有些缺陷，我用他的在线体验网址 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://hamstr.to/">hamstr.to</a> 试了试，登录账号之后刷新就什么都做不了了，很怪。如果能和flycat结合一下那大概是蕨杀。</li></ul></li><li>Nostr node项目：参考 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://nostrtips.com/?p=259">自建Nostr中继器 - Nostr协议 (nostrtips.com)</a> 这里留档几个自己比较感兴趣的项目。<del>（留坑为后续自建node做准备x）</del><ul><li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/hoytech/strfry">hoytech/strfry: a nostr relay (github.com)</a> 基于C++实现的无数据库中继器</li><li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://sr.ht/~gheartsfield/nostr-rs-relay/">nostr-rs-relay: Nostr relay in rust (sr.ht)</a> 基于Rust使用SQLite存储数据的中继器</li><li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://code.pobblelabs.org/fossil/nostr_relay/index">nostr relay: nostr relay (pobblelabs.org)</a> 基于Python使用SQLite存储的中继器</li></ul></li><li>其他Nostr相关网址：<ul><li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/nostr-protocol">nostr-protocol (github.com)</a>：应该算是“nostr官方”吧，理论提出的文章记录仓库，以及nostr相关的基本介绍，实现思路应该都有，不过基本只有md文件，过于简陋，只能算是理论，不是什么实际项目，有兴趣可以看看）</li><li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://nostr.build/">nostr.build media uploader</a> 为Nostr网络提供图像存储上传的网站，可以使用直链查看，不过可惜国内屏蔽了，不然可以当图床用x 不过关键的数据存储是否使用Nostr网络这点打个问号，目前来看大概率不是，还是自托管的，毕竟用的php实现的，还能查看具体的存储用量）估计和一般的图床差不多，只是挂了个nostr的名号。</li><li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://nostr.watch/">nostr.watch</a> 查看Nostr节点的网站，目前来看已经有500多个节点了，不过中国节点屈指可数）这么来看的话Nostr网络集群也算是发展起来了，虽然不如区块链那般壮大。</li><li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/search?q=nostr&amp;type=repositories">Repository search results · GitHub</a> Github上nostr相关的仓库，目前来看数量也有2.6k了，也算是比较成熟的项目了吧。</li><li><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/aljazceru/awesome-nostr">aljazceru/awesome-nostr: A curated list of nostr projects and resources (github.com)</a> Nostr相关的项目大集合，有不少，有时间可以看看。</li></ul></li></ul><p>去中心化的“web3”概念提出到现在，Nostr是第一个我看到，并且亲自尝试的实际项目。 <strong>概念的变革都是由理想家提出，由工程师落实，最后让用户进行巩固充盈，这三者缺一不可，但资本并不是绝对必须的存在。</strong> 对于Nostr网络的未来，我还是很期待的。</p><h1 id="使用体验-amp-区别"><a class="headerlink" href="#使用体验-amp-区别" title="使用体验&amp;区别"></a>使用体验&amp;区别</h1><blockquote><p>一般的使用体验基本和Twitter差不多，发送文章，评论，点赞什么的（尽管不能撤销x）主要说下技术上的区别带来的直观体验吧。</p></blockquote><h2 id="1-账户体验："><a class="headerlink" href="#1-账户体验：" title="1. 账户体验："></a>1. 账户体验：</h2><p>应该是最直观的体验差异，账户不像中心化管理的社交网络那样使用常规的邮箱/手机号注册，密码验证，而是使用公钥私钥进行创建账户以及认证信息。这样做和中心化管理的最大差异就是你可以使用公钥看到对方的信息，包括发的文章，关住，粉丝，甚至私信对象（大部分nostr客户端的设计把公钥和私钥都设置成可以登录的认证方式了） </p><p>但是并不是所有信息都能看到，毕竟那样就没有设置账户的意义了）私信内容会被加密，只有有私钥的人才能看到具体内容，公钥看就是一团乱码。此外没有私钥的话也不能进行信息交互，发文章点赞关注之类的。大体来说其实和传统的账户使用无异。但是公钥和私钥都是不能更改的，所以说一旦泄露这个账户基本就相当于废了，正儿八经用的话可以使用密码管理器一类的东西来保存。 </p><h2 id="2-客户端体验："><a class="headerlink" href="#2-客户端体验：" title="2. 客户端体验："></a>2. 客户端体验：</h2><p>客户端体验算是一个比较直观的体验差距，和传统中心化管理的社交网络不同，没有“官方客户端”这一说，所有客户端都是第三方的。这样做有利有弊吧，相比起传统的中心化社交网络的第三方客户端，去中心化的社交网络的客户端开发显然地位要比前者高，可操性也更强，事实上半天的琢磨已经发现了不少开源的客户端，软件网页应有尽有，各有各的好处和优势，不过展开讲就长了，留着挖个坑，回头再说x。 </p><p>基本内容都是一样的，可以看到别人的文章，基本的信息，发布自己的文章等等。要说有什么不同的话，那就是相比起中心化的社交网络多了个“node节点选择”的功能，不同的节点获取到的信息可能是不一样的，你发送的信息实际上也是悲存储在了node节点中。不过倒是不用太担心数据安全的问题（大概 该加密的数据就算存储在别人的node上也会以加密的形式存储，解密需要用到私钥，这个是客户端的活。 </p><h2 id="3-服务器体验："><a class="headerlink" href="#3-服务器体验：" title="3. 服务器体验："></a>3. 服务器体验：</h2><p>至少直到目前为止，去中心化的优势并没有在中国有所体现，因为基本上绝大多数的节点都被gfw噶掉了）而且去中心化的社交网络不利于监管，对于中国这种林子大了什么鸟都有的国家还是不太适用）不过可以自建node节点，这点倒是和传统的中心化社交网络差异性比较大。目前为止从 nostr.watch 的网站来看，已经有了500多个节点，不过大半集中在欧美地区，亚洲地区的node节点还比较少，目前来看日本那边可能用的人多一些（大概是twitter的难民）国内节点目前来看的话，台湾有一个节点，大陆有三四个，其中一半不是失效就是乱提交的，实质上能用的似乎只有一个（开node的大哥哥加油啊x），看别的人说国内节点迟早也会被制裁，这点我也比较同意，基本暂时不对国内节点保留希望了）</p><p>说实话，目前为止的nostr网络虽然说实现了去中心化管理，但是和我想象中的“完全去中心化社交网络”，或者说是“web3”还是有些差距，理想状态下我是希望能做到“用户及节点”的效果，这样用户体量越大社交网络也就越稳定，但是现阶段是“节点越多网络越稳定”，节点数量和用户数量不一定是正相关的，所以有崩溃的风险。另外虽然说从技术角度来看和区块链关系不大，但是目前主要受众群体其实还是吃到区块链红利的那波人，有没有可能下沉到一般用户群体（特别是在中国）也有待商榷。 </p><p>另外有机会的话我也想试试自建node节点，不过需要考虑的事情还是有很多，比如选择什么样的方式搭建（node节点的实现方式似乎有不少），使用什么服务对外公开，以及通过什么途径来进行使用以及宣传，以及监管措施导致的服务商层面的惩罚等，要考虑清楚在弄，不能随随便便就去弄了，毕竟已经吃到过教训了） </p><h2 id="4-数据体验："><a class="headerlink" href="#4-数据体验：" title="4. 数据体验："></a>4. 数据体验：</h2><p>数据的存储，交互可以说是去中心化网络最大的特色和看点，相比起中心化网络，数据的直接所有人是维护中心化网络的主体（一般来说往往是公司）， <strong>去中心化的nostr社交网络的数据从结论上来看则是“不属于任何人”。</strong> 尽管数据直接存储在node节点中，但是用户是可以主动选择node节点的，而且用户数据似乎也会被分发到不同的节点中进行分布式存储，以及node搭建的所有人就算能查看到node里的数据，对于隐私数据一般来说是无法查看的，加密信息，密钥等。 说了“不属于任何人”，当然也不属于你自己。你能做到的只有两件事：发布和交互。</p><p>你想要删除或者修改都是没有办法的，发布出去的信息相当于“泼出去的水”，而且还不会干，会一直保留在去中心化的网络中。账户也是同理，无法注销，无法修改密码。从好的方面来想一定程度上保证了数据的安全性，以及相比起传统的中心化社交网络来说隐秘性更高，因为你的隐私数据只有你自己（私钥所有人）可以查看，连服务提供者都没法看到； <strong>从不好的方面来考虑，那就是现阶段的去中心化社交网络“太危险了”</strong> ：</p><p>因为数据“不属于任何人”，而认证账户的唯一手段是一个无法更改的密钥，你的账户也是并不是绝对安全的，也没有法律措施能够保护账户上的财产安全，上升到“国家舆论保护”的层面更是如此，所以短时间内这种模式的去中心化社交网络很难在中国普及开来。下放到商业化操作，这种去中心化的社交网络所承载的账号也绝对不是什么好选择，不管是作为公司企业的官方账号，还是偶像演员明星的活动账号，放在这种去中心化的社交网络风险都是相当大的，一方面是资本引来的大量流量，作为媒介的账号本身就具有价值，肯定会有人图谋不轨试图获取账号，万一账号密钥泄露，相关的公司或者艺人几乎没有任何办法再把这个账号挽回，放弃账号的话就相当于把一个常年积累的流量入口拱手让人，甚至会产生负面影响。这点其实下放到个人，上升到国家都是一样的，只是影响规模的程度问题。 </p><p>综上所述，当前的去中心化社交网络几乎不可能吃到资本带来的流量红利，更多的其实还是向往自由的个体户在进行“尝鲜”。其实这种网络更加符合我心目中的“互联网精神”，其技术架构模式也类似bt那样的文件上传存储下载技术，但是如果失去了“资本的利益”，这种网络究竟能走多远，就不得而知了。虽然个人来说看好这种技术，但是就目前来说，他是一个“自由的混乱都市”，无法承担“世界级”的任务。</p><p>对了，补充一点。因为账户创建的低成本以及数据所有的特性，nostr其实有被大量bot用户灌溉“垃圾信息”的风险。但是目前来看nostr网络实际存储的信息只有文字和账户基本设定等基本信息，图片等其他资源还是引用的外部资源，包括头像，横幅，以及各种插入图也是。虽然有 nostr.build 这样的资源上传站点，但是实际上是否是用的nostr网络进行存储不得而知，似乎也并不是开源的。Amethyst的上传是可以自选图片托管方的，其他客户端目前不得而知，大概是随便选了个，或者是直接自建了吧。</p>
+</div>
+
+<div>
+<div class="tag-plugin link dis-select"><a class="link-card plain" title="Nostr浅尝记录" href="http://blog.imc.re/archives/99d4.html" target="_blank" rel="external nofollow noopener noreferrer" cardlink autofill="icon"><div class="left"><span class="title">Nostr浅尝记录</span><span class="cap link fs12">http://blog.imc.re/archives/99d4.html</span></div><div class="right"><div class="lazy img" data-bg="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/link/8f277b4ee0ecd.svg"></div></div></a></div>
+</div>
+
+
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/me-shaon/GLWTPL/blob/master/translations/LICENSE_zh-CN">GLWT（Good Luck With That，祝你好运）公共许可证</a> 许可协议，转载请注明出处。</p>
+</div></section><section id="share"><div class="header"><span>分享文章</span></div><div class="body"><div class="link"><input class="copy-area" readonly="true" id="copy-link" value="https://touhou.pub/rss/ab2923a2.html"></div><div class="social-wrap dis-select"><a class="social share-item wechat" onclick="util.toggle(&quot;qrcode-wechat&quot)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/b32ef3da1162a.svg"></a><a class="social share-item weibo" target="_blank" rel="external nofollow noopener noreferrer" href="https://service.weibo.com/share/share.php?url=https://touhou.pub/rss/ab2923a2.html&title=Nostr浅尝记录 - Touhou.Pub&pics=https://picsum.photos/400/300?random=3492&summary=
+前言Nostr是什么？一句话总结nostr：基本成型的去中心化的社交网络。 其实相关的概念已经见到过不少了，“去中心化”也是最近网上的热点 (嘛，多半都是被比特币炒上去的热度就是了，实际上关注技术和应用本身的人并不算很多x) 而No..."><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/80c07e4dbb303.svg"></a><a class="social share-item email" href="mailto:?subject=Nostr浅尝记录 - Touhou.Pub&amp;body=https://touhou.pub/rss/ab2923a2.html"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/a1b00e20f425d.svg"></a><a class="social share-item link" onclick="util.copy(&quot;copy-link&quot;, &quot;复制成功&quot;)"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/social/8411ed322ced6.svg"></a></div><div class="qrcode" id="qrcode-wechat" style="visibility:hidden;height:0"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://api.qrserver.com/v1/create-qr-code/?size=256x256&data=https://touhou.pub/rss/ab2923a2.html"></div></div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/rss/824ee0f8.html">MCBE 88音平均律</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/rss/b9fd9bf0.html">我们都曾是东方众 ——记俄乌冲突与两国东方众</a></div></section></div>
+
+
+<div class="related-wrap reveal" id="related-posts">
+    <section class="header">
+      <div class="title cap theme">您可能感兴趣的文章</div>
+    </section>
+    <section class="body">
+    <div class="related-posts"><a class="item" href="/rss/2b561629.html" title="Linux 权限操作"><span class="title">Linux 权限操作</span></a><a class="item" href="/rss/d28565de.html" title="Linux变量使用"><span class="title">Linux变量使用</span></a><a class="item" href="/rss/579d1b0.html" title="Linux查找作业解析"><span class="title">Linux查找作业解析</span></a><a class="item" href="/rss/bcd9ad2.html" title="Linux查询操作"><span class="title">Linux查询操作</span></a><a class="item" href="/rss/a0063800.html" title="Linux环境设置"><span class="title">Linux环境设置</span></a></div></section></div>
+
+
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">文章</span><a href="/rss">订阅</a><a href="/categories">分类</a><a href="/tags">标签</a><a href="/archives">归档</a></div><div class="sitemap-group"><span class="fs14">项目</span><a href="/wiki/guides">指南</a><a href="/webs">导航</a></div><div class="sitemap-group"><span class="fs14">更多</span><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Touhou-Public">Github</a><a target="_blank" rel="external nofollow noopener noreferrer" href="https://blog.imc.re/">博客</a><a target="_blank" rel="external nofollow noopener noreferrer" href="https://imc.re/">IMC.RE</a></div></div><div class="text"><p><a href="/">@Touhou.Pub</a> 2023 powered by <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/Touhou-Public">Touhou-Public</a>。<br><br>本网站所有内容除特别声明外，均采用 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/me-shaon/GLWTPL/blob/master/translations/LICENSE_zh-CN">GLWT（Good Luck With That，祝你好运）公共许可证</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+
+      <div class="float-panel mobile-only blur" style="display:none">
+  <button type="button" class="sidebar-toggle mobile" onclick="sidebar.toggle()">
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewbox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"/><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"/></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class="scripts">
+    <script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = stellar.config.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.19.0';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.19.0';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+    root : '/',
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://gcore.jsdelivr.net/npm/jquery@3.6.2/dist/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"codeblock":true,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.copycode = Object.assign({"enable":true,"js":"/js/plugins/copycode.js","default_text":"Copy","success_text":"Copied"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+  function loadJS() {
+    const els = document.querySelectorAll("#comments #giscus");
+    if (els.length === 0) return;
+    els.forEach((el, i) => {
+      try {
+        el.innerHTML = '';
+      } catch (error) {
+        console.log(error);
+      }
+      var script = document.createElement('script');
+      script.src = 'https://giscus.app/client.js';
+      script.async = true;
+      for (let key of Object.keys(el.attributes)) {
+        let attr = el.attributes[key];
+        if (['class', 'id'].includes(attr.name) === false) {
+          script.setAttribute(attr.name, attr.value);
+        }
+      }
+      el.appendChild(script);
+    });
+  }
+  window.addEventListener('DOMContentLoaded', (event) => {
+    loadJS();
+  });
+</script>
+
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>
